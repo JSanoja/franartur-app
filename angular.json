@@ -2,6 +2,7 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
+  
   "projects": {
     "franartur-app": {
       "projectType": "application",
@@ -13,6 +14,7 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -21,6 +23,11 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
+            "stylePreprocessorOptions":{
+              "includePaths": [
+                "./src/styles"
+              ]
+            },
             "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
@@ -67,7 +74,10 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "franartur-app:build"
+            "browserTarget": "franartur-app:build",
+            "host": "192.168.1.6",
+            "disableHostCheck":true,
+            "port": 8080
           },
           "configurations": {
             "production": {

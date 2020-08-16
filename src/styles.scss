@@ -1,1 +1,39 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+@import 'styles/index';
+// Plus imports for other components in your app.
+
+$custom-typography: mat-typography-config(
+  $font-family: 'Poppins, monospace',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core($custom-typography);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$franartur-app-primary: mat-palette($mat-fran-purple);
+$franartur-app-accent: mat-palette($mat-fran-purple, 500, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$franartur-app-warn: mat-palette($mat-fran-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$franartur-app-theme: mat-light-theme($franartur-app-primary, $franartur-app-accent, $franartur-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($franartur-app-theme);
+
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }

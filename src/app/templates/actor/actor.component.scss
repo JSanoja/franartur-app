@@ -1,0 +1,12 @@
+@import "variables";
+:host {
+    background-image: url("/assets/back.jpg");
+    padding: 20px;
+    display: block;
+    .fran {        
+        width: 100%;
+        position: relative;
+        top: 11px;
+    }
+    
+}

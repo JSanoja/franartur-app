@@ -1,0 +1,38 @@
+<div >  
+    <div id="home-1" class="home-1" #home1>
+      <video autoplay muted loop id="homeVideo" #homevideo>
+        <source src="/assets/entrada.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <img class="fran" src="assets/fran.png">
+    </div>
+    <div id="home-2" class="home-2" #home2>
+        <button mat-button class="category actor" [routerLink]="'/actor'">Actor</button>
+        <button mat-button class="category speaker">Speaker</button>
+        <button mat-button class="category voice-artist">Voice Artist</button>
+        <button mat-button class="category comediante">Comediante</button>
+    </div>   
+    <div id="home-3" class="home-3" #home3>
+      <mat-card>
+        <mat-card-title>BIO</mat-card-title>
+        <p>
+          Soy Actor, Voice Artist, Comediante y  Speaker. Un Artista Multifacético y Empresario, amante de la comedia que ha trabajado por más de 15 años en la industria del entretenimiento de Latinoamérica.   
+        </p>
+        <p>
+          He creado, escrito, producido, actuado, y dirigido contenidos en distintos formatos, para llegar a millones de personas a través del entretenimiento.
+        </p>
+        <p>
+          Soy un hombre universal que ama expresarse artísticamente con un lenguaje que funcione en todo el planeta; y lo hago porque es mi forma de darle al mundo maravillas.
+        </p>
+      </mat-card>
+    </div>   
+    <div class="navigate">
+        <button mat-mini-fab (click)="changePrev()">
+          <mat-icon>{{ isHome ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</mat-icon>
+        </button>
+        <br>
+        <button mat-mini-fab (click)="changeNext()">
+          <mat-icon>{{ isHome ? 'keyboard_arrow_down' : 'keyboard_arrow_down' }}</mat-icon>
+        </button>
+    </div>
+</div>
