@@ -3,6 +3,8 @@ import { Subject, interval, Observable, empty, Subscription  } from 'rxjs';
 import { switchMap, scan, takeWhile, debounceTime, debounce, finalize, distinctUntilChanged, map, share } from 'rxjs/operators';
 import { ScrollService } from 'src/app/services/scroll.service';
 import { ViewportScroller } from '@angular/common';
+import { MatDialog } from '@angular/material';
+import { BioDialogComponent } from 'src/app/components/bio-dialog/bio-dialog.component';
 
 
 
@@ -26,7 +28,7 @@ export class HomeComponent implements OnInit {
   
   //capture the scroll event and pass to a function that triggers your own event for clarity and so you can manually trigger
   scrollToSource: Subject<any> = new Subject<any>();  
-  constructor(private scrollService: ScrollService, private vc:ViewportScroller) { }
+  constructor(private scrollService: ScrollService, private vc:ViewportScroller, public dialog: MatDialog) { }
   scroll$: Subscription;
   ngOnDestroy() {
     this.scroll$.unsubscribe()
@@ -153,5 +155,10 @@ export class HomeComponent implements OnInit {
       this.isHome = true
     }*/
   } 
-
+  openBioDialog() {
+    const dialogRef = this.dialog.open(BioDialogComponent, {
+      width: '80vw',
+      height: '80vh', 
+    });
+  }
 }

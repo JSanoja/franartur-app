@@ -15,6 +15,8 @@ import {MatCardModule} from '@angular/material/card';
 import { ActorComponent } from './templates/actor/actor.component';
 import { ScrollService } from './services/scroll.service';
 
+import {MatDialogModule} from '@angular/material/dialog';
+import { BioDialogComponent } from './components/bio-dialog/bio-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +24,11 @@ import { ScrollService } from './services/scroll.service';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ActorComponent
+    ActorComponent,
+    BioDialogComponent,
+    
   ],
+  entryComponents: [ BioDialogComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,7 +39,8 @@ import { ScrollService } from './services/scroll.service';
     MatToolbarModule,
     MatSidenavModule, 
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [ScrollService],
   bootstrap: [AppComponent]

@@ -1,0 +1,10 @@
+:host {
+    .mat-dialog-title {
+        position: relative;
+        .close-icon {
+            display: block;
+            position: absolute;
+            right: 0;
+        }
+    }
+}

@@ -14,6 +14,8 @@
     fixedBottomGap="0" mode="side">
       <mat-nav-list>  
         <a mat-list-item [routerLink]="'/'" (click)="sidenav.toggle()"> HOME </a> 
+        <a mat-list-item (click)="sidenav.toggle(); openBioDialog()"> BIO </a> 
+        
         <a mat-list-item [routerLink]="'/'" (click)="sidenav.toggle()"> Equipo </a>        
         <a mat-list-item [routerLink]="'/'" (click)="sidenav.toggle()"> Contacto </a>
         <a mat-list-item [routerLink]="'/'" (click)="sidenav.toggle()"> SIRCOMEDIA </a>
