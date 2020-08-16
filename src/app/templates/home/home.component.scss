@@ -13,7 +13,8 @@
         #homeVideo {
             position: relative;
             top:0px;
-            width: 100%;            
+            width: auto;            
+            height: 100%;
             z-index: 0;            
         }
         .fran {
@@ -21,8 +22,9 @@
             bottom: 60px;
             left: -42px;
             width: 110%;
+            display:none;
             @media (orientation: landscape) { 
-                display:none
+                display:none;
             }
         }
     }
