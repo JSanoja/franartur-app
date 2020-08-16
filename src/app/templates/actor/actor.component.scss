@@ -3,10 +3,25 @@
     background-image: url("/assets/back.jpg");
     padding: 20px;
     display: block;
+    mat-card {
+        margin-bottom: 80px;
+    }
     .fran {        
         width: 100%;
         position: relative;
         top: 11px;
+        @media (orientation: landscape) {
+            top: 40px;
+            width: 300px;
+            display: block;
+            margin-left: auto;
+        }
+    }
+    .fran-demo {
+        width: 80%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
     
 }

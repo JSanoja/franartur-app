@@ -7,10 +7,10 @@ import { ScrollService } from 'src/app/services/scroll.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  currentScroll:number;
+  currentScroll:number = 0;
   constructor(private scrollService: ScrollService) { }
 
-  ngOnInit() {
+  ngOnInit() {    
     this.scrollService.scroll$.subscribe(scroll => {
       this.currentScroll= scroll;
     })

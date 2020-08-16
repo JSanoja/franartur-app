@@ -4,9 +4,9 @@
         <source src="/assets/entrada.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
-      <img class="fran" src="assets/fran.png">
+      <img class="fran" src="assets/fran.png" [wmAnimate]="'fadeIn'">
     </div>
-    <div id="home-2" class="home-2" #home2>
+    <div id="home-2" class="home-2" #home2 >
         <button mat-button class="category actor" [routerLink]="'/actor'">Actor</button>
         <button mat-button class="category speaker">Speaker</button>
         <button mat-button class="category voice-artist">Voice Artist</button>

@@ -8,6 +8,8 @@
         overflow: hidden;
         background-color: $blue;
         background-image: url("/assets/back.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
         #homeVideo {
             position: relative;
             top:0px;
@@ -19,6 +21,9 @@
             bottom: 60px;
             left: -42px;
             width: 110%;
+            @media (orientation: landscape) { 
+                display:none
+            }
         }
     }
     .home-2 {
@@ -60,6 +65,8 @@
     }
     .home-3 {
         background-image: url("/assets/back.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
         display: block;
         width: calc(100% - 20px);
         height: calc(100vh - 76px);
