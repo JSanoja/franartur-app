@@ -1,8 +1,29 @@
 @import "variables";
 :host {
-    background-image: url("/assets/back.jpg");
+    // background-image: url("/assets/back.jpg");
     background-size: cover;
     display: block;
+    .que-fran-quieres {
+        background-color: $light-gray;
+        padding-top: 0;
+        .arrow-down-up {
+            margin-left: auto;
+        }
+    }
+    .que-fran-quieres-list {
+        background-color: white;
+        padding-top: 0;
+        .mat-list-item:nth-child(1) {
+            border-left: 4px solid $gray;
+        }
+    }
+    .go-to-top {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
     .home-1 {
         display: block;
         position: relative;
@@ -12,7 +33,7 @@
         #homeVideo {
             position: relative;
             top:0px;
-            width: 100%;            
+            width: 200%;            
             height: auto;
             z-index: 0;  
             margin-bottom: -7px;          
@@ -67,12 +88,15 @@
         }   
     }
     .categories {
+        .categories-item {
+            margin-bottom: 20px;
+        }
         .foto {
-            width: 100%;
-            padding: 10px 0;
+            // width: 100%;
         }
         .damelo-todo {
-            float: right;
+            margin-left: auto;
+            display: block;
         }
     }
         

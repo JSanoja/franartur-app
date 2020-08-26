@@ -20,6 +20,14 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { BioDialogComponent } from './components/bio-dialog/bio-dialog.component';
 import { FooterLargeComponent } from './components/footer-large/footer-large.component';
 
+import { SwiperModule } from 'ngx-swiper-wrapper';
+import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
+import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+ 
+const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
+  direction: 'horizontal',
+  slidesPerView: 'auto'
+};
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,9 +51,16 @@ import { FooterLargeComponent } from './components/footer-large/footer-large.com
     MatListModule,
     MatCardModule,
     MatDialogModule,
-    MatExpansionModule 
+    MatExpansionModule,
+    SwiperModule
   ],
-  providers: [ScrollService],
+  providers: [
+    ScrollService,
+    {
+      provide: SWIPER_CONFIG,
+      useValue: DEFAULT_SWIPER_CONFIG
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

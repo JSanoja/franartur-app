@@ -7,88 +7,60 @@
       <!-- <img class="fran" src="assets/fran.png" [wmAnimate]="'fadeIn'"> -->
     </div>
     <div id="home-2" class="home-2" #home2 >
+      <mat-nav-list class="que-fran-quieres">
+        <mat-list-item (click)="queFran=!queFran"> 
+          ¿Que Fran quieres? 
+          <mat-icon class="arrow-down-up">{{queFran ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</mat-icon>
+        </mat-list-item>      
+      </mat-nav-list>
+      <div wmAnimate="landing" speed="faster" *ngIf="queFran">
+        <mat-nav-list class="que-fran-quieres-list" >
+          <mat-list-item (click)="goTo('category-1')"> 
+            Actor     
+          </mat-list-item>
+          <mat-list-item (click)="goTo('category-2')"> 
+            Voice Artist     
+          </mat-list-item>
+          <mat-list-item (click)="goTo('category-3')"> 
+            Speaker      
+          </mat-list-item>
+          <mat-list-item (click)="goTo('category-4')"> 
+            Comediante     
+          </mat-list-item>
+          <mat-list-item (click)="goTo('category-5')"> 
+            Sircomedia    
+          </mat-list-item>
+        </mat-nav-list> 
+      </div>      
+
         <mat-card>
-          <mat-card-title>¿ Que Fran Quieres ?</mat-card-title>
-          <mat-card-subtitle>
-            Soy un artista multifacético y empresario, amante de la comedia, que ha trabajado por más de 15 años en la industria del entretenimiento de Latinoamérica.
-          </mat-card-subtitle>
-          <mat-accordion class="categories">            
-            <mat-expansion-panel>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Actor
-                </mat-panel-title>
-                <mat-panel-description>
-                   
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>
-                Amo actuar para todos los formatos (teatro, cine, tv, publicidad). Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones. 
-              </p>
-              <img class="foto" src="assets/foto.jpg" alt="">
-              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Voice Artist
-                </mat-panel-title>
-                <mat-panel-description>
-                   
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>
-                Mi experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina. 
-              </p>
-              <img class="foto" src="assets/foto.jpg" alt="">
-              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Speaker
-                </mat-panel-title>
-                <mat-panel-description>
-                   
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>
-                Mis conferencias producen transformación cultural en las empresas, inspirando a través de valores, arte y risa, para que haya equipos de trabajo más éticos, más felices y más productivos.
-              </p>
-              <img class="foto" src="assets/foto.jpg" alt="">
-              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Comediante
-                </mat-panel-title>
-                <mat-panel-description>
-                   
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>
-                La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura.
-              </p>
-              <img class="foto" src="assets/foto.jpg" alt="">
-              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
-            </mat-expansion-panel>
-            <mat-expansion-panel>
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  Sircomedia
-                </mat-panel-title>
-                <mat-panel-description>
-                   
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>
-                Esta es mi empresa y nace para brindar espacios amplios y diversos para la Comedia como forma de arte. Es una casa matriz de un conjunto de marcas que celebran el don universal de las risas. Justo en el instante en el que se produce una carcajada comienza nuestro universo. 
-              </p>
-              <img class="foto" src="assets/foto.jpg" alt="">
-              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
-            </mat-expansion-panel>
-          </mat-accordion>
+          <div class="categories">               
+              <mat-card class="categories-item" *ngFor="let category of categories; let index = index" id="category-{{index}}">
+                <mat-card-title>{{category.title}}</mat-card-title>
+                <mat-card-content>
+                  {{category.description}}
+                </mat-card-content>
+                <swiper [config]="config" [(index)]="index">
+                  <div>
+                    <img class="foto" src="assets/foto.jpg" alt="" >
+                  </div>
+                </swiper>
+                
+                
+                <mat-card-actions>
+                  <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
+                </mat-card-actions>
+              </mat-card> 
+          </div>
+          <mat-card class="mini-bio">            
+            <mat-card-content>
+              Soy un artista multifacético y empresario, amante de la comedia, que ha trabajado por más de 15 años en la industria del entretenimiento de Latinoamérica.
+            </mat-card-content>            
+          </mat-card>
         </mat-card>
+        <button mat-fab class="go-to-top">
+          <mat-icon (click)="goToTop()">arrow_upward</mat-icon>
+        </button>
+        
     </div>   
 </div>
