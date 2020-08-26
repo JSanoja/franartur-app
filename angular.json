@@ -77,7 +77,7 @@
             "browserTarget": "franartur-app:build",
             "host": "192.168.1.6",
             "disableHostCheck":true,
-            "port": 8080
+            "port": 4200
           },
           "configurations": {
             "production": {

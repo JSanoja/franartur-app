@@ -6,6 +6,9 @@
     left:0;
     color:white;
     z-index: 2;
+    svg {
+        outline: unset;
+    }
     .example-spacer {
         flex: 1 1 auto;
       }
@@ -18,8 +21,76 @@
             background-color: transparent;
             background: linear-gradient(0deg, rgba(45,41,85,0) 0%, rgba(45,41,85,0.4) 100%, rgba(45,41,85,0.4) 100%);
         }
-        
-        
+    }
+    .menu-container {
+        display: block;
+        padding-top: 30px;
+        opacity: 0;
+        transition: opacity ease-in-out .2s;
+        background-color: $purple;
+        color:white;
+        position: fixed;
+        height: calc(100vh - 30px);
+        width: 100vw;
+        top: -100vh;
+        left: 0;
+        .mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+            height: 35px;
+        }
+        mat-icon.arrow-down-up {
+            margin-left: auto;
+        }
+        &.active {
+            //transition: opacity ease-in-out .2s;
+            top: 0;
+            display: block;
+            opacity: 1;
+            text-transform: uppercase;
+            .mat-list-base .mat-list-item {                
+                opacity: 1;
+                padding-left: 0;
+                &:nth-child(0) {
+                    transition-delay: .2s;
+                }
+                &:nth-child(1) {
+                    transition-delay: .3s;
+                }
+                &:nth-child(2) {
+                    transition-delay: .4s;
+                }
+                &:nth-child(3) {
+                    transition-delay: .5s;
+                }
+                &:nth-child(4) {
+                    transition-delay: .6s;
+                }
+                &:nth-child(5) {
+                    transition-delay: .7s;
+                }
+                &:nth-child(6) {
+                    transition-delay: .8s;
+                }
+            }
+            .que-fran {
+                margin-left: 20px;
+            }
+        }
+        .close {
+            position: absolute;
+            top:17px;
+            right: 24px;
+        }
+        .mat-list-base .mat-list-item {
+            padding-left: 10px;
+            color:white;
+            opacity: 0;
+            transition: all ease-in-out .3s;
+        }
+    }
+    app-footer {
+        position: absolute;
+        bottom:0;
+        left:0;
     }
 
 }

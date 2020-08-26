@@ -73,7 +73,7 @@ export class AnimateComponent implements OnInit, OnDestroy {
       normal: '1s', 
       fast: '500ms', 
       faster: '300ms'
-    }[speed || 'normal'];
+    }[speed || 'faster'];
   }
 
   /** Delays the animation */

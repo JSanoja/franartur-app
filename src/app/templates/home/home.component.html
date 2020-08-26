@@ -1,32 +1,94 @@
 <div >  
     <div id="home-1" class="home-1" #home1>
-      <video autoplay muted loop id="homeVideo" #homevideo>
+      <video autoplay loop playsinline muted id="homeVideo" #homevideo >
         <source src="/assets/entrada.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
       </video>
-      <img class="fran" src="assets/fran.png" [wmAnimate]="'fadeIn'">
+      <!-- <img class="fran" src="assets/fran.png" [wmAnimate]="'fadeIn'"> -->
     </div>
     <div id="home-2" class="home-2" #home2 >
-        <button mat-button class="category actor" [routerLink]="'/actor'">Actor</button>
-        <button mat-button class="category speaker">Speaker</button>
-        <button mat-button class="category voice-artist">Voice Artist</button>
-        <button mat-button class="category comediante">Comediante</button>
+        <mat-card>
+          <mat-card-title>¿ Que Fran Quieres ?</mat-card-title>
+          <mat-card-subtitle>
+            Soy un artista multifacético y empresario, amante de la comedia, que ha trabajado por más de 15 años en la industria del entretenimiento de Latinoamérica.
+          </mat-card-subtitle>
+          <mat-accordion class="categories">            
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Actor
+                </mat-panel-title>
+                <mat-panel-description>
+                   
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>
+                Amo actuar para todos los formatos (teatro, cine, tv, publicidad). Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones. 
+              </p>
+              <img class="foto" src="assets/foto.jpg" alt="">
+              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Voice Artist
+                </mat-panel-title>
+                <mat-panel-description>
+                   
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>
+                Mi experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina. 
+              </p>
+              <img class="foto" src="assets/foto.jpg" alt="">
+              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Speaker
+                </mat-panel-title>
+                <mat-panel-description>
+                   
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>
+                Mis conferencias producen transformación cultural en las empresas, inspirando a través de valores, arte y risa, para que haya equipos de trabajo más éticos, más felices y más productivos.
+              </p>
+              <img class="foto" src="assets/foto.jpg" alt="">
+              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Comediante
+                </mat-panel-title>
+                <mat-panel-description>
+                   
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>
+                La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura.
+              </p>
+              <img class="foto" src="assets/foto.jpg" alt="">
+              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
+            </mat-expansion-panel>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Sircomedia
+                </mat-panel-title>
+                <mat-panel-description>
+                   
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <p>
+                Esta es mi empresa y nace para brindar espacios amplios y diversos para la Comedia como forma de arte. Es una casa matriz de un conjunto de marcas que celebran el don universal de las risas. Justo en el instante en el que se produce una carcajada comienza nuestro universo. 
+              </p>
+              <img class="foto" src="assets/foto.jpg" alt="">
+              <button class="damelo-todo" mat-raised-button color="primary">Damelo Todo!</button>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-card>
     </div>   
-    <div id="home-3" class="home-3" #home3>
-      <mat-card>        
-        <p>
-          Soy Actor, Voice Artist, Comediante y  Speaker. Un Artista Multifacético y Empresario, amante de la comedia que ha trabajado por más de 15 años en la industria del entretenimiento de Latinoamérica.   
-        </p>
-        <button class="more-info" mat-raised-button color="primary" (click)="openBioDialog()">+ INFO</button>
-      </mat-card>
-    </div>   
-    <div class="navigate">
-        <button mat-mini-fab (click)="changePrev()">
-          <mat-icon>{{ isHome ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</mat-icon>
-        </button>
-        <br>
-        <button mat-mini-fab (click)="changeNext()">
-          <mat-icon>{{ isHome ? 'keyboard_arrow_down' : 'keyboard_arrow_down' }}</mat-icon>
-        </button>
-    </div>
 </div>

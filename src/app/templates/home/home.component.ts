@@ -31,11 +31,11 @@ export class HomeComponent implements OnInit {
   constructor(private scrollService: ScrollService, private vc:ViewportScroller, public dialog: MatDialog) { }
   scroll$: Subscription;
   ngOnDestroy() {
-    this.scroll$.unsubscribe()
+    // this.scroll$.unsubscribe()
   }
 
   ngOnInit() {    
-  this.scroll$ = this.scrollService.scroll$.subscribe(
+  /* this.scroll$ = this.scrollService.scroll$.subscribe(
     (scroll) => {  
       console.log(scroll)      
       this.currentScroll = scroll;
@@ -61,7 +61,7 @@ export class HomeComponent implements OnInit {
         this.oldScroll = this.currentScroll;
         console.log(this.currentScroll, this.oldScroll) 
       
-    });
+    }); */
 
     this.scrollToSource.pipe(      
       switchMap(({targetYPos, invert}) =>       
@@ -107,14 +107,7 @@ export class HomeComponent implements OnInit {
     window.scrollTo(0, 0)
     let video: HTMLVideoElement = this.homeVideo.nativeElement;
     video.muted = true; 
-    /* window.scrollTo(0, 0)
-    this.home1.nativeElement.scrollIntoView();
-    setTimeout(()=> {
-      this.home1.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    },1000) 
-    setTimeout(()=> {
-      this.home2.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    },2000)    */
+    
   }
   scrollTo(target: ElementRef, invert:boolean): void {
     // this assumes you're passing in an ElementRef, it may or may not be appropriate, you can pass them to functions in templates with template variable syntax such as: <div #targetDiv>Scroll Target</div> <button (click)="scrollTo(targetDiv)">Click To Scroll</button>
@@ -125,36 +118,6 @@ export class HomeComponent implements OnInit {
     }
     
   }
-  changeNext() {
-    let next = this.current < this.max ? this.current +1 : this.max;
-                this.current = next;
-                let home= `home${next}`;
-                console.log(home)
-                this.inTransition = true
-                this.scrollTo(this[home], false);    
-    /* if (this.isHome) {
-      this.scrollTo(this.home2, false);
-      this.isHome = false
-    } else {      
-      this.scrollTo(this.home1, true);
-      this.isHome = true
-    }*/
-  } 
-  changePrev() {
-    let next = this.current > 1 ? this.current - 1 : 1;
-                this.current = next;
-                let home= `home${next}`;
-                console.log(this[home])
-                this.inTransition = true
-                this.scrollTo(this[home], true);    
-    /* if (this.isHome) {
-      this.scrollTo(this.home2, false);
-      this.isHome = false
-    } else {      
-      this.scrollTo(this.home1, true);
-      this.isHome = true
-    }*/
-  } 
   openBioDialog() {
     const dialogRef = this.dialog.open(BioDialogComponent, {
       width: '80vw',

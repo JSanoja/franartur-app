@@ -14,9 +14,11 @@ import { MatToolbarModule, MatSidenavModule, MatListModule} from  '@angular/mate
 import {MatCardModule} from '@angular/material/card';
 import { ActorComponent } from './templates/actor/actor.component';
 import { ScrollService } from './services/scroll.service';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import {MatDialogModule} from '@angular/material/dialog';
 import { BioDialogComponent } from './components/bio-dialog/bio-dialog.component';
+import { FooterLargeComponent } from './components/footer-large/footer-large.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,7 @@ import { BioDialogComponent } from './components/bio-dialog/bio-dialog.component
     HomeComponent,
     ActorComponent,
     BioDialogComponent,
-    
+    FooterLargeComponent
   ],
   entryComponents: [ BioDialogComponent ],
   imports: [
@@ -40,7 +42,8 @@ import { BioDialogComponent } from './components/bio-dialog/bio-dialog.component
     MatSidenavModule, 
     MatListModule,
     MatCardModule,
-    MatDialogModule
+    MatDialogModule,
+    MatExpansionModule 
   ],
   providers: [ScrollService],
   bootstrap: [AppComponent]

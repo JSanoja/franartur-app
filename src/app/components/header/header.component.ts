@@ -10,8 +10,10 @@ import { BioDialogComponent } from '../bio-dialog/bio-dialog.component';
 })
 export class HeaderComponent implements OnInit {
   currentScroll:number = 0;
+  menuActive:boolean = false;
+  queFran:boolean = false;
   constructor(private scrollService: ScrollService, public dialog: MatDialog) { }
-
+  
   ngOnInit() {    
     this.scrollService.scroll$.subscribe(scroll => {
       this.currentScroll= scroll;
@@ -28,6 +30,9 @@ export class HeaderComponent implements OnInit {
         console.log('The dialog was closed');        
       });
     
+  }
+  toggleMenu() {
+    this.menuActive = !this.menuActive
   }
 
 }
