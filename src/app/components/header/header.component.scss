@@ -15,8 +15,26 @@
     .sidenav {
         min-width: 80%;  
     }
+    .mat-toolbar-multiple-rows {        
+        min-height: 36px;
+        .mat-toolbar-row {
+            height: 36px;
+            svg {
+                width: 90px;
+            }
+        }
+        &.transparent {            
+            .mat-toolbar-row {
+                height: 56px;
+                svg {
+                    width: 125px;
+                }
+            }
+        }
+    }
     mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-multiple-rows {
         transition: all .3s;
+
         &.transparent{
             background-color: transparent;
             background: linear-gradient(0deg, rgba(45,41,85,0) 0%, rgba(45,41,85,0.4) 100%, rgba(45,41,85,0.4) 100%);
