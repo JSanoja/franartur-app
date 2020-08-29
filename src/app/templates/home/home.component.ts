@@ -21,23 +21,24 @@ export class HomeComponent implements OnInit {
   current:number  = 1;
   max:number = 3;
   inTransition:boolean= false;
+  queFran:boolean = false;
   config: SwiperConfigInterface = {
-      a11y: true,
+      a11y: false,
       direction: 'horizontal',
-      slidesPerView: 3,
+      slidesPerView: 1,
       slideToClickedSlide: true,
-      mousewheel: true,
+      mousewheel: false,
       scrollbar: false,
-      watchSlidesProgress: true,
-      navigation: true,
-      keyboard: true,
+      watchSlidesProgress: false,
+      navigation: false,
+      keyboard: false,
       pagination: false,
       centeredSlides: true,
       loop: true,
       roundLengths: true,
-      slidesOffsetBefore: 100,
-      slidesOffsetAfter: 100,
-      spaceBetween: 50,
+      slidesOffsetBefore: 0,
+      slidesOffsetAfter: 0,
+      spaceBetween: 0,
       breakpoints: {
           // when window width is >= 320px
           320: {
@@ -67,10 +68,10 @@ export class HomeComponent implements OnInit {
       description: "Esta es mi empresa y nace para brindar espacios amplios y diversos para la Comedia como forma de arte. Es una casa matriz de un conjunto de marcas que celebran el don universal de las risas. Justo en el instante en el que se produce una carcajada comienza nuestro universo. "
     },
   ]
-  @ViewChild('home1',{static:false}) home1: ElementRef;
-  @ViewChild('home2',{static:false}) home2: ElementRef;
-  @ViewChild('home3',{static:false}) home3: ElementRef;
-  @ViewChild('homevideo',{static:false}) homeVideo: ElementRef;
+  @ViewChild('home1') home1: ElementRef;
+  @ViewChild('home2') home2: ElementRef;
+  @ViewChild('home3') home3: ElementRef;
+  @ViewChild('homevideo') homeVideo: ElementRef;
   
   //capture the scroll event and pass to a function that triggers your own event for clarity and so you can manually trigger
   scrollToSource: Subject<any> = new Subject<any>();  
@@ -177,7 +178,7 @@ export class HomeComponent implements OnInit {
   goTo(item:string) {
     let element : HTMLElement = document.getElementById(item);
     console.log(element.offsetTop)
-    this.scrollToSource.next({targetYPos: element.offsetTop + 130, invert: false});
+    this.scrollToSource.next({targetYPos: element.offsetTop + 150, invert: false});
 
   }
 

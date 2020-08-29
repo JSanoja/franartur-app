@@ -37,3 +37,6 @@ $franartur-app-theme: mat-light-theme($franartur-app-primary, $franartur-app-acc
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
+.swiper-button-next, .swiper-button-prev {
+  display: none !important;
+}

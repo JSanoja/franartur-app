@@ -35,16 +35,21 @@
 
         <mat-card>
           <div class="categories">               
-              <mat-card class="categories-item" *ngFor="let category of categories; let index = index" id="category-{{index}}">
+              <mat-card class="categories-item" *ngFor="let category of categories; let i = index" id="category-{{i}}">
                 <mat-card-title>{{category.title}}</mat-card-title>
                 <mat-card-content>
                   {{category.description}}
                 </mat-card-content>
-                <swiper [config]="config" [(index)]="index">
-                  <div>
-                    <img class="foto" src="assets/foto.jpg" alt="" >
-                  </div>
-                </swiper>
+                <div class="swiper-card">
+                  <swiper [config]="config" >
+                    <div>    
+                      <img  class="foto-swiper" src="assets/foto.jpg" alt="" >
+                    </div>
+                    <div>
+                      <img class="foto-swiper" src="assets/foto.jpg" alt="" >
+                    </div>
+                  </swiper>
+                </div>
                 
                 
                 <mat-card-actions>
