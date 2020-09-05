@@ -23,16 +23,16 @@ export class HomeComponent implements OnInit {
   inTransition:boolean= false;
   queFran:boolean = false;
   config: SwiperConfigInterface = {
-      a11y: false,
+      a11y: true,
       direction: 'horizontal',
-      slidesPerView: 1,
+      slidesPerView: 1.1,
       slideToClickedSlide: true,
       mousewheel: false,
       scrollbar: false,
       watchSlidesProgress: false,
       navigation: false,
       keyboard: false,
-      pagination: false,
+      pagination: true,
       centeredSlides: true,
       loop: true,
       roundLengths: true,
@@ -40,10 +40,7 @@ export class HomeComponent implements OnInit {
       slidesOffsetAfter: 0,
       spaceBetween: 0,
       breakpoints: {
-          // when window width is >= 320px
-          320: {
-              slidesPerView: 1
-          }
+          // when window width is >= 320px          
       }
   };
   categories: Array<any> = [
@@ -119,8 +116,8 @@ export class HomeComponent implements OnInit {
         interval(this.interval).pipe( //interval just creates an observable stream corresponding to time, this emits every 1/10th of a second. This can be fixed or make it dynamic depending on the distance to scroll        
           scan((acc, curr) =>  {
             this.interval = this.interval / 10
-            if (invert) return acc -50
-            return acc + 50
+            if (invert) return acc -80
+            return acc + 80
           }, window.pageYOffset), // scan takes all values from an emitted observable stream and accumulates them, here you're taking the current position, adding a scroll step (fixed at 5, though this could also be dynamic), and then so on, its like a for loop with +=, but you emit every value to the next operator which scrolls, the second argument is the start position
           takeWhile(val => {  
                      
@@ -136,8 +133,7 @@ export class HomeComponent implements OnInit {
             }
             else {
               if (val > targetYPos) {
-                this.interval = 10;
-                console.log('finish')                 
+                this.interval = 10;                
                 window.scrollTo(0,targetYPos)
                 setTimeout(()=>this.inTransition = false, 500)
                                 
@@ -177,8 +173,7 @@ export class HomeComponent implements OnInit {
   }
   goTo(item:string) {
     let element : HTMLElement = document.getElementById(item);
-    console.log(element.offsetTop)
-    this.scrollToSource.next({targetYPos: element.offsetTop + 150, invert: false});
+    this.scrollToSource.next({targetYPos: element.offsetTop + 345, invert: false});
 
   }
 

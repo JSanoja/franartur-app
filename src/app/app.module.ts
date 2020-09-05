@@ -19,11 +19,14 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BioDialogComponent } from './components/bio-dialog/bio-dialog.component';
 import { FooterLargeComponent } from './components/footer-large/footer-large.component';
-
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SwiperModule } from 'ngx-swiper-wrapper';
 import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
- 
+import { TopHeaderComponent } from './components/top-header/top-header.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatSelectModule } from '@angular/material/select';
+
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
@@ -36,7 +39,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HomeComponent,
     ActorComponent,
     BioDialogComponent,
-    FooterLargeComponent
+    FooterLargeComponent,
+    TopHeaderComponent
   ],
   entryComponents: [ BioDialogComponent ],
   imports: [
@@ -52,7 +56,11 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatCardModule,
     MatDialogModule,
     MatExpansionModule,
-    SwiperModule
+    SwiperModule,
+    FontAwesomeModule,
+    MatSelectModule,
+    FormsModule, 
+    ReactiveFormsModule,
   ],
   providers: [
     ScrollService,

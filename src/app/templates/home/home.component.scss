@@ -23,9 +23,13 @@
     .que-fran-quieres-list {
         background-color: white;
         padding-top: 0;
-        .mat-list-item:nth-child(1) {
-            border-left: 4px solid $gray;
+        .mat-list-item {
+            border-bottom: 1px solid $light-gray;
+            &:nth-child(1) {
+                border-left: 4px solid $gray;
+            }
         }
+            
     }
     .go-to-top {
         display: block;
@@ -33,6 +37,8 @@
         margin-right: auto;
         margin-top: 15px;
         margin-bottom: 15px;
+        border: 1px solid $gray;
+        line-height: 37px;
     }
     .home-1 {
         display: block;
@@ -43,11 +49,12 @@
         #homeVideo {
             position: relative;
             top:0px;
-            width: 200%;            
-            height: auto;
+            width: 100%;            
+            height: 60vh;
             z-index: 0;  
             margin-bottom: -7px;   
-            left: -50%;       
+            left: 0%;  
+            object-fit: cover;     
         }
         .fran {
             position: absolute;
@@ -79,7 +86,7 @@
             font-weight: 900;
             font-size: 20px;
             color: $light-yellow;
-            text-shadow: 3px 2px #2d2955;
+            text-shadow: 3px 2px $gray;
             &.actor {
                 top:70px;
                 left: 10px;
@@ -106,10 +113,41 @@
             // width: 100%;
         }
         .damelo-todo {
-            margin-left: auto;
+            margin-top:25px;            
             display: block;
+            border: 1px solid $purple;
+            border-radius: 0;
+            font-size: 11px;
+            font-style: normal;
+            font-stretch: normal;
+            letter-spacing: 2px;
+            line-height: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px 32px;
         }
     }
+    .main-content {
+        padding: 10px;
         
-    
+    }
+    .content {
+        padding: 30px 20px;
+        
+    }
+    .mini-bio {
+        font-size: 20px;   
+        text-align: center; 
+    }
+    .divider {
+        display: block;
+        width: 100px;
+        height: 1px;
+        background-color: $gray;
+        margin: 30px auto;
+    }
+    .category-title {
+        margin: 30px 0;
+    }
 }

@@ -25,6 +25,7 @@
             "polyfills": "src/polyfills.ts",
             "stylePreprocessorOptions":{
               "includePaths": [
+                "../node_modules/videogular2/fonts/videogular.css",
                 "./src/styles"
               ]
             },

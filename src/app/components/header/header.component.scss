@@ -5,7 +5,7 @@
     top:0;
     left:0;
     color:white;
-    z-index: 2;
+    z-index: 4;
     svg {
         outline: unset;
     }
@@ -23,8 +23,11 @@
                 width: 90px;
             }
         }
-        &.transparent {            
+        &.transparent {   
+            position: relative;
+            top: 30px;         
             .mat-toolbar-row {
+                
                 height: 56px;
                 svg {
                     width: 125px;
@@ -52,11 +55,22 @@
         width: 100vw;
         top: -100vh;
         left: 0;
+        .logo-menu {
+            margin-top: -15px;
+            margin-left: 15px;
+        }
+        .mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
+            
+        }
         .mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
             height: 35px;
+            
         }
         mat-icon.arrow-down-up {
             margin-left: auto;
+            position: relative;
+            top: 7px;
+            left: 15px;
         }
         &.active {
             //transition: opacity ease-in-out .2s;
@@ -64,9 +78,12 @@
             display: block;
             opacity: 1;
             text-transform: uppercase;
-            .mat-list-base .mat-list-item {                
+            
+            .mat-list-base .mat-list-item {  
+                           
                 opacity: 1;
                 padding-left: 0;
+                
                 &:nth-child(0) {
                     transition-delay: .2s;
                 }
@@ -95,14 +112,18 @@
         }
         .close {
             position: absolute;
-            top:17px;
-            right: 24px;
+            top:15px;
+            right: 15px;
         }
         .mat-list-base .mat-list-item {
             padding-left: 10px;
             color:white;
             opacity: 0;
             transition: all ease-in-out .3s;
+            ::ng-deep .mat-list-item-content {
+                text-align:center;
+                display: block;
+            }   
         }
     }
     app-footer {

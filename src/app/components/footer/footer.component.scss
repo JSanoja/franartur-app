@@ -8,13 +8,9 @@
     display: block;
     .social {
         display: inline-block;
-        width: 40px;
+        width: 30px;
         margin-right: 10px;
-        overflow: hidden;                
-        svg {
-            fill: white;
-            width: 100%;
-            height: auto;
-        }
+        overflow: hidden;  
+        color:white;
     }
 }

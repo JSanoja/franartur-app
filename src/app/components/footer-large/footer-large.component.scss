@@ -3,9 +3,9 @@
     width: 100%;
     background-color: $purple;
     text-align: center;
-    padding-top: 10px;
+    padding-top: 30px;
     display: block;
-    padding-bottom: 10px ;
+    padding-bottom: 30px ;
     .slogan {
         font-style: italic;
         color: white;
@@ -14,17 +14,36 @@
     }
     .social {
         display: inline-block;
-        width: 40px;
+        width: 30px;
         margin-right: 10px;
-        overflow: hidden;                
-        svg {
-            fill: white;
-            width: 100%;
-            height: auto;
-        }
+        overflow: hidden;  
+        color:white;
     }
     .copyright {
         font-size:12px;
         color:white;
+        margin-top: 10px;
+        .rights {
+            font-size: 25px;
+            line-height: 0px;
+            position: relative;
+            top: 8px;
+        }
+    }
+    .contact-button {
+        border:1px solid white;
+        border-radius: 0;
+        color:white;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 11px;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: 2px;
+        line-height: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px 32px;
     }
 }
