@@ -6,6 +6,7 @@ import { ViewportScroller, DOCUMENT } from '@angular/common';
 import { MatDialog } from '@angular/material';
 import { BioDialogComponent } from 'src/app/components/bio-dialog/bio-dialog.component';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
+import { EventsService } from 'src/app/services/events.service';
 
 
 @Component({
@@ -76,6 +77,7 @@ export class HomeComponent implements OnInit {
     private scrollService: ScrollService, 
     private vc:ViewportScroller, 
     public dialog: MatDialog,
+    private eventService : EventsService,
     @Inject(DOCUMENT) document) { }
   scroll$: Subscription;
   ngOnDestroy() {
@@ -83,6 +85,12 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {  
+    this.eventService.eventEmit$.subscribe(event => {
+      if (event.name == "goTo") {
+        this.goTo(event.action);
+      }
+      
+    })
   /* this.scroll$ = this.scrollService.scroll$.subscribe(
     (scroll) => {  
       console.log(scroll)      
@@ -154,6 +162,13 @@ export class HomeComponent implements OnInit {
     window.scrollTo(0, 0)
     let video: HTMLVideoElement = this.homeVideo.nativeElement;
     video.muted = true; 
+    video.play();
+    if (!!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2)) {
+      console.log('playing')
+    } else {
+      video.play()
+    }
+
     
   }
   scrollTo(target: ElementRef, invert:boolean): void {

@@ -8,9 +8,12 @@
     background-color: $purple;
     text-align: right;
     .social-item {
+        text-align: center;
         display: inline-block;
-        margin-right: 10px;
+        margin: 0 5px;
         margin-top: 3px;
+        min-width: 20px;
+        height: 20px;
         a {
             color:white;
         }

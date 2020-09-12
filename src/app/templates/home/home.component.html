@@ -1,7 +1,7 @@
 <div >  
     <div id="home-1" class="home-1" #home1>
       <video 
-        autoplay loop controls muted 
+        autoplay loop controls muted playsinline
         id="homeVideo" 
         #homevideo 
         data-setup="{ 'aspectRatio':'9:16', 'playbackRates': [1, 1.5, 2] }">
@@ -58,10 +58,11 @@
               </swiper>
             </div>
             <div>
-              <button class="damelo-todo" mat-button>Damelo Todo!</button>
+              <button *ngIf="category.title != 'Sircomedia'"class="damelo-todo" mat-button>¡Dámelo Todo!</button>
+              <button *ngIf="category.title == 'Sircomedia'" class="damelo-todo" mat-button>Visita Sircomedia ⟶</button>
             </div>
             
-            <div class="divider"></div>
+            <div *ngIf="i != categories.length - 1" class="divider-full"></div>
           </div> 
       </div>
       </div>

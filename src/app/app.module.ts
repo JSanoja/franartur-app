@@ -26,7 +26,7 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { TopHeaderComponent } from './components/top-header/top-header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSelectModule } from '@angular/material/select';
-
+import { EventsService } from './services/events.service'
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
@@ -64,10 +64,12 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   ],
   providers: [
     ScrollService,
+    EventsService,
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    
   ],
   bootstrap: [AppComponent]
 })

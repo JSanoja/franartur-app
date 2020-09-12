@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ScrollService } from 'src/app/services/scroll.service';
 import { MatDialog } from '@angular/material';
 import { BioDialogComponent } from '../bio-dialog/bio-dialog.component';
+import { EventsService } from 'src/app/services/events.service';
 
 @Component({
   selector: 'app-header',
@@ -12,7 +13,10 @@ export class HeaderComponent implements OnInit {
   currentScroll:number = 0;
   menuActive:boolean = false;
   queFran:boolean = false;
-  constructor(private scrollService: ScrollService, public dialog: MatDialog) { }
+  constructor(
+    private scrollService: ScrollService, 
+    public dialog: MatDialog,
+    private eventService: EventsService) { }
   
   ngOnInit() {    
     this.scrollService.scroll$.subscribe(scroll => {
@@ -33,6 +37,9 @@ export class HeaderComponent implements OnInit {
   }
   toggleMenu() {
     this.menuActive = !this.menuActive
+  }
+  goToEvent(name:string) {
+    this.eventService.emmit('goTo', name)
   }
 
 }
