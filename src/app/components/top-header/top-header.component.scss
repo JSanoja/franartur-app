@@ -20,3 +20,29 @@
     }
     
 }
+
+::ng-deep .top-select-language .mat-form-field-wrapper {
+    padding-bottom: 0 !important;
+  }
+::ng-deep .top-select-language .mat-form-field-infix {
+    padding: 0 !important;
+    border:0 !important;
+    width: 80px;
+  }
+::ng-deep .top-select-language {
+    position: relative;
+    top: -2px;
+    text-align: right;
+    .mat-select-arrow-wrapper .mat-select-arrow {
+      color: white !important;
+    }
+    .mat-select-value {
+      color: white;
+      font-size: 13px;
+      text-align: right;
+    }
+    &.mat-form-field-appearance-legacy .mat-form-field-underline {
+      height: 0;
+      display: none;
+    }
+  } 

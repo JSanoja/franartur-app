@@ -59,7 +59,8 @@
             </div>
             <div>
               <button *ngIf="category.title != 'Sircomedia'"class="damelo-todo" mat-button>¡Dámelo Todo!</button>
-              <button *ngIf="category.title == 'Sircomedia'" class="damelo-todo" mat-button>Visita Sircomedia ⟶</button>
+              <!-- <span class="arrow-right"> ⟶</span> -->
+              <button *ngIf="category.title == 'Sircomedia'" class="damelo-todo" mat-button>Visita Sircomedia <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button>
             </div>
             
             <div *ngIf="i != categories.length - 1" class="divider-full"></div>

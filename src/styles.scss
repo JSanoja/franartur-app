@@ -40,31 +40,7 @@ body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
 .swiper-button-next, .swiper-button-prev {
   display: none !important;
 }
-.top-select-language .mat-form-field-wrapper {
-  padding-bottom: 0 !important;
-}
-.top-select-language .mat-form-field-infix {
-  padding: 0 !important;
-  border:0 !important;
-  width: 80px;
-}
-.top-select-language {
-  position: relative;
-  top: -2px;
-  text-align: right;
-  .mat-select-arrow-wrapper .mat-select-arrow {
-    color: $purple;
-  }
-  .mat-select-value {
-    color: white;
-    font-size: 13px;
-    text-align: right;
-  }
-  &.mat-form-field-appearance-legacy .mat-form-field-underline {
-    height: 0;
-    display: none;
-  }
-} 
+
 :root {
   --swiper-theme-color: #2D2955 !important;
 }

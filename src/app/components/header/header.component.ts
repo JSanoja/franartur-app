@@ -37,6 +37,7 @@ export class HeaderComponent implements OnInit {
   }
   toggleMenu() {
     this.menuActive = !this.menuActive
+    this.queFran = false;
   }
   goToEvent(name:string) {
     this.eventService.emmit('goTo', name)

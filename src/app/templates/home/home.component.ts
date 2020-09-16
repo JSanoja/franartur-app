@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
   categories: Array<any> = [
     {
       title: "Actor",
-      description: "Amo actuar para todos los formatos (teatro, cine, tv, publicidad). Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones. "
+      description: "Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones, en cualquiera de sus formatos."
     },
     {
       title: "Voice Artist",
@@ -55,7 +55,7 @@ export class HomeComponent implements OnInit {
     },
     {
       title: "Speaker",
-      description: "Mis conferencias producen transformación cultural en las empresas, inspirando a través de valores, arte y risa, para que haya equipos de trabajo más éticos, más felices y más productivos."
+      description: "Mis conferencias inspiran con valores, arte y risa, para lograr personas y equipos de trabajo más éticos, más felices y más productivos. Esto es todo un propósito que hace parte de un grandioso proyecto social y educativo, mucho más amplio, que desarrollo a través de mi marca Pechos de Héroe."
     },
     {
       title: "Comediante",

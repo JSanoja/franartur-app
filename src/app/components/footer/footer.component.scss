@@ -9,8 +9,14 @@
         display: inline-block;
         width: 50px;
         margin-right: 10px;
-        overflow: hidden;  
-        color:white;
-        font-size: 24px;
+        overflow: hidden;          
+        a {
+            color:white;
+            font-size: 24px;
+        }
+    }
+    .conecta {
+        font-size: 12px;
+        margin-bottom: 10px;
     }
 }

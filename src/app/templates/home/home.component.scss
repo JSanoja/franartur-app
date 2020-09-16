@@ -134,7 +134,13 @@
             text-decoration: none;
             text-transform: uppercase;
             text-align: center;
-            padding: 10px 32px;
+            padding: 10px 60px 10px 32px;
+            position: relative;
+            .arrow-right {
+                position: absolute;
+                right: 25px;
+                top: 7px;
+            }
         }
     }
     .main-content {
