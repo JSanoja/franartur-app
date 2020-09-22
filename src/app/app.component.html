@@ -1,5 +1,7 @@
 
 <app-top-header></app-top-header>
 <app-header></app-header>
-<router-outlet (activate)="onActivate($event)"></router-outlet>
+<div class="main">
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
+</div>
 <app-footer-large></app-footer-large>

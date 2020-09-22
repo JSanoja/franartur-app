@@ -7,6 +7,8 @@
     .que-fran-quieres {
         background-color: $light-gray;
         padding-top: 0;
+        position: relative;
+        z-index: 1;
         .arrow-down-up {
             margin-left: auto;
         }
@@ -23,6 +25,7 @@
     .que-fran-quieres-list {
         background-color: white;
         padding-top: 0;
+        
         .mat-list-item {
             border-bottom: 1px solid $light-gray;
             &:nth-child(1) {
@@ -86,6 +89,15 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain; 
+        .cual-fran {
+            display: flex;  
+            flex-direction: row;
+            align-items: center;   
+            padding: 0 16px;
+            height: 48px;
+            -webkit-tap-highlight-color: transparent;            
+            width: calc(100% - 32px);
+        }
         .category-back {
             width: 100%;
         }
@@ -140,6 +152,8 @@
                 position: absolute;
                 right: 25px;
                 top: 7px;
+                transform: scaleX(1.5) scaleY(0.8);
+                color: rgb(117, 117, 117);
             }
         }
     }

@@ -1,38 +1,34 @@
-<div class="social-item" >
-    <a href="https://www.instagram.com/franarturduque/" target="_blank">
-        <fa-icon [icon]="faInstagram"></fa-icon>
-    </a>
+<div [ngClass]="{'top-scroll':currentScroll > 0}" class="top-header">
+    <div class="social-item" >
+        <a href="https://www.instagram.com/franarturduque/" target="_blank">
+            <fa-icon [icon]="faInstagram"></fa-icon>
+        </a>
+    </div>
+    <div class="social-item" >
+        <a href="https://www.facebook.com/FranarturDuque/" target="_blank">
+            <fa-icon [icon]="faFacebookF"></fa-icon>
+        </a>
+    </div>
+    <div class="social-item" >
+        <a href="https://twitter.com/FranarturDuque/" target="_blank">
+            <fa-icon [icon]="faTwitter"></fa-icon>
+        </a>
+    </div>
+    <div class="social-item" >
+        <a href="https://www.youtube.com/FranarturDuque/" target="_blank">
+            <fa-icon [icon]="faYoutube"></fa-icon>
+        </a>
+    </div>
+    <div class="social-item">    
+        <mat-form-field class="top-select-language">
+            <mat-select [formControl]="languageSelect" >
+                <mat-option value="es">
+                    Español
+                </mat-option>
+                <mat-option value="en">
+                    English
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>    
 </div>
-<div class="social-item" >
-    <a href="https://www.facebook.com/FranarturDuque/" target="_blank">
-        <fa-icon [icon]="faFacebookF"></fa-icon>
-    </a>
-</div>
-<div class="social-item" >
-    <a href="https://twitter.com/FranarturDuque/" target="_blank">
-        <fa-icon [icon]="faTwitter"></fa-icon>
-    </a>
-</div>
-<div class="social-item" >
-    <a href="https://www.youtube.com/FranarturDuque/" target="_blank">
-        <fa-icon [icon]="faYoutube"></fa-icon>
-    </a>
-</div>
-<div class="social-item">    
-    <mat-form-field class="top-select-language">
-        <mat-select [formControl]="languageSelect" >
-            <mat-option value="es">
-                Español
-            </mat-option>
-            <mat-option value="en">
-                Ingles
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-</div>
-
-    
-    
-    
-
-

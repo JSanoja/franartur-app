@@ -1,12 +1,21 @@
 @import "variables";
 :host {
-    display: block;
-    position: relative;
-    z-index: 3;
-    height: 30px;
-    width: 100%;
-    background-color: $purple;
-    text-align: right;
+    
+    .top-header {
+      display: block;
+      position: fixed;
+      top:0;
+      left: 0;
+      z-index: 3;
+      height: 30px;
+      width: 100%;
+      background-color: $dark-purple;
+      text-align: right;
+      transition: all .3s;
+      &.top-scroll {
+        top:-30px;
+      }
+    }
     .social-item {
         text-align: center;
         display: inline-block;
@@ -27,7 +36,7 @@
 ::ng-deep .top-select-language .mat-form-field-infix {
     padding: 0 !important;
     border:0 !important;
-    width: 80px;
+    width: 70px;
   }
 ::ng-deep .top-select-language {
     position: relative;
@@ -45,4 +54,11 @@
       height: 0;
       display: none;
     }
+    
   } 
+  ::ng-deep .mat-select-panel .mat-option {
+    line-height: 2em !important;
+    height: 2em !important;
+    padding: 0 0px;
+    text-align: center;
+  }

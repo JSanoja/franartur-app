@@ -1,3 +1,4 @@
+@import "variables";
 :host {
     .mat-dialog-title {
         position: relative;
@@ -6,5 +7,12 @@
             position: absolute;
             right: 0;
         }
+    }
+    .slogan {
+        border-top: 1px solid $light-gray;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-style: italic;
     }
 }

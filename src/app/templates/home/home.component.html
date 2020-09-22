@@ -11,13 +11,13 @@
       <!-- <img class="fran" src="assets/fran.png" [wmAnimate]="'fadeIn'"> -->
     </div>
     <div id="home-2" class="home-2" #home2 >
-      <mat-nav-list class="que-fran-quieres">
-        <mat-list-item (click)="queFran=!queFran"> 
+      <mat-nav-list class="que-fran-quieres">           
+        <div class="cual-fran" (click)="queFran=!queFran"> 
           ¿Cuál Fran quieres? 
           <mat-icon class="arrow-down-up">{{queFran ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</mat-icon>
-        </mat-list-item>      
+        </div>    
       </mat-nav-list>
-      <div wmAnimate="landing" speed="faster" *ngIf="queFran">
+      <div wmAnimate="fadeInDown" speed="faster" *ngIf="queFran">
         <mat-nav-list class="que-fran-quieres-list" >
           <mat-list-item (click)="goTo('category-1')"> 
             Actor     
