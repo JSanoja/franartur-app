@@ -47,8 +47,8 @@
         transition: all .1s;
 
         &.transparent{
-            // background-color: transparent;
-            //background: linear-gradient(0deg, rgba(45,41,85,0) 0%, rgba(45,41,85,0.4) 100%, rgba(45,41,85,0.4) 100%);
+            background-color: transparent;
+            background: linear-gradient(0deg, rgba(45,41,85,0) 0%, rgba(45,41,85,0.4) 100%, rgba(45,41,85,0.4) 100%);
         }
     }
     .menu-container {
