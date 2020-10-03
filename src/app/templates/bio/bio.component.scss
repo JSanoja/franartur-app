@@ -1,12 +1,11 @@
 :host {
     .showcase {
         width: 100%;
-        height: 200px;
-        background-color: aqua;
-        background-image: url('/assets/foto.jpg');
+        height: 400px;
+        background-image: url('/assets/Foto-bio.png');
         background-size: cover; 
         @media (orientation: landscape) { 
-            height: 200px;
+            height: 600px;
         }        
     }
     .content {

@@ -1,12 +1,12 @@
+@import "variables";
 :host {
     .showcase {
         width: 100%;
-        height: 200px;
-        background-color: aqua;
-        background-image: url('/assets/foto.jpg');
+        height: 56px;
+        background-color: $purple;
         background-size: cover; 
         @media (orientation: landscape) { 
-            height: 200px;
+            height: 56px;
         }        
     }
     .aditional-info {
