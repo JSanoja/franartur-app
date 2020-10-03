@@ -1,0 +1,40 @@
+<div class="showcase"></div>
+<div class="content">
+    <h1 >        
+        Team
+    </h1> 
+    <div class="sub-title">
+        Porque si hoy mis pasos son más fuertes es por el peso que mi equipo tiene. <br>Esta es mi familia, la familia FD.
+    </div>
+    <h4>
+        Agentes y Managers FD
+    </h4>
+    <div class="team-list">
+        <div class="team-item" *ngFor="let person of teamAgents">
+            <mat-card>
+                <img mat-card-image src="{{person.picture}}">                
+                <mat-card-header>                  
+                  <mat-card-title>{{person.name}}</mat-card-title>
+                  <mat-card-subtitle>{{person.subname}}</mat-card-subtitle>
+                </mat-card-header>                
+              </mat-card>
+        </div>
+    </div>
+    <h4>
+        Producción FD
+    </h4>
+    <div class="team-list">
+        <div class="team-item" *ngFor="let person of teamProductions">
+            <mat-card>
+                <img mat-card-image src="{{person.picture}}">                
+                <mat-card-header>                  
+                  <mat-card-title>{{person.name}}</mat-card-title>
+                  <mat-card-subtitle>{{person.subname}}</mat-card-subtitle>
+                </mat-card-header>                
+              </mat-card>
+        </div>
+    </div>
+    <button mat-icon-button class="go-to-top">
+        <mat-icon (click)="goToTop()">keyboard_arrow_up</mat-icon>
+    </button>
+</div>

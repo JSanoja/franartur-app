@@ -47,3 +47,38 @@ body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
 swiper >.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-first, swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-last {
   border: none !important;
 }
+.full-width {
+  width: 100%;
+}
+
+.button-box, .button-box.mat-button {
+  margin-top:25px;            
+  display: block;
+  border: 1px solid $purple;
+  border-radius: 0;
+  font-size: 11px;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: 2px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 60px 10px 32px;
+  position: relative;
+  .arrow-right {
+      position: absolute;
+      right: 25px;
+      top: 7px;
+      transform: scaleX(1.5) scaleY(0.8);
+      color: rgb(117, 117, 117);
+  }
+}
+
+.divider-full {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $mid-gray;
+  margin: 30px auto;
+}

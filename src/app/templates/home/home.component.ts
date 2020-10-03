@@ -73,13 +73,14 @@ export class HomeComponent implements OnInit {
   
   //capture the scroll event and pass to a function that triggers your own event for clarity and so you can manually trigger
   scrollToSource: Subject<any> = new Subject<any>();  
+  scroll$: Subscription;
   constructor(
     private scrollService: ScrollService, 
     private vc:ViewportScroller, 
     public dialog: MatDialog,
     private eventService : EventsService,
     @Inject(DOCUMENT) document) { }
-  scroll$: Subscription;
+ 
   ngOnDestroy() {
     // this.scroll$.unsubscribe()
   }

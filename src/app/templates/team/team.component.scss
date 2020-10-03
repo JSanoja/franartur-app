@@ -1,0 +1,48 @@
+@import "variables";
+:host {
+    .sub-title {
+        font-style: italic;
+        text-align: center;
+    }
+    .showcase {
+        width: 100%;
+        height: 56px;
+        background-color: $purple;
+        background-size: cover; 
+        @media (orientation: landscape) { 
+            height: 56px;
+        }        
+    }
+    .content {
+        padding: 10px 20px 20px;
+    }
+    .team-list {
+        .team-item {            
+            margin-bottom: 20px;
+            @media (orientation: landscape) { 
+                width: 47.5%;
+                display: inline-block;
+                margin-right: 5%;
+                vertical-align: top;
+                &:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+            ::ng-deep .mat-card-header-text {
+                margin: 0;
+            }
+            ::ng-deep .mat-card-title {
+                margin: 0;
+            }
+        }
+    }
+    .go-to-top {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        margin-bottom: 30px;
+        border: 1px solid $purple;
+        line-height: 37px;
+    }
+}

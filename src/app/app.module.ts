@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,7 +16,7 @@ import {MatCardModule} from '@angular/material/card';
 import { ActorComponent } from './templates/actor/actor.component';
 import { ScrollService } from './services/scroll.service';
 import { MatExpansionModule } from '@angular/material/expansion';
-
+import {MatInputModule} from '@angular/material/input';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BioDialogComponent } from './components/bio-dialog/bio-dialog.component';
 import { FooterLargeComponent } from './components/footer-large/footer-large.component';
@@ -26,7 +27,10 @@ import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { TopHeaderComponent } from './components/top-header/top-header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatSelectModule } from '@angular/material/select';
-import { EventsService } from './services/events.service'
+import { EventsService } from './services/events.service';
+import { BioComponent } from './templates/bio/bio.component';
+import { ContactComponent } from './templates/contact/contact.component';
+import { TeamComponent } from './templates/team/team.component'
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
@@ -40,7 +44,10 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ActorComponent,
     BioDialogComponent,
     FooterLargeComponent,
-    TopHeaderComponent
+    TopHeaderComponent,
+    BioComponent,
+    ContactComponent,
+    TeamComponent
   ],
   entryComponents: [ BioDialogComponent ],
   imports: [
@@ -55,6 +62,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatListModule,
     MatCardModule,
     MatDialogModule,
+    MatInputModule,
     MatExpansionModule,
     SwiperModule,
     FontAwesomeModule,

@@ -1,0 +1,23 @@
+:host {
+    .showcase {
+        width: 100%;
+        height: 200px;
+        background-color: aqua;
+        background-image: url('/assets/foto.jpg');
+        background-size: cover; 
+        @media (orientation: landscape) { 
+            height: 200px;
+        }        
+    }
+    .aditional-info {
+        font-size: 13px;
+    }
+    .content {
+        padding: 10px 20px 20px;
+    }
+    .contact-form {
+        .input {
+            margin-bottom: 10px;
+        }
+    }
+}
