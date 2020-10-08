@@ -37,14 +37,14 @@
         </mat-nav-list> 
       </div>      
       <div class="content">
-        <div class="mini-bio">
+        <div class="mini-bio sub-title">
           Soy un artista multifacético y empresario, amante de la comedia, que ha trabajado por más de 15 años en la industria del entretenimiento de Latinoamérica.
         </div>
         <div class="divider"></div>
         <div class="categories">               
           <div class="categories-item" *ngFor="let category of categories; let i = index" id="category-{{i+1}}">
-            <h2 class="category-title">{{category.title}}</h2>
-            <p>
+            <div class="category-title title">{{category.title}}</div>
+            <p class="text">
               {{category.description}}
             </p>
             <div class="swiper-card">
@@ -60,7 +60,7 @@
             <div>
               <button *ngIf="category.title != 'Sircomedia'"class="damelo-todo" mat-button>¡Dámelo Todo!</button>
               <!-- <span class="arrow-right"> ⟶</span> -->
-              <button *ngIf="category.title == 'Sircomedia'" class="damelo-todo" mat-button>Visita Sircomedia <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button>
+              <button *ngIf="category.title == 'Sircomedia'" class=" w-arrow damelo-todo" mat-button>Visita Sircomedia <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button>
             </div>
             
             <div *ngIf="i != categories.length - 1" class="divider-full"></div>

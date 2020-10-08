@@ -1,18 +1,8 @@
 <div class="showcase"></div>
 <div class="content">
-    <h1 >        
-        Contacto
-    </h1>
-    <p class="aditional-info">
-        Email: manager@franarturduque.com<br>
-        Redes: @franarturduque<br>
-        Instagram, Fb, Twitter, Youtube, Linkedin, IMDB, Wikipedia<br>
-        <br>
-        Teléfonos:<br>
-        Colombia +57 320 8967726<br>
-        México +52 55 18276522<br>
-        Estados Unidos +1 860 6701737<br>
-    </p>
+    <div class="title">        
+        ¡Hagamos maravillas juntos!
+    </div>   
     <div *ngIf="contactForm">        
         <form class="contact-form" [formGroup]="contactForm">
             <mat-form-field class="full-width input">
@@ -50,7 +40,16 @@
                     Introduzca un Nombre
                 </mat-error>
             </mat-form-field>
-            <button class="button-box" mat-button>Enviar <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button>
+            <button class="button-box" mat-button>Enviar</button>
           </form>          
-    </div>   
+    </div> 
+    <p class="aditional-info text">
+        Email: manager@franarturduque.com<br>
+        Redes: @franarturduque<br>        
+        <br>
+        Teléfonos:<br>
+        Colombia +57 320 8967726<br>
+        México +52 55 18276522<br>
+        Estados Unidos +1 860 6701737<br>
+    </p>  
 </div>

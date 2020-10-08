@@ -1,5 +1,9 @@
 :host {
     .main{
-        padding-top: 29px;
+        .top-background {
+            height: 29px;
+            background-color: #212051;
+        }
+        
     }
 }

@@ -17,14 +17,9 @@ export class TeamComponent implements OnInit {
       picture:"/assets/agents/1 Mafe Cortés Manager Actor Ficción.jpeg"
     },
     {
-      name:"Idealo Pez",
+      name:"Idealo Pez - Lizette Estrada",
       subname:"Manager Actor Marcas (Colombia)",
       picture:"/assets/agents/2 Idealo Pez Manager Actor Marcas .jpg"
-    },
-    {
-      name:"Lizette Estrada",
-      subname:"Manager Actor Marcas (Colombia)",
-      picture:"/assets/agents/2 Lizette Estrada_ Manager Actor Marcas.jpg"
     },
     {
       name:"Class Celebridades",
@@ -74,11 +69,6 @@ export class TeamComponent implements OnInit {
       picture:"/assets/person.png"
     },
     {
-      name: "Juan Sanoja",
-      subname:"Desarrollador Web",
-      picture:"/assets/productions/jms.jpg"
-    },
-    {
       name: "Mercedes Rodríguez",
       subname:"Traductora y Adaptadora",
       picture:"/assets/productions/13 Mercedes Rodríguez - Traductora y Adaptadora.jpg"
@@ -98,6 +88,7 @@ export class TeamComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   goToTop() {
     window.scrollTo(0, 0)  
   }
