@@ -13,6 +13,7 @@
         padding: 20px;
     }
     .team-list {
+        padding: 0 14px;
         .team-item {            
             margin-bottom: 40px;
             @media (orientation: landscape) { 
@@ -26,26 +27,16 @@
             }
             .team-image {
                 width: 100%;
-                margin-bottom: -7px;
+                
             }
             .team-title {
-                font-size: 13px;
-                line-height: 1.23;
-                letter-spacing: 2px;
-                color: #4c4d4e;
-                text-align: left;
-                text-transform: uppercase;
-                margin-top: 16px;
-                margin-bottom: 8px;
+                font-size: 22px;
+                font-weight: 600;
+                font-family: "Crimson Text";
             }
             .team-text {
-                font-size: 22px;
-                line-height: 1.27;
-                letter-spacing: -0.1px;
-                color: #181818;
-                text-align: left;
-                margin-top: 0;
-                margin-bottom: 0;
+                color: rgba(0, 0, 0, 0.54);
+                font-size: 14px;
             }
             ::ng-deep .mat-card-header-text {
                 margin: 0;

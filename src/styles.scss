@@ -87,24 +87,30 @@ swiper >.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-p
 }
 
 .title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 32px;
   line-height: 1.25;
   color: $black;
-  padding: 24px 0;
+  padding: 20px 0;
   margin: 0;
+  font-family: "Crimson Text";
 }
 .sub-title {
+  font-weight: 600;
   font-size: 26px;
   letter-spacing: -0.1px;
   line-height: 32px;
   color: $black-2;
   margin: 33px 0 15px 0px;
+  font-family: "Crimson Text";
 }
 .text {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 28px;
   color: $black-2;
   
+}
+.content {
+  padding: 20px;
 }

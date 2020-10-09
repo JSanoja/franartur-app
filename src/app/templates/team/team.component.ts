@@ -14,17 +14,17 @@ export class TeamComponent implements OnInit {
     {
       name:"Mafe Cortés",
       subname:"Manager Actor Ficción (Colombia)",
-      picture:"/assets/agents/1 Mafe Cortés Manager Actor Ficción.jpeg"
+      picture:"/assets/agents/1 Mafe Cortés Manager Actor Ficción.png"
     },
     {
       name:"Idealo Pez - Lizette Estrada",
       subname:"Manager Actor Marcas (Colombia)",
-      picture:"/assets/agents/2 Idealo Pez Manager Actor Marcas .jpg"
+      picture:"/assets/agents/2 Idealo Pez Manager Actor Marcas .png"
     },
     {
       name:"Class Celebridades",
       subname:"Manager Actor Marcas (México y Estados Unidos)",
-      picture:"/assets/agents/3 Class Celebridades - Agencia Actor Marcas (México y Estados Unidos)(1).jpg"
+      picture:"/assets/agents/3 Class Celebridades - Agencia Actor Marcas (México y Estados Unidos).png"
     },    
   ];
   teamProductions: Array<ITeam> = [
@@ -36,52 +36,52 @@ export class TeamComponent implements OnInit {
     {
       name: "Juliana Noreña",
       subname:"Promoción y Ventas",
-      picture:"/assets/productions/5 Juliana Noreña - Promoción y Ventas.jpg"
+      picture:"/assets/productions/5 Juliana Noreña - Promoción y Ventas.png"
     },
     {
       name: "Victor Diaz",
       subname:"Postproductor Audio",
-      picture:"/assets/productions/6 Victor Días - Postproductor Audio.jpeg"
+      picture:"/assets/productions/6 Victor Días - Postproductor Audio.png"
     },
-    {
+    /* {
       name: "Bernardo Garcés",
       subname:"Postproductor Video",
       picture:"/assets/person.png"
-    },
+    }, */
     {
       name: "Andrés Algeciras",
       subname:"Animador",
-      picture:"/assets/person.png"
+      picture:"/assets/productions/8 Andrés Algeciras - Animador .png"
     },
     {
       name: "Juan Sebastian",
       subname:"Diseñador",
-      picture:"/assets/person.png"
+      picture:"/assets/productions/9 Juan Sebastian - Diseñador.png"
     },
     {
       name: "Mateo Julian",
       subname:"Artista Ilustrador",
-      picture:"/assets/productions/10 Mateo Julian - Artista Ilustrador.jpg"
+      picture:"/assets/productions/10 Mateo Julian - Artista Ilustrador.png"
     },
-    {
+    /* {
       name: "Juan Ariza",
       subname:"Edición Fotográfica",
       picture:"/assets/person.png"
-    },
+    }, */
     {
       name: "Mercedes Rodríguez",
       subname:"Traductora y Adaptadora",
-      picture:"/assets/productions/13 Mercedes Rodríguez - Traductora y Adaptadora.jpg"
+      picture:"/assets/productions/13 Mercedes Rodríguez - Traductora y Adaptadora.png"
     },
-    {
+  /*   {
       name: "Luis Rodriguez",
       subname:"Capacitador de personal",
       picture:"/assets/person.png"
-    },
+    }, */
     {
       name: "Cavelier Abogados",
       subname:"Equipo legal",
-      picture:"/assets/productions/15 Cavelier Abogados Equipo legal (fondo blanco).png"
+      picture:"/assets/productions/15 Cavelier Abogados- Equipo legal (fondo negro).png"
     }
   ]
   constructor() { }
