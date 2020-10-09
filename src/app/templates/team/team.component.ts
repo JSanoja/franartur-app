@@ -48,6 +48,7 @@ export class TeamComponent implements OnInit {
       subname:"Postproductor Video",
       picture:"/assets/person.png"
     }, */
+    
     {
       name: "Andrés Algeciras",
       subname:"Animador",
