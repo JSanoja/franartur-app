@@ -19,4 +19,13 @@
             margin-bottom: 10px;
         }
     }
+    .button-box {
+        margin-top: 11px;
+        margin-bottom: 30px;
+    }
+}
+::ng-deep .contacto {
+    .contact-button {
+        display: none;
+    }
 }

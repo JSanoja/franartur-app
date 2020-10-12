@@ -31,6 +31,8 @@ import { EventsService } from './services/events.service';
 import { BioComponent } from './templates/bio/bio.component';
 import { ContactComponent } from './templates/contact/contact.component';
 import { TeamComponent } from './templates/team/team.component'
+import {MatTabsModule} from '@angular/material/tabs';
+
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
   slidesPerView: 'auto'
@@ -51,6 +53,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   ],
   entryComponents: [ BioDialogComponent ],
   imports: [
+    MatTabsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

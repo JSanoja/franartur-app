@@ -1,27 +1,29 @@
 @import "variables";
 :host {
-    background-image: url("/assets/back.jpg");
-    padding: 20px;
-    display: block;
-    mat-card {
-        margin-bottom: 80px;
-    }
-    .fran {        
-        width: 100%;
-        position: relative;
-        top: 11px;
-        @media (orientation: landscape) {
-            top: 40px;
-            width: 300px;
-            display: block;
-            margin-left: auto;
+    .category-landing {
+        position: fixed;
+        top:30px;
+        .navigation-landing {
+            position: fixed;
+            top: 120px;
+            right: 25px;
+            width: 180px;
+            .item-text {
+                color: $white;
+                font-weight: 500;
+                font-size: 26px;                
+                text-align: right;
+                margin-bottom: 10px;
+            }
+        }
+        .landing-picture {
+            width: auto;
+            height: calc(100vh - 30px);
         }
     }
-    .fran-demo {
-        width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+}
+::ng-deep .actor {
+    app-footer-large {
+        display:none;
     }
-    
 }

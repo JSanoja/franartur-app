@@ -3,46 +3,6 @@
     <div class="title">        
         ¡Hagamos maravillas juntos!
     </div>   
-    <div *ngIf="contactForm">        
-        <form class="contact-form" [formGroup]="contactForm">
-            <mat-form-field class="full-width input">
-              <mat-label>Hola Fran, mi nombre es</mat-label>
-              <input matInput formControlName="name">
-              <mat-error *ngIf="contactForm.get('name').hasError('required')">
-                Introduzca un Nombre
-                </mat-error>
-            </mat-form-field>
-            <mat-form-field class="full-width input">
-                <mat-label>Hola Fran, mi nombre es</mat-label>                                  
-                <mat-select formControlName="who">
-                    <mat-option *ngFor="let who of whoes" [value]="who">
-                      {{who}}
-                    </mat-option>
-                </mat-select>          
-                <mat-error *ngIf="contactForm.get('who').hasError('required')">
-                  Introduzca el Fran que quieres
-                </mat-error>
-            </mat-form-field>
-            <mat-form-field class="full-width input">
-                <mat-label>Mi correo es</mat-label>
-                <input matInput formControlName="email">
-                <mat-error *ngIf="contactForm.get('email').hasError('email') && !contactForm.get('email').hasError('required')">
-                    Introduzca una dirección de correo electrónico válida
-                </mat-error>
-                <mat-error *ngIf="contactForm.get('email').hasError('required')">
-                    Introduzca una dirección de correo electrónico
-                </mat-error>
-            </mat-form-field>
-            <mat-form-field class="full-width input">
-                <mat-label>Te cuento</mat-label>
-                <textarea mat-autosize="true" matAutosizeMinRows="5" class="input-area" matInput formControlName="content"></textarea>
-                <mat-error *ngIf="contactForm.get('content').hasError('required')">
-                    Introduzca un Nombre
-                </mat-error>
-            </mat-form-field>
-            <button class="button-box" mat-button>Enviar</button>
-          </form>          
-    </div> 
     <p class="aditional-info text">
         Email: manager@franarturduque.com<br>
         Redes: @franarturduque<br>        
@@ -52,4 +12,45 @@
         México +52 55 18276522<br>
         Estados Unidos +1 860 6701737<br>
     </p>  
+    <div *ngIf="contactForm">        
+        <form class="contact-form" [formGroup]="contactForm">
+            <mat-form-field class="full-width input">
+              <mat-label>Hola Fran, mi nombre es</mat-label>
+              <input matInput formControlName="name">
+              <mat-error *ngIf="contactForm.get('name').hasError('required')">
+                Introduce tu nombre
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width input">
+                <mat-label>Quiero al Fran</mat-label>                                  
+                <mat-select formControlName="who">
+                    <mat-option *ngFor="let who of whoes" [value]="who">
+                      {{who}}
+                    </mat-option>
+                </mat-select>          
+                <mat-error *ngIf="contactForm.get('who').hasError('required')">
+                    Introduce el Fran que quieres
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width input">
+                <mat-label>Mi correo es</mat-label>
+                <input matInput formControlName="email">
+                <mat-error *ngIf="contactForm.get('email').hasError('email') && !contactForm.get('email').hasError('required')">
+                    Introduce tu dirección de correo electrónico válida
+                </mat-error>
+                <mat-error *ngIf="contactForm.get('email').hasError('required')">
+                    Introduce tu dirección de correo electrónico
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width input">
+                <mat-label>Te cuento</mat-label>
+                <textarea mat-autosize="true" matAutosizeMinRows="5" class="input-area" matInput formControlName="content"></textarea>
+                <mat-error *ngIf="contactForm.get('content').hasError('required')">
+                    Introduce tu mensaje
+                </mat-error>
+            </mat-form-field>
+            <button class="button-box" mat-button>Enviar</button>
+          </form>          
+    </div> 
+    
 </div>

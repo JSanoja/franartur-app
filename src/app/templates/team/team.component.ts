@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatButton } from '@angular/material';
 export interface ITeam{
   name:string;
   subname:string;
@@ -36,7 +37,7 @@ export class TeamComponent implements OnInit {
     {
       name: "Juliana Noreña",
       subname:"Promoción y Ventas",
-      picture:"/assets/productions/5 Juliana Noreña - Promoción y Ventas.png"
+      picture:"/assets/productions/5 Juliana Noreña - Promoción y Ventas.JPG"
     },
     {
       name: "Victor Diaz",
@@ -72,26 +73,27 @@ export class TeamComponent implements OnInit {
     {
       name: "Mercedes Rodríguez",
       subname:"Traductora y Adaptadora",
-      picture:"/assets/productions/13 Mercedes Rodríguez - Traductora y Adaptadora.png"
+      picture:"/assets/productions/11 Mercedes Rodríguez - Traductora y Adaptadora.JPG"
     },
-  /*   {
+    {
       name: "Luis Rodriguez",
       subname:"Capacitador de personal",
-      picture:"/assets/person.png"
-    }, */
+      picture:"/assets/productions/12 Luis Rodriguez - Capacitador de personal.png"
+    },
     {
       name: "Cavelier Abogados",
       subname:"Equipo legal",
       picture:"/assets/productions/15 Cavelier Abogados- Equipo legal (fondo negro).png"
     }
   ]
+  @ViewChild ("goToTopRef") goToTopRef: MatButton;
   constructor() { }
 
   ngOnInit(): void {
   }
   
   goToTop() {
-    window.scrollTo(0, 0)  
+    window.scroll({top: 0, left: 0, behavior: 'smooth' });
   }
 
 }

@@ -47,7 +47,8 @@ export class HomeComponent implements OnInit {
   categories: Array<any> = [
     {
       title: "Actor",
-      description: "Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones, en cualquiera de sus formatos."
+      description: "Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones, en cualquiera de sus formatos.",
+      link:"/actor"
     },
     {
       title: "Voice Artist",
