@@ -3,15 +3,7 @@
     <div class="title">        
         ¡Hagamos maravillas juntos!
     </div>   
-    <p class="aditional-info text">
-        Email: manager@franarturduque.com<br>
-        Redes: @franarturduque<br>        
-        <br>
-        Teléfonos:<br>
-        Colombia +57 320 8967726<br>
-        México +52 55 18276522<br>
-        Estados Unidos +1 860 6701737<br>
-    </p>  
+    
     <div *ngIf="contactForm">        
         <form class="contact-form" [formGroup]="contactForm">
             <mat-form-field class="full-width input">
@@ -52,5 +44,15 @@
             <button class="button-box" mat-button>Enviar</button>
           </form>          
     </div> 
+    <p class="aditional-info text">
+        <strong>Teléfonos:</strong><br>
+        Colombia +57 320 8967726<br>
+        México +52 55 18276522<br>
+        Estados Unidos +1 860 6701737<br><br>
+        <strong>Email:</strong><br>manager@franarturduque.com<br><br>
+        <strong>Redes:</strong><br>@franarturduque<br>        
+        <br>
+        
+    </p>  
     
 </div>

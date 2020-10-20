@@ -1,0 +1,88 @@
+<div class="showcase"></div>
+<div class="content">
+    <div class="title">
+        Voice Artist
+    </div>
+    <div>
+        <p class="text">
+            Mis más de 15 años de experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas
+            y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina.
+        </p>
+        <p class="text">
+            Me especializo en conectar a través de las emociones ¿El secreto? Una voz amable y auténtica, un acento para
+            todos y sentido del humor universal.
+        </p>
+        <p class="text">
+            ¿Mis fuertes? Institucionales amables, caracterizaciones y promos, en un tono medio, edad de 20 a 38 años y
+            un acento sin regionalismos (español latino) que me permite llegar a toda Latinoamérica.
+
+        </p>
+        <p class="text">
+            Desde 2013 he sido la voz de más de 200 piezas comerciales y estoy disponible para todos los continentes,
+            ofreciendo servicio de alta calidad y a gran velocidad desde mi productora, junto a mi equipo de trabajo.
+        </p>
+    </div>    
+    <div class="audio-real">
+        <div class="sub-title audio-real-title">
+            Mi Voz - Español Latino
+        </div>
+        <swiper [config]="config" >
+            <div class="audio-item" *ngFor="let audio of audios">
+                 <div class="audio-title">
+                    {{audio.title}}
+                 </div>
+                <audio width="100%" controls controlsList="nodownload">
+                    <source src="{{audio.source}}" type="audio/mp3" />        
+                </audio>
+                <button  (click)="download(audio)" class="button-box audio-button" mat-button>Descargar</button>
+            </div>            
+          </swiper>
+          <button (click)="downloadAll()" class="button-box audio-button-all" mat-button>Descargalos todos</button>
+    </div>
+    <div class="audio-video">
+        <iframe width="100%" src="https://www.youtube.com/embed/J_XER5GxWlY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="sircomedia">
+        <div class="sub-title">
+            Sircomedia Productions
+        </div>
+        <div class="text">
+            Desde mi propia productora, con estudio adecuado acústicamente a prueba de sonido, ofrezco un servicio de alta calidad y a gran velocidad, para clientes de todos los continentes. Junto a mi excelente equipo de profesionales estoy listo para atender tus necesidades específicas.
+        </div>
+        <button [routerLink]="'/contacto'" class="button-box tomame-button" mat-button>¡Tómame ya!</button>
+    </div>
+    <div class="testimonios">
+        <div class="sub-title">
+            Testimonios
+        </div>
+        <swiper [config]="configTest" >
+            <div *ngFor="let test of tests">
+                <div class="test-item">
+                    <div class="test-message">
+                       {{test.text}}
+                       <span class="test-name">
+                           {{test.name}}
+                        </span>
+                    </div>
+                </div>
+            </div>            
+          </swiper>
+    </div>
+    <div class="marcas">
+        <div class="sub-title">
+            Marcas
+        </div>
+        Coca cola, La Especial, Del Valle, Bimbo, El Tiempo, ETB, Samsung, Davivienda, Éxito, Durex, MullenLowe SSP3, MCCann, Ogilvy, Havas, Leo Burnett
+    </div>
+    <div class="brands">
+        <mat-grid-list cols="2" rowHeight="2:2">
+            <mat-grid-tile>
+                <img src="/assets/voice-artist/10 ACL y Source Connect.png" alt="">
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img src="/assets/voice-artist/10.1 ACL y Source Connect.png" alt="">
+            </mat-grid-tile>
+        </mat-grid-list>    
+    </div>
+    
+</div>

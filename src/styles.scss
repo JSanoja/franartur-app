@@ -1,14 +1,13 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
-@import 'styles/index';
+@import "~@angular/material/theming";
+@import "styles/index";
 // Plus imports for other components in your app.
 
 $custom-typography: mat-typography-config(
-  $font-family: 'Poppins, monospace',
+  $font-family: "Poppins, monospace",
   $headline: mat-typography-level(32px, 48px, 700),
-  $body-1: mat-typography-level(16px, 24px, 500)
+  $body-1: mat-typography-level(16px, 24px, 500),
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -26,7 +25,11 @@ $franartur-app-accent: mat-palette($mat-fran-purple, 500, A100, A400);
 $franartur-app-warn: mat-palette($mat-fran-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$franartur-app-theme: mat-light-theme($franartur-app-primary, $franartur-app-accent, $franartur-app-warn);
+$franartur-app-theme: mat-light-theme(
+  $franartur-app-primary,
+  $franartur-app-accent,
+  $franartur-app-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -35,24 +38,41 @@ $franartur-app-theme: mat-light-theme($franartur-app-primary, $franartur-app-acc
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Poppins, "Helvetica Neue", sans-serif; }
-.swiper-button-next, .swiper-button-prev {
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Poppins, "Helvetica Neue", sans-serif;
+}
+.swiper-button-next,
+.swiper-button-prev {
   display: none !important;
 }
 
 :root {
-  --swiper-theme-color: #2D2955 !important;
+  --swiper-theme-color: #2d2955 !important;
 }
-swiper >.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-first, swiper>.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-pagination-bullet.swiper-pagination-bullet-last {
+swiper
+  > .swiper.s-wrapper
+  .swiper-pagination
+  .swiper-pagination-handle
+  .swiper-pagination-bullet.swiper-pagination-bullet-first,
+swiper
+  > .swiper.s-wrapper
+  .swiper-pagination
+  .swiper-pagination-handle
+  .swiper-pagination-bullet.swiper-pagination-bullet-last {
   border: none !important;
 }
 .full-width {
   width: 100%;
 }
 
-.button-box, .button-box.mat-button {
-  margin-top:25px;            
+.button-box,
+.button-box.mat-button {
+  margin-top: 25px;
   display: block;
   border: 1px solid $purple;
   border-radius: 0;
@@ -70,11 +90,11 @@ swiper >.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-p
     padding: 10px 60px 10px 32px;
   }
   .arrow-right {
-      position: absolute;
-      right: 25px;
-      top: 7px;
-      transform: scaleX(1.5) scaleY(0.8);
-      color: rgb(117, 117, 117);
+    position: absolute;
+    right: 25px;
+    top: 7px;
+    transform: scaleX(1.5) scaleY(0.8);
+    color: rgb(117, 117, 117);
   }
 }
 
@@ -91,25 +111,22 @@ swiper >.swiper.s-wrapper .swiper-pagination .swiper-pagination-handle .swiper-p
   font-size: 32px;
   line-height: 1.25;
   color: $black;
-  padding: 10px 0 10px;
   margin: 0;
   font-family: "Crimson Text";
 }
 .sub-title {
   font-weight: 600;
   font-size: 26px;
-  letter-spacing: -0.1px;
-  line-height: 32px;
+  line-height: 1.25;
   color: $black-2;
-  margin: 33px 0 15px 0px;
   font-family: "Crimson Text";
 }
 .text {
   font-size: 16px;
   font-weight: 300;
-  line-height: 28px;
+  line-height: 1.25;
   color: $black-2;
-  
+  margin: 5px 0 10px;
 }
 .content {
   padding: 20px;

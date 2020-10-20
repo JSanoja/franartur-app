@@ -1,99 +1,125 @@
-import { Component, OnInit, HostListener, ViewChild, ElementRef, OnDestroy, Inject } from '@angular/core';
-import { Subject, interval, Observable, empty, Subscription  } from 'rxjs';
-import { switchMap, scan, takeWhile, debounceTime, debounce, finalize, distinctUntilChanged, map, share } from 'rxjs/operators';
-import { ScrollService } from 'src/app/services/scroll.service';
-import { ViewportScroller, DOCUMENT } from '@angular/common';
-import { MatDialog } from '@angular/material';
-import { BioDialogComponent } from 'src/app/components/bio-dialog/bio-dialog.component';
-import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
-import { EventsService } from 'src/app/services/events.service';
-
+import {
+  Component,
+  OnInit,
+  HostListener,
+  ViewChild,
+  ElementRef,
+  OnDestroy,
+  Inject,
+} from "@angular/core";
+import { Subject, interval, Observable, empty, Subscription } from "rxjs";
+import {
+  switchMap,
+  scan,
+  takeWhile,
+  debounceTime,
+  debounce,
+  finalize,
+  distinctUntilChanged,
+  map,
+  share,
+} from "rxjs/operators";
+import { ScrollService } from "src/app/services/scroll.service";
+import { ViewportScroller, DOCUMENT } from "@angular/common";
+import { MatDialog } from "@angular/material";
+import { BioDialogComponent } from "src/app/components/bio-dialog/bio-dialog.component";
+import { SwiperConfigInterface } from "ngx-swiper-wrapper";
+import { EventsService } from "src/app/services/events.service";
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: "app-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
-  oldScroll:number = 0;
-  currentScroll:number = 0;
-  interval=10;
+  oldScroll: number = 0;
+  currentScroll: number = 0;
+  interval = 10;
   isHome: boolean;
-  current:number  = 1;
-  max:number = 3;
-  inTransition:boolean= false;
-  queFran:boolean = false;
+  current: number = 1;
+  max: number = 3;
+  inTransition: boolean = false;
+  queFran: boolean = false;
   config: SwiperConfigInterface = {
-      a11y: true,
-      direction: 'horizontal',
-      slidesPerView: 1.1,
-      slideToClickedSlide: true,
-      mousewheel: false,
-      scrollbar: false,
-      watchSlidesProgress: false,
-      navigation: false,
-      keyboard: false,
-      pagination: true,
-      centeredSlides: true,
-      loop: true,
-      roundLengths: true,
-      slidesOffsetBefore: 0,
-      slidesOffsetAfter: 0,
-      spaceBetween: 0,
-      breakpoints: {
-          // when window width is >= 320px          
-      }
+    a11y: true,
+    direction: "horizontal",
+    slidesPerView: 1.1,
+    slideToClickedSlide: true,
+    mousewheel: false,
+    scrollbar: false,
+    watchSlidesProgress: false,
+    navigation: false,
+    keyboard: false,
+    pagination: true,
+    centeredSlides: true,
+    loop: true,
+    roundLengths: true,
+    slidesOffsetBefore: 0,
+    slidesOffsetAfter: 0,
+    spaceBetween: 0,
+    breakpoints: {
+      // when window width is >= 320px
+    },
   };
   categories: Array<any> = [
     {
       title: "Actor",
-      description: "Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones, en cualquiera de sus formatos.",
-      link:"/actor"
+      description:
+        "Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones, en cualquiera de sus formatos.",
+      link: "/actor",
     },
     {
       title: "Voice Artist",
-      description: "Mi experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina. "
+      description:
+        "Mi experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina. ",
+      link: "/voice-artist",
     },
     {
       title: "Speaker",
-      description: "Mis conferencias inspiran con valores, arte y risa, para lograr personas y equipos de trabajo más éticos, más felices y más productivos. Esto es todo un propósito que hace parte de un grandioso proyecto social y educativo, mucho más amplio, que desarrollo a través de mi marca Pechos de Héroe."
+      description:
+        "Mis conferencias inspiran con valores, arte y risa, para lograr personas y equipos de trabajo más éticos, más felices y más productivos. Esto es todo un propósito que hace parte de un grandioso proyecto social y educativo, mucho más amplio, que desarrollo a través de mi marca Pechos de Héroe.",
     },
     {
       title: "Comediante",
-      description: "La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura."
+      description:
+        "La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura.",
     },
     {
       title: "Sircomedia",
-      description: "Esta es mi empresa y nace para brindar espacios amplios y diversos para la Comedia como forma de arte. Es una casa matriz de un conjunto de marcas que celebran el don universal de las risas. Justo en el instante en el que se produce una carcajada comienza nuestro universo. "
+      description:
+        "Esta es mi empresa y nace para brindar espacios amplios y diversos para la Comedia como forma de arte. Es una casa matriz de un conjunto de marcas que celebran el don universal de las risas. Justo en el instante en el que se produce una carcajada comienza nuestro universo. ",
     },
-  ]
-  @ViewChild('home1') home1: ElementRef;
-  @ViewChild('home2') home2: ElementRef;
-  @ViewChild('home3') home3: ElementRef;
-  @ViewChild('homevideo') homeVideo: ElementRef;
-  
+  ];
+  @ViewChild("home1") home1: ElementRef;
+  @ViewChild("home2") home2: ElementRef;
+  @ViewChild("home3") home3: ElementRef;
+  @ViewChild("homevideo") homeVideo: ElementRef;
+
   //capture the scroll event and pass to a function that triggers your own event for clarity and so you can manually trigger
-  scrollToSource: Subject<any> = new Subject<any>();  
+  scrollToSource: Subject<any> = new Subject<any>();
   scroll$: Subscription;
   constructor(
-    private scrollService: ScrollService, 
-    private vc:ViewportScroller, 
+    private scrollService: ScrollService,
+    private vc: ViewportScroller,
     public dialog: MatDialog,
-    private eventService : EventsService,
-    @Inject(DOCUMENT) document) { }
- 
+    private eventService: EventsService,
+    @Inject(DOCUMENT) document
+  ) {}
+
   ngOnDestroy() {
     // this.scroll$.unsubscribe()
   }
 
-  ngOnInit() {  
-    this.eventService.eventEmit$.subscribe(event => {
+  ngOnInit() {
+    console.log("init");
+    this.eventService.eventEmit$.subscribe((event) => {
       if (event.name == "goTo") {
-        this.goTo(event.action);
+        setTimeout(() => {
+          this.goTo(event.action);
+        }, 100);
       }
-      
-    })
-  /* this.scroll$ = this.scrollService.scroll$.subscribe(
+    });
+    /* this.scroll$ = this.scrollService.scroll$.subscribe(
     (scroll) => {  
       console.log(scroll)      
       this.currentScroll = scroll;
@@ -121,80 +147,88 @@ export class HomeComponent implements OnInit {
       
     }); */
 
-    this.scrollToSource.pipe(      
-      switchMap(({targetYPos, invert}) =>       
-        interval(this.interval).pipe( //interval just creates an observable stream corresponding to time, this emits every 1/10th of a second. This can be fixed or make it dynamic depending on the distance to scroll        
-          scan((acc, curr) =>  {
-            this.interval = this.interval / 10
-            if (invert) return acc -80
-            return acc + 80
-          }, window.pageYOffset), // scan takes all values from an emitted observable stream and accumulates them, here you're taking the current position, adding a scroll step (fixed at 5, though this could also be dynamic), and then so on, its like a for loop with +=, but you emit every value to the next operator which scrolls, the second argument is the start position
-          takeWhile(val => {  
-                     
-            if (invert) {
-              if (val < targetYPos) {
-                this.interval = 10;
-                console.log('finish')                 
-                window.scrollTo(0,targetYPos)
-                setTimeout(()=>this.inTransition = false, 500)
-                
-              }
-              return val > targetYPos
-            }
-            else {
-              if (val > targetYPos) {
-                this.interval = 10;                
-                window.scrollTo(0,targetYPos)
-                setTimeout(()=>this.inTransition = false, 500)
-                                
-              }
-              return val < targetYPos
-            }  
-            
-          })
-        ), // stop when you get to the target      
-      ), 
-      ).subscribe(position => {
-      //console.log(position)  
-      window.scrollTo(0, position)      
-    }); 
+    this.scrollToSource
+      .pipe(
+        switchMap(
+          ({ targetYPos, invert }) =>
+            interval(this.interval).pipe(
+              //interval just creates an observable stream corresponding to time, this emits every 1/10th of a second. This can be fixed or make it dynamic depending on the distance to scroll
+              scan((acc, curr) => {
+                this.interval = this.interval / 10;
+                if (invert) return acc - 80;
+                return acc + 80;
+              }, window.pageYOffset), // scan takes all values from an emitted observable stream and accumulates them, here you're taking the current position, adding a scroll step (fixed at 5, though this could also be dynamic), and then so on, its like a for loop with +=, but you emit every value to the next operator which scrolls, the second argument is the start position
+              takeWhile((val) => {
+                if (invert) {
+                  if (val < targetYPos) {
+                    this.interval = 10;
+                    console.log("finish");
+                    window.scrollTo(0, targetYPos);
+                    setTimeout(() => (this.inTransition = false), 500);
+                  }
+                  return val > targetYPos;
+                } else {
+                  if (val > targetYPos) {
+                    this.interval = 10;
+                    window.scrollTo(0, targetYPos);
+                    setTimeout(() => (this.inTransition = false), 500);
+                  }
+                  return val < targetYPos;
+                }
+              })
+            ) // stop when you get to the target
+        )
+      )
+      .subscribe((position) => {
+        //console.log(position)
+        window.scrollTo(0, position);
+      });
   }
-   
-  ngAfterViewInit() {
-    window.scrollTo(0, 0)
-    let video: HTMLVideoElement = this.homeVideo.nativeElement;
-    video.muted = true; 
-    video.play();
-    if (!!(video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2)) {
-      console.log('playing')
-    } else {
-      video.play()
-    }
 
-    
-  }
-  scrollTo(target: ElementRef, invert:boolean): void {
-    // this assumes you're passing in an ElementRef, it may or may not be appropriate, you can pass them to functions in templates with template variable syntax such as: <div #targetDiv>Scroll Target</div> <button (click)="scrollTo(targetDiv)">Click To Scroll</button>
-    if (target == this.home1 ) {
-      this.scrollToSource.next({targetYPos: 0, invert: invert});  
+  ngAfterViewInit() {
+    window.scrollTo(0, 0);
+    let video: HTMLVideoElement = this.homeVideo.nativeElement;
+    video.muted = true;
+    video.play();
+    if (
+      !!(
+        video.currentTime > 0 &&
+        !video.paused &&
+        !video.ended &&
+        video.readyState > 2
+      )
+    ) {
+      console.log("playing");
     } else {
-      this.scrollToSource.next({targetYPos: target.nativeElement.offsetTop, invert: invert});
+      video.play();
     }
-    
+  }
+  scrollTo(target: ElementRef, invert: boolean): void {
+    // this assumes you're passing in an ElementRef, it may or may not be appropriate, you can pass them to functions in templates with template variable syntax such as: <div #targetDiv>Scroll Target</div> <button (click)="scrollTo(targetDiv)">Click To Scroll</button>
+    if (target == this.home1) {
+      this.scrollToSource.next({ targetYPos: 0, invert: invert });
+    } else {
+      this.scrollToSource.next({
+        targetYPos: target.nativeElement.offsetTop,
+        invert: invert,
+      });
+    }
   }
   openBioDialog() {
     const dialogRef = this.dialog.open(BioDialogComponent, {
-      width: '80vw',
-      height: '80vh', 
+      width: "80vw",
+      height: "80vh",
     });
   }
-  goTo(item:string) {
-    let element : HTMLElement = document.getElementById(item);
-    this.scrollToSource.next({targetYPos: element.offsetTop + 345, invert: false});
-
+  goTo(item: string) {
+    let element: HTMLElement = document.getElementById(item);
+    this.scrollToSource.next({
+      targetYPos: element.offsetTop + 345,
+      invert: false,
+    });
   }
 
   goToTop() {
-    this.scrollToSource.next({targetYPos: 0, invert: true});
+    this.scrollToSource.next({ targetYPos: 0, invert: true });
   }
 }

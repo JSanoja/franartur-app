@@ -1,29 +1,31 @@
 @import "variables";
 :host {
-    .category-landing {
-        position: fixed;
-        top:30px;
-        .navigation-landing {
-            position: fixed;
-            top: 120px;
-            right: 25px;
-            width: 180px;
-            .item-text {
-                color: $white;
-                font-weight: 500;
-                font-size: 26px;                
-                text-align: right;
-                margin-bottom: 10px;
-            }
-        }
-        .landing-picture {
-            width: auto;
-            height: calc(100vh - 30px);
-        }
+  .category-landing {
+    position: fixed;
+    top: 30px;
+    .navigation-landing {
+      position: fixed;
+      top: 120px;
+      right: 25px;
+      width: auto;
+      .item-text {
+        color: $white;
+        font-weight: 500;
+        font-size: 17px;
+        text-align: right;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid $white;
+      }
     }
+    .landing-picture {
+      width: auto;
+      height: calc(100vh - 30px);
+    }
+  }
 }
 ::ng-deep .actor {
-    app-footer-large {
-        display:none;
-    }
+  app-footer-large {
+    display: none;
+  }
 }
