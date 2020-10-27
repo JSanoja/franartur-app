@@ -1,185 +1,182 @@
 @import "variables";
 
 :host {
-    // background-image: url("/assets/back.jpg");
-    background-size: cover;
+  // background-image: url("/assets/back.jpg");
+  background-size: cover;
+  display: block;
+  .que-fran-quieres {
+    background-color: $light-gray;
+    padding-top: 0;
+    position: relative;
+    z-index: 1;
+    .arrow-down-up {
+      margin-left: auto;
+    }
+  }
+  .foto-swiper {
+    width: 100%;
+    height: auto;
+  }
+  .swiper-card {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .que-fran-quieres-list {
+    background-color: white;
+    padding-top: 0;
+    .mat-list-item {
+      border-bottom: 1px solid $light-gray;
+      &:nth-child(1) {
+        // border-left: 4px solid $gray;
+      }
+    }
+  }
+  .go-to-top {
     display: block;
-    .que-fran-quieres {
-        background-color: $light-gray;
-        padding-top: 0;
-        position: relative;
-        z-index: 1;
-        .arrow-down-up {
-            margin-left: auto;
-        }
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    border: 1px solid $purple;
+    line-height: 37px;
+  }
+  .home-1 {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: -7px;
+    background-color: yellow;
+    // height: 480px;
+    // background-image: url("/assets/VOICE-ARTIST-MOVIL-1.jpg");
+    // background-position-y: top;
+    // background-position-x: left;
+    // background-size: cover;
+    #homeVideo {
+      position: relative;
+      top: 0px;
+      width: 100%;
+      height: 60vh;
+      z-index: 0;
+      margin-bottom: -7px;
+      left: 0%;
+      object-fit: cover;
+      @media (orientation: landscape) {
+        height: calc(90vh - 30px);
+      }
     }
-    .foto-swiper {
-        width: 100%;
-        height: auto;
+    .fran {
+      position: absolute;
+      bottom: 60px;
+      left: -42px;
+      width: 110%;
+      display: none;
+      @media (orientation: landscape) {
+        display: none;
+      }
     }
-    .swiper-card {
-        margin-left: -16px;
-        margin-right: -16px;
+  }
+  .home-2 {
+    display: block;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    // background-image: url("/assets/back.jpg");
+    // background-image: url("/assets/home-2.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    .cual-fran {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 16px;
+      height: 48px;
+      -webkit-tap-highlight-color: transparent;
+      width: calc(100% - 32px);
     }
-    
-    .que-fran-quieres-list {
-        background-color: white;
-        padding-top: 0;        
-        .mat-list-item {
-            border-bottom: 1px solid $light-gray;
-            &:nth-child(1) {
-                // border-left: 4px solid $gray;
-            }
-        }
-            
+    .category-back {
+      width: 100%;
     }
-    .go-to-top {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 0px;
-        margin-bottom: 30px;
-        border: 1px solid $purple;
-        line-height: 37px;
+    .category {
+      position: absolute;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 20px;
+      color: $light-yellow;
+      text-shadow: 3px 2px $gray;
+      &.actor {
+        top: 70px;
+        left: 10px;
+      }
+      &.voice-artist {
+        top: 70px;
+        right: 10px;
+      }
+      &.speaker {
+        bottom: 70px;
+        left: 10px;
+      }
+      &.comediante {
+        bottom: 70px;
+        right: 10px;
+      }
     }
-    .home-1 {
-        display: block;
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        margin-bottom: -7px;
-        background-color: yellow;
-        // height: 480px;
-        // background-image: url("/assets/VOICE-ARTIST-MOVIL-1.jpg");
-        // background-position-y: top;
-        // background-position-x: left;
-        // background-size: cover;
-        #homeVideo {
-            position: relative;
-            top:0px;
-            width: 100%;            
-            height: 60vh;
-            z-index: 0;  
-            margin-bottom: -7px;   
-            left: 0%;  
-            object-fit: cover;
-            @media (orientation: landscape) { 
-                height: calc(90vh - 30px);
-            }     
-        }
-        .fran {
-            position: absolute;
-            bottom: 60px;
-            left: -42px;
-            width: 110%;
-            display:none;
-            @media (orientation: landscape) { 
-                display:none;
-            }
-        }
+  }
+  .categories {
+    .categories-item {
+      margin-bottom: 20px;
     }
-    .home-2 {
-        display: block;
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        // background-image: url("/assets/back.jpg");
-        // background-image: url("/assets/home-2.jpg");
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain; 
-        .cual-fran {
-            display: flex;  
-            flex-direction: row;
-            align-items: center;   
-            padding: 0 16px;
-            height: 48px;
-            -webkit-tap-highlight-color: transparent;            
-            width: calc(100% - 32px);
-        }
-        .category-back {
-            width: 100%;
-        }
-        .category {
-            position: absolute;
-            text-transform: uppercase;
-            font-weight: 900;
-            font-size: 20px;
-            color: $light-yellow;
-            text-shadow: 3px 2px $gray;
-            &.actor {
-                top:70px;
-                left: 10px;
-            }
-            &.voice-artist {
-                top:70px;
-                right: 10px;
-            }
-            &.speaker {
-                bottom: 70px;
-                left: 10px;
-            }
-            &.comediante {
-                bottom: 70px;
-                right: 10px;
-            }
-        }   
+    .foto {
+      // width: 100%;
     }
-    .categories {
-        .categories-item {
-            margin-bottom: 20px;
-        }
-        .foto {
-            // width: 100%;
-        }
-        .damelo-todo {
-            margin-top:25px;            
-            display: block;
-            border: 1px solid $purple;
-            border-radius: 0;
-            font-size: 11px;
-            font-style: normal;
-            font-stretch: normal;
-            letter-spacing: 2px;
-            line-height: 16px;
-            text-decoration: none;
-            text-transform: uppercase;
-            text-align: center;
-            padding: 10px 32px 10px 32px;
-            position: relative;
-            &.w-arrow {
-                padding: 10px 60px 10px 32px;
-            }
-            .arrow-right {
-                position: absolute;
-                right: 25px;
-                top: 7px;
-                transform: scaleX(1.5) scaleY(0.8);
-                color: rgb(117, 117, 117);
-            }
-        }
+    .damelo-todo {
+      margin-top: 25px;
+      display: block;
+      border: 1px solid $purple;
+      border-radius: 0;
+      font-size: 11px;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: 2px;
+      line-height: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 10px 32px 10px 32px;
+      position: relative;
+      &.w-arrow {
+        padding: 10px 60px 10px 32px;
+      }
+      .arrow-right {
+        position: absolute;
+        right: 25px;
+        top: 7px;
+        transform: scaleX(1.5) scaleY(0.8);
+        color: rgb(117, 117, 117);
+      }
     }
-    .main-content {
-        padding: 10px;
-        
-    }
-    .content {
-        padding: 30px 20px 15px;
-        
-    }
-    .mini-bio {
-        font-size: 18px;   
-        text-align: center; 
-    }
-    .divider {
-        display: block;
-        width: 100px;
-        height: 1px;
-        background-color: $mid-gray;
-        margin: 30px auto;
-    }
-    
-    .category-title {
-        padding-bottom: 0;
-    }
+  }
+  .main-content {
+    padding: 10px;
+  }
+  .content {
+    padding: 30px 20px 15px;
+  }
+  .mini-bio {
+    font-size: 18px;
+    text-align: center;
+  }
+  .divider {
+    display: block;
+    width: 100px;
+    height: 1px;
+    background-color: $mid-gray;
+    margin: 30px auto;
+  }
+
+  .category-title {
+    padding-bottom: 0;
+  }
 }
