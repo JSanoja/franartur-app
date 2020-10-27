@@ -1,0 +1,47 @@
+@import "variables";
+:host {
+  height: 50px;
+  .panel-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background-color: $white;
+    z-index: 4;
+    transition: height 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    border-top: 2px solid $purple;
+
+    &.active {
+      background-color: $orange;
+      height: 100vh;
+      .open-action-panel {
+        .closed {
+          display: none;
+        }
+        .opened {
+          border-bottom: 2px solid $purple;
+          display: block;
+        }
+      }
+    }
+    .open-action-panel {
+      line-height: 50px;
+      color: $purple;
+      text-align: center;
+      .mat-icon {
+        position: relative;
+        top: 5px;
+      }
+      .closed {
+        display: block;
+      }
+      .opened {
+        display: none;
+      }
+    }
+  }
+}
+::ng-deep .panel-bottom .mat-list-item-content {
+  justify-content: center;
+}

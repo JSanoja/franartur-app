@@ -46,11 +46,12 @@ export class TeamComponent implements OnInit {
       subname: "Postproductor Audio",
       picture: "/assets/productions/6 Victor Días - Postproductor Audio.png",
     },
-    /* {
+    {
       name: "Bernardo Garcés",
-      subname:"Postproductor Video",
-      picture:"/assets/person.png"
-    }, */
+      subname: "Postproductor Video",
+      picture:
+        "/assets/productions/7 Bernardo Garcés - Postproductor Video.png",
+    },
 
     {
       name: "Andrés Algeciras",
@@ -67,11 +68,11 @@ export class TeamComponent implements OnInit {
       subname: "Artista Ilustrador",
       picture: "/assets/productions/10 Mateo Julian - Artista Ilustrador.png",
     },
-    {
-      name: "Juan Ariza",
-      subname: "Edición Fotográfica",
-      picture: "/assets/productions/10 Juan Ariza - Edición Fotográfica.jpg",
-    },
+    // {
+    //   name: "Juan Ariza",
+    //   subname: "Edición Fotográfica",
+    //   picture: "/assets/productions/10 Juan Ariza - Edición Fotográfica.jpg",
+    // },
     {
       name: "Mercedes Rodríguez",
       subname: "Traductora y Adaptadora",
@@ -105,7 +106,7 @@ export class TeamComponent implements OnInit {
       setTimeout(() => {
         window.scrollTo(0, i);
         this.smoothScroll(i - 150);
-      }, 10);
+      }, 5);
     } else {
       window.scrollTo(0, 0);
     }

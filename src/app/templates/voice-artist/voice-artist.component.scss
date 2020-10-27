@@ -16,7 +16,6 @@
     padding-bottom: 60px;
     .audio-button {
       margin: 10px 0;
-      width: 100%;
     }
     .audio-title {
       font-weight: 500;
@@ -47,7 +46,10 @@
   }
   .audio-video iframe {
     margin-top: 20px;
-    height: calc((100vw - 39px) * 9 / 16);
+    margin-left: -20px;
+    margin-right: -20px;
+    width: 100vw;
+    height: calc((100vw) * 9 / 16);
   }
   .sircomedia {
     .sub-title {
@@ -87,6 +89,28 @@
       .test-name {
         font-weight: 500;
       }
+    }
+  }
+  .client-item {
+    padding-bottom: 60px;
+    height: 100px;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    .client-name {
+      font-weight: 500;
+      text-align: center;
+      font-style: italic;
     }
   }
   .marcas {

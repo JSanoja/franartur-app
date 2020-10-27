@@ -1,0 +1,19 @@
+<div class="panel-bottom" [ngClass]="{'active':active}" (click)="toggleActive()">
+    <div class="open-action-panel">
+        <span class="closed">
+            ¿Cuál Fran quieres? <mat-icon>add</mat-icon>
+        </span>
+        <span class="opened">
+            <mat-icon>close</mat-icon>
+        </span>
+    </div>
+    <div class="opened-content">
+        <mat-nav-list class="que-fran-list">  
+            <a mat-list-item [routerLink]="'/actor'" > ACTOR </a> 
+            <a mat-list-item [routerLink]="'/voice-artist'"  > VOICE ARTIST </a>       
+            <a mat-list-item [routerLink]="'/'"  > SPEAKER </a>        
+            <a mat-list-item [routerLink]="'/'"  > COMEDIANTE </a>                
+            <a mat-list-item [routerLink]="'/'"  > SIRCOMEDIA </a>
+        </mat-nav-list>  
+    </div>
+</div>

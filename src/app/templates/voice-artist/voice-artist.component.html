@@ -5,20 +5,20 @@
     </div>
     <div>
         <p class="text">
-            Mis más de 15 años de experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas
+            <i>Mis más de 15 años de experiencia</i> en la actuación y la comedia me permite dar vida a voces diversas, frescas
             y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina.
         </p>
         <p class="text">
             Me especializo en conectar a través de las emociones ¿El secreto? Una voz amable y auténtica, un acento para
-            todos y sentido del humor universal.
+            todos y <i>sentido del humor universal.</i>
         </p>
         <p class="text">
-            ¿Mis fuertes? Institucionales amables, caracterizaciones y promos, en un tono medio, edad de 20 a 38 años y
-            un acento sin regionalismos (español latino) que me permite llegar a toda Latinoamérica.
+            ¿Mis fuertes? Institucionales amables, caracterizaciones y promos, en un tono medio, <i>edad de 20 a 38 años</i> y
+            un acento sin regionalismos <i>(español latino)</i> que me permite llegar a toda Latinoamérica.
 
         </p>
         <p class="text">
-            Desde 2013 he sido la voz de más de 200 piezas comerciales y estoy disponible para todos los continentes,
+            Desde 2013 he sido la voz de más de 200 piezas comerciales y estoy <i>disponible para todos los continentes,</i>
             ofreciendo servicio de alta calidad y a gran velocidad desde mi productora, junto a mi equipo de trabajo.
         </p>
     </div>    
@@ -26,12 +26,15 @@
         <div class="sub-title audio-real-title">
             Mi Voz - Español Latino
         </div>
-        <swiper [config]="config" >
+        <p class="text">
+            Aquí puedes disfrutar mis cinco demos y descargarlos, sólo desliza hacia el lado.
+        </p>
+        <swiper [config]="config" (indexChange)="pauseAllAudios()">
             <div class="audio-item" *ngFor="let audio of audios">
                  <div class="audio-title">
                     {{audio.title}}
                  </div>
-                <audio width="100%" controls controlsList="nodownload">
+                <audio width="100%" controls controlsList="nodownload" #audio>
                     <source src="{{audio.source}}" type="audio/mp3" />        
                 </audio>
                 <button  (click)="download(audio)" class="button-box audio-button" mat-button>Descargar</button>
@@ -51,6 +54,31 @@
         </div>
         <button [routerLink]="'/contacto'" class="button-box tomame-button" mat-button>¡Tómame ya!</button>
     </div>
+    
+    <div class="marcas">
+        <div class="sub-title">
+            Clientes
+        </div>
+        <swiper [config]="configClients" >
+            <div *ngFor="let client of clients">
+                <div class="client-item">
+                    <div class="client-name">                       
+                        {{client.name}}
+                    </div>
+                </div>
+            </div>            
+        </swiper>        
+    </div>
+    <div class="brands">
+        <mat-grid-list cols="2" rowHeight="2:2">
+            <mat-grid-tile>
+                <img src="/assets/voice-artist/10 ACL y Source Connect.png" alt="">
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img src="/assets/voice-artist/10.1 ACL y Source Connect.png" alt="">
+            </mat-grid-tile>
+        </mat-grid-list>    
+    </div>
     <div class="testimonios">
         <div class="sub-title">
             Testimonios
@@ -68,21 +96,7 @@
             </div>            
           </swiper>
     </div>
-    <div class="marcas">
-        <div class="sub-title">
-            Marcas
-        </div>
-        Coca cola, La Especial, Del Valle, Bimbo, El Tiempo, ETB, Samsung, Davivienda, Éxito, Durex, MullenLowe SSP3, MCCann, Ogilvy, Havas, Leo Burnett
-    </div>
-    <div class="brands">
-        <mat-grid-list cols="2" rowHeight="2:2">
-            <mat-grid-tile>
-                <img src="/assets/voice-artist/10 ACL y Source Connect.png" alt="">
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <img src="/assets/voice-artist/10.1 ACL y Source Connect.png" alt="">
-            </mat-grid-tile>
-        </mat-grid-list>    
-    </div>
-    
+    <br>
+    <go-to-top></go-to-top>
 </div>
+<who-fran-want></who-fran-want>

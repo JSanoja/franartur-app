@@ -1,31 +1,31 @@
 @import "variables";
 :host {
-    .showcase {
-        width: 100%;
-        height: 56px;
-        background-color: $purple;
-        background-size: cover; 
-        @media (orientation: landscape) { 
-            height: 56px;
-        }        
+  .showcase {
+    width: 100%;
+    height: 56px;
+    background-color: $purple;
+    background-size: cover;
+    @media (orientation: landscape) {
+      height: 56px;
     }
-    .aditional-info {
+  }
+  .aditional-info {
+  }
+  .content {
+    padding: 20px;
+  }
+  .contact-form {
+    .input {
+      margin-bottom: 10px;
     }
-    .content {
-        padding: 20px;
-    }
-    .contact-form {
-        .input {
-            margin-bottom: 10px;
-        }
-    }
-    .button-box {
-        margin-top: 11px;
-        margin-bottom: 30px;
-    }
+  }
+  .button-box {
+    margin-top: 0px;
+    margin-bottom: 30px;
+  }
 }
 ::ng-deep .contacto {
-    .contact-button {
-        display: none;
-    }
+  .contact-button {
+    display: none;
+  }
 }

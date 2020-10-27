@@ -1,4 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  QueryList,
+  ViewChildren,
+} from "@angular/core";
 import { SwiperConfigInterface } from "ngx-swiper-wrapper";
 declare var MediaElementPlayer;
 
@@ -8,6 +14,7 @@ declare var MediaElementPlayer;
   styleUrls: ["./voice-artist.component.scss"],
 })
 export class VoiceArtistComponent implements OnInit {
+  @ViewChildren("audio") audiosRef: QueryList<any>;
   config: SwiperConfigInterface = {
     a11y: true,
     direction: "horizontal",
@@ -19,8 +26,8 @@ export class VoiceArtistComponent implements OnInit {
     navigation: false,
     keyboard: false,
     pagination: true,
-    centeredSlides: true,
-    loop: true,
+    centeredSlides: false,
+    loop: false,
     roundLengths: true,
     slidesOffsetBefore: 0,
     slidesOffsetAfter: 0,
@@ -41,8 +48,30 @@ export class VoiceArtistComponent implements OnInit {
     navigation: false,
     keyboard: false,
     pagination: true,
-    centeredSlides: true,
-    loop: true,
+    centeredSlides: false,
+    loop: false,
+    roundLengths: true,
+    slidesOffsetBefore: 0,
+    slidesOffsetAfter: 0,
+    spaceBetween: 0,
+    breakpoints: {
+      // when window width is >= 320px
+    },
+  };
+  configClients: SwiperConfigInterface = {
+    autoHeight: true, //enable auto height
+    a11y: true,
+    direction: "horizontal",
+    slidesPerView: 2,
+    slideToClickedSlide: true,
+    mousewheel: false,
+    scrollbar: false,
+    watchSlidesProgress: false,
+    navigation: false,
+    keyboard: false,
+    pagination: true,
+    centeredSlides: false,
+    loop: false,
     roundLengths: true,
     slidesOffsetBefore: 0,
     slidesOffsetAfter: 0,
@@ -106,7 +135,7 @@ export class VoiceArtistComponent implements OnInit {
       text: "“Yo era un tipo normal hasta que conocí a Franártur Duque”.",
     },
   ];
-  marcas: Array<any> = [
+  clients: Array<any> = [
     {
       name: "Coca cola",
       url: "",
@@ -188,5 +217,14 @@ export class VoiceArtistComponent implements OnInit {
     document.body.appendChild(link);
     link.click();
     link.remove();
+  }
+  pauseAllAudios() {
+    console.log(this.audiosRef.toArray());
+    this.audiosRef.toArray().forEach((a: ElementRef) => {
+      a.nativeElement.pause();
+      setTimeout(() => {
+        a.nativeElement.pause();
+      }, 100);
+    });
   }
 }

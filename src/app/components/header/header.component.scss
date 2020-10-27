@@ -1,167 +1,176 @@
 @import "variables";
 :host {
-    header {
-        width: 100%;
-        position: fixed;
-        top:0;
-        left:0;
-        color:white;
-        z-index: 4;
-        transition: all .3s;
-        &.top-scroll {
-            top:30px;
-        }
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 4;
+    transition: all 0.3s;
+    &.top-scroll {
+      top: 30px;
     }
-    .menu-icon {
-        transform: scale(1.3,1);
+    &.active {
+      z-index: 8;
     }
-    svg {
-        outline: unset;
-    }
-    .example-spacer {
-        flex: 1 1 auto;
+  }
+  .menu-icon {
+    transform: scale(1.3, 1);
+  }
+  svg {
+    outline: unset;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .sidenav {
+    min-width: 80%;
+  }
+  .mat-toolbar-multiple-rows {
+    min-height: 36px;
+    .mat-toolbar-row {
+      height: 36px;
+      svg {
+        width: 90px;
       }
-    .sidenav {
-        min-width: 80%;  
     }
-    .mat-toolbar-multiple-rows {        
-        min-height: 36px;
-        .mat-toolbar-row {
-            height: 36px;
-            svg {
-                width: 90px;
-            }
+    &.transparent {
+      position: relative;
+      .mat-toolbar-row {
+        height: 56px;
+        svg {
+          width: 125px;
         }
-        &.transparent {   
-            position: relative;
-            .mat-toolbar-row {
-                
-                height: 56px;
-                svg {
-                    width: 125px;
-                }
-            }
-        }
+      }
     }
-    mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-multiple-rows {
-        transition: all .1s;
+  }
+  mat-toolbar.mat-toolbar.mat-primary.mat-toolbar-multiple-rows {
+    transition: all 0.1s;
 
-        &.transparent{
-            background-color: transparent;
-            background: linear-gradient(0deg, rgba(45,41,85,0) 0%, rgba(45,41,85,0.4) 100%, rgba(45,41,85,0.4) 100%);
-        }
+    &.transparent {
+      background-color: transparent;
+      background: linear-gradient(
+        0deg,
+        rgba(45, 41, 85, 0) 0%,
+        rgba(45, 41, 85, 0.4) 100%,
+        rgba(45, 41, 85, 0.4) 100%
+      );
     }
-    .menu-container {
+  }
+  .menu-container {
+    display: block;
+    padding-top: 30px;
+    opacity: 0;
+    transition: opacity ease-in-out 0.2s;
+    background-color: $purple;
+    color: white;
+    position: fixed;
+    height: calc(100vh - 30px);
+    width: 100vw;
+    top: -100vh;
+    left: 0;
+    .logo-menu {
+      margin-top: -15px;
+      margin-left: 15px;
+    }
+    .mat-list-base .mat-list-item .mat-list-item-content,
+    .mat-list-base .mat-list-option .mat-list-item-content {
+    }
+    .mat-list-base .mat-list-item,
+    .mat-list-base .mat-list-option {
+      height: 35px;
+    }
+    mat-icon.arrow-down-up {
+      position: absolute;
+      right: 20px;
+    }
+    &.active {
+      //transition: opacity ease-in-out .2s;
+      top: 0;
+      display: block;
+      opacity: 1;
+      text-transform: uppercase;
+      .mat-list-base {
+        padding-top: 50px;
+        @media (orientation: landscape) {
+          padding-top: 20px;
+        }
+      }
+
+      .mat-list-base .mat-list-item {
+        opacity: 1;
+        padding-left: 0;
+
+        &:nth-child(0) {
+          transition-delay: 0.2s;
+        }
+        &:nth-child(1) {
+          transition-delay: 0.3s;
+        }
+        &:nth-child(2) {
+          transition-delay: 0.4s;
+        }
+        &:nth-child(3) {
+          transition-delay: 0.5s;
+        }
+        &:nth-child(4) {
+          transition-delay: 0.6s;
+        }
+        &:nth-child(5) {
+          transition-delay: 0.7s;
+        }
+        &:nth-child(6) {
+          transition-delay: 0.8s;
+        }
+      }
+      .que-fran {
+        opacity: 1;
+        padding-left: 0;
+        transition-delay: 0.8s;
+      }
+      .que-fran-list {
+        padding-top: 10px;
+        @media (orientation: landscape) {
+          padding-bottom: 50px;
+        }
+      }
+    }
+    .list {
+      overflow: auto;
+      height: 80vh;
+    }
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+    .mat-list-base .mat-list-item {
+      padding-left: 10px;
+      color: white;
+      opacity: 0;
+      transition: all ease-in-out 0.3s;
+      ::ng-deep .mat-list-item-content {
+        text-align: center;
         display: block;
-        padding-top: 30px;
-        opacity: 0;
-        transition: opacity ease-in-out .2s;
-        background-color: $purple;
-        color:white;
-        position: fixed;
-        height: calc(100vh - 30px);
-        width: 100vw;
-        top: -100vh;
-        left: 0;
-        .logo-menu {
-            margin-top: -15px;
-            margin-left: 15px;
-        }
-        .mat-list-base .mat-list-item .mat-list-item-content, .mat-list-base .mat-list-option .mat-list-item-content {
-            
-        }
-        .mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
-            height: 35px;
-            
-        }
-        mat-icon.arrow-down-up {           
-            position: absolute;
-            right: 20px;
-        }
-        &.active {
-            //transition: opacity ease-in-out .2s;
-            top: 0;
-            display: block;
-            opacity: 1;
-            text-transform: uppercase;
-            .mat-list-base {
-                padding-top: 50px;
-                @media (orientation: landscape) { 
-                    padding-top: 20px;
-                } 
-            }
-            
-            .mat-list-base .mat-list-item {  
-                           
-                opacity: 1;
-                padding-left: 0;
-                
-                &:nth-child(0) {
-                    transition-delay: .2s;
-                }
-                &:nth-child(1) {
-                    transition-delay: .3s;
-                }
-                &:nth-child(2) {
-                    transition-delay: .4s;
-                }
-                &:nth-child(3) {
-                    transition-delay: .5s;
-                }
-                &:nth-child(4) {
-                    transition-delay: .6s;
-                }
-                &:nth-child(5) {
-                    transition-delay: .7s;
-                }
-                &:nth-child(6) {
-                    transition-delay: .8s;
-                }
-            }
-            .que-fran {
-                opacity: 1;
-                padding-left: 0;
-                transition-delay: .8s;
-            }
-            .que-fran-list {
-                padding-top: 10px;
-                @media (orientation: landscape) {                    
-                    padding-bottom: 50px;
-                }
-            }
-        }
-        .list {
-            overflow: auto;
-            height: 80vh;
-        }
-        .close {
-            position: absolute;
-            top:15px;
-            right: 15px;
-        }
-        .mat-list-base .mat-list-item {
-            padding-left: 10px;
-            color:white;
-            opacity: 0;
-            transition: all ease-in-out .3s;
-            ::ng-deep .mat-list-item-content {
-                text-align:center;
-                display: block;
-            }   
-        }
-        .que-fran {
-            opacity: 0;
-            padding-left: 10px;
-            text-align:center;
-            display: block;
-            
-            transition: all ease-in-out .3s;
-        }
+      }
     }
-    app-footer {
-        position: fixed;
-        bottom:0;
-        left:0;
-    }
+    .que-fran {
+      opacity: 0;
+      padding-left: 10px;
+      text-align: center;
+      display: block;
 
+      transition: all ease-in-out 0.3s;
+    }
+  }
+  app-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
 }

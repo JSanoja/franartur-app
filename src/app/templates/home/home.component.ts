@@ -21,7 +21,7 @@ import {
 } from "rxjs/operators";
 import { ScrollService } from "src/app/services/scroll.service";
 import { ViewportScroller, DOCUMENT } from "@angular/common";
-import { MatDialog } from "@angular/material";
+import { MatButton, MatDialog } from "@angular/material";
 import { BioDialogComponent } from "src/app/components/bio-dialog/bio-dialog.component";
 import { SwiperConfigInterface } from "ngx-swiper-wrapper";
 import { EventsService } from "src/app/services/events.service";
@@ -51,8 +51,8 @@ export class HomeComponent implements OnInit {
     navigation: false,
     keyboard: false,
     pagination: true,
-    centeredSlides: true,
-    loop: true,
+    centeredSlides: false,
+    loop: false,
     roundLengths: true,
     slidesOffsetBefore: 0,
     slidesOffsetAfter: 0,
@@ -67,33 +67,42 @@ export class HomeComponent implements OnInit {
       description:
         "Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones, en cualquiera de sus formatos.",
       link: "/actor",
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
     {
       title: "Voice Artist",
       description:
         "Mi experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina. ",
       link: "/voice-artist",
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
     {
       title: "Speaker",
       description:
         "Mis conferencias inspiran con valores, arte y risa, para lograr personas y equipos de trabajo más éticos, más felices y más productivos. Esto es todo un propósito que hace parte de un grandioso proyecto social y educativo, mucho más amplio, que desarrollo a través de mi marca Pechos de Héroe.",
+      link: "",
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
     {
       title: "Comediante",
       description:
         "La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura.",
+      link: "",
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
     {
       title: "Sircomedia",
       description:
         "Esta es mi empresa y nace para brindar espacios amplios y diversos para la Comedia como forma de arte. Es una casa matriz de un conjunto de marcas que celebran el don universal de las risas. Justo en el instante en el que se produce una carcajada comienza nuestro universo. ",
+      link: "",
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
   ];
   @ViewChild("home1") home1: ElementRef;
   @ViewChild("home2") home2: ElementRef;
   @ViewChild("home3") home3: ElementRef;
   @ViewChild("homevideo") homeVideo: ElementRef;
+  @ViewChild("goToTopRef") goToTopRef: MatButton;
 
   //capture the scroll event and pass to a function that triggers your own event for clarity and so you can manually trigger
   scrollToSource: Subject<any> = new Subject<any>();
@@ -116,7 +125,7 @@ export class HomeComponent implements OnInit {
       if (event.name == "goTo") {
         setTimeout(() => {
           this.goTo(event.action);
-        }, 100);
+        }, 200);
       }
     });
     /* this.scroll$ = this.scrollService.scroll$.subscribe(
@@ -228,7 +237,21 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  // goToTop() {
+  //   this.scrollToSource.next({ targetYPos: 0, invert: true });
+  // }
   goToTop() {
-    this.scrollToSource.next({ targetYPos: 0, invert: true });
+    this.smoothScroll(this.goToTopRef._elementRef.nativeElement.offsetTop);
+  }
+  smoothScroll(h) {
+    let i = h || 0;
+    if (i >= 0) {
+      setTimeout(() => {
+        window.scrollTo(0, i);
+        this.smoothScroll(i - 150);
+      }, 5);
+    } else {
+      window.scrollTo(0, 0);
+    }
   }
 }

@@ -48,13 +48,10 @@
               {{category.description}}
             </p>
             <div class="swiper-card">
-              <swiper [config]="config" >
-                <div>    
-                  <img  class="foto-swiper" src="assets/foto.jpg" alt="" >
-                </div>
-                <div>
-                  <img class="foto-swiper" src="assets/foto.jpg" alt="" >
-                </div>
+              <swiper [config]="config" [useSwiperClass]="'categories-swiper-'+(i+1)">
+                <div *ngFor="let photo of category.photos">    
+                  <img class="foto-swiper" src="{{photo}}" alt="" >
+                </div>                
               </swiper>
             </div>
             <div>
@@ -66,11 +63,6 @@
           </div> 
       </div>
       </div>
-          
-          
-        <button mat-icon-button class="go-to-top">
-          <mat-icon (click)="goToTop()">keyboard_arrow_up</mat-icon>
-        </button>
-        
+      <go-to-top></go-to-top>
     </div>   
 </div>
