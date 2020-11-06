@@ -9,21 +9,28 @@
     width: 100%;
     background-color: $white;
     z-index: 4;
-    transition: height 0.2s ease-in-out, background-color 0.2s ease-in-out;
-    border-top: 2px solid $purple;
+    transition: height 0s ease-in-out, background-color 0.2s ease-in-out;
+    border-top: 1px solid $purple;
 
     &.active {
       background-color: $orange;
       height: 100vh;
       .open-action-panel {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         .closed {
           display: none;
         }
         .opened {
-          border-bottom: 2px solid $purple;
+          border-bottom: 1px solid $purple;
           display: block;
         }
       }
+    }
+    .opened-content {
+      padding-top: 100px;
     }
     .open-action-panel {
       line-height: 50px;
@@ -35,6 +42,14 @@
       }
       .closed {
         display: block;
+        font-size: 11px;
+        font-style: normal;
+        font-stretch: normal;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
       }
       .opened {
         display: none;
@@ -44,4 +59,9 @@
 }
 ::ng-deep .panel-bottom .mat-list-item-content {
   justify-content: center;
+  font-weight: 600;
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: $white;
 }

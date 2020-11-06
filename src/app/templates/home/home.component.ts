@@ -63,6 +63,13 @@ export class HomeComponent implements OnInit {
   };
   categories: Array<any> = [
     {
+      title: "Director",
+      description:
+        "Como Director uso el lenguaje de la comedia para transmitir ideas en todos los formatos. A cada proyecto le imprimo el tratamiento artístico y cinematográfico necesario, para lograr productos de comedia pocas veces vistos en Latam.",
+      link: "/director",
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
+    },
+    {
       title: "Actor",
       description:
         "Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones, en cualquiera de sus formatos.",

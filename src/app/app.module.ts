@@ -39,6 +39,7 @@ import { VoiceArtistComponent } from "./templates/voice-artist/voice-artist.comp
 import { MatGridListModule } from "@angular/material/grid-list";
 import { GoToTopComponent } from './components/go-to-top/go-to-top.component';
 import { WhoFranWantComponent } from './components/who-fran-want/who-fran-want.component';
+import { ActorFiccionComponent } from './templates/actor/actor-ficcion/actor-ficcion.component';
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
@@ -60,6 +61,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     VoiceArtistComponent,
     GoToTopComponent,
     WhoFranWantComponent,
+    ActorFiccionComponent,
   ],
   entryComponents: [BioDialogComponent],
   imports: [

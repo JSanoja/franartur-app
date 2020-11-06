@@ -14,6 +14,7 @@
   }
   .audio-item {
     padding-bottom: 60px;
+    padding-top: 15px;
     .audio-button {
       margin: 10px 0;
     }
@@ -38,10 +39,11 @@
     }
   }
   .audio-real-title {
-    margin-top: 20px;
+    margin-top: 40px;
+    margin-bottom: 10px;
   }
   .audio-button-all {
-    margin: 10px 0;
+    margin: 53px 0 30px;
     width: 100%;
   }
   .audio-video iframe {
@@ -52,16 +54,19 @@
     height: calc((100vw) * 9 / 16);
   }
   .sircomedia {
+    margin-bottom: 40px;
     .sub-title {
-      margin-top: 10px;
+      margin-top: 20px;
+      margin-bottom: 15px;
     }
     .tomame-button {
       background-color: $light-gray;
     }
   }
   .testimonios {
+    margin-bottom: 20px;
     .sub-title {
-      margin-top: 20px;
+      margin-top: 30px;
       margin-bottom: -10px;
     }
 

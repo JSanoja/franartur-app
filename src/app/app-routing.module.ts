@@ -6,12 +6,18 @@ import { BioComponent } from "./templates/bio/bio.component";
 import { ContactComponent } from "./templates/contact/contact.component";
 import { TeamComponent } from "./templates/team/team.component";
 import { VoiceArtistComponent } from "./templates/voice-artist/voice-artist.component";
+import { ActorFiccionComponent } from "./templates/actor/actor-ficcion/actor-ficcion.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
   { path: "bio", component: BioComponent },
   { path: "contacto", component: ContactComponent },
-  { path: "actor", component: ActorComponent },
+  {
+    path: "actor",
+    component: ActorComponent,
+    children: [],
+  },
+  { path: "actor/actor-ficcion", component: ActorFiccionComponent },
   { path: "team", component: TeamComponent },
   { path: "voice-artist", component: VoiceArtistComponent },
 ];

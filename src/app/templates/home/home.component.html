@@ -19,6 +19,9 @@
       </mat-nav-list>
       <div wmAnimate="fadeInDown" speed="faster" *ngIf="queFran">
         <mat-nav-list class="que-fran-quieres-list" >
+          <mat-list-item (click)="goTo('category-0')"> 
+            Director     
+          </mat-list-item>
           <mat-list-item (click)="goTo('category-1')"> 
             Actor     
           </mat-list-item>
@@ -42,7 +45,7 @@
         </div>
         <div class="divider"></div>
         <div class="categories">               
-          <div class="categories-item" *ngFor="let category of categories; let i = index" id="category-{{i+1}}">
+          <div class="categories-item" *ngFor="let category of categories; let i = index" id="category-{{i}}">
             <div class="category-title title">{{category.title}}</div>
             <p class="text">
               {{category.description}}
@@ -55,11 +58,11 @@
               </swiper>
             </div>
             <div>
-              <button [routerLink]="category.link" *ngIf="category.title != 'Sircomedia'"class="damelo-todo" mat-button>¡Dámelo Todo!</button>
+              <button [routerLink]="category.link" class="damelo-todo" mat-button>¡Dámelo Todo!</button>
               <!-- <span class="arrow-right"> ⟶</span> -->
-              <button [routerLink]="category.link"  *ngIf="category.title == 'Sircomedia'" class=" w-arrow damelo-todo" mat-button>Visita Sircomedia <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button>
+              <!-- <button [routerLink]="category.link"  *ngIf="category.title == 'Sircomedia'" class=" w-arrow damelo-todo" mat-button>Visita Sircomedia <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button> -->
             </div>            
-            <div *ngIf="i != categories.length - 1" class="divider-full"></div>
+            <!-- <div *ngIf="i != categories.length - 1" class="divider-full"></div> -->
           </div> 
       </div>
       </div>

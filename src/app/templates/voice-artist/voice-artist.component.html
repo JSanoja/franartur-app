@@ -5,20 +5,20 @@
     </div>
     <div>
         <p class="text">
-            <i>Mis más de 15 años de experiencia</i> en la actuación y la comedia me permite dar vida a voces diversas, frescas
+            Mis más de 15 años de experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas
             y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina.
         </p>
         <p class="text">
             Me especializo en conectar a través de las emociones ¿El secreto? Una voz amable y auténtica, un acento para
-            todos y <i>sentido del humor universal.</i>
+            todos y sentido del humor universal.
         </p>
         <p class="text">
-            ¿Mis fuertes? Institucionales amables, caracterizaciones y promos, en un tono medio, <i>edad de 20 a 38 años</i> y
-            un acento sin regionalismos <i>(español latino)</i> que me permite llegar a toda Latinoamérica.
+            ¿Mis fuertes? Institucionales amables, caracterizaciones y promos, en un tono medio, edad de 20 a 38 años y
+            un acento sin regionalismos (español latino) que me permite llegar a toda Latinoamérica.
 
         </p>
         <p class="text">
-            Desde 2013 he sido la voz de más de 200 piezas comerciales y estoy <i>disponible para todos los continentes,</i>
+            Desde 2013 he sido la voz de más de 200 piezas comerciales y estoy disponible para todos los continentes,
             ofreciendo servicio de alta calidad y a gran velocidad desde mi productora, junto a mi equipo de trabajo.
         </p>
     </div>    
@@ -39,8 +39,11 @@
                 </audio>
                 <button  (click)="download(audio)" class="button-box audio-button" mat-button>Descargar</button>
             </div>            
+            <div class="audio-item">
+                <button (click)="downloadAll()" class="button-box audio-button-all" mat-button>Descargalos todos</button>
+            </div>
           </swiper>
-          <button (click)="downloadAll()" class="button-box audio-button-all" mat-button>Descargalos todos</button>
+          
     </div>
     <div class="audio-video">
         <iframe width="100%" src="https://www.youtube.com/embed/J_XER5GxWlY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -69,16 +72,7 @@
             </div>            
         </swiper>        
     </div>
-    <div class="brands">
-        <mat-grid-list cols="2" rowHeight="2:2">
-            <mat-grid-tile>
-                <img src="/assets/voice-artist/10 ACL y Source Connect.png" alt="">
-            </mat-grid-tile>
-            <mat-grid-tile>
-                <img src="/assets/voice-artist/10.1 ACL y Source Connect.png" alt="">
-            </mat-grid-tile>
-        </mat-grid-list>    
-    </div>
+    
     <div class="testimonios">
         <div class="sub-title">
             Testimonios
@@ -95,6 +89,16 @@
                 </div>
             </div>            
           </swiper>
+    </div>
+    <div class="brands">
+        <mat-grid-list cols="2" rowHeight="2:2">
+            <mat-grid-tile>
+                <img src="/assets/voice-artist/10 ACL y Source Connect.png" alt="">
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <img src="/assets/voice-artist/10.1 ACL y Source Connect.png" alt="">
+            </mat-grid-tile>
+        </mat-grid-list>    
     </div>
     <br>
     <go-to-top></go-to-top>

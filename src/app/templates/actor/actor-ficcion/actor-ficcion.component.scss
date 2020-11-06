@@ -1,0 +1,15 @@
+@import "variables";
+:host {
+  .showcase {
+    width: 100%;
+    height: calc(100vw * (4 / 3));
+    background-image: url("/assets/PORTADA+MENU-MOVIL-7.jpg");
+    background-size: cover;
+    @media (orientation: landscape) {
+      height: calc(100vw * (4 / 3));
+    }
+  }
+  .content {
+    padding: 20px;
+  }
+}

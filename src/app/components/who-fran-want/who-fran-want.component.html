@@ -1,14 +1,15 @@
-<div class="panel-bottom" [ngClass]="{'active':active}" (click)="toggleActive()">
+<div class="panel-bottom" [ngClass]="{'active':active}" >
     <div class="open-action-panel">
-        <span class="closed">
-            ¿Cuál Fran quieres? <mat-icon>add</mat-icon>
+        <span class="closed" (click)="toggleActive()">
+            ¿Cuál Fran quieres? +
         </span>
-        <span class="opened">
+        <span class="opened" (click)="toggleActive()">
             <mat-icon>close</mat-icon>
         </span>
     </div>
     <div class="opened-content">
         <mat-nav-list class="que-fran-list">  
+            <a mat-list-item [routerLink]="'/director'" > DIRECTOR </a> 
             <a mat-list-item [routerLink]="'/actor'" > ACTOR </a> 
             <a mat-list-item [routerLink]="'/voice-artist'"  > VOICE ARTIST </a>       
             <a mat-list-item [routerLink]="'/'"  > SPEAKER </a>        
