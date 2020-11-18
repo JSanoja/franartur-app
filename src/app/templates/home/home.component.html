@@ -1,71 +1,80 @@
-<div >  
-    <div id="home-1" class="home-1" #home1>
-      <video 
-        autoplay loop controls muted playsinline
-        id="homeVideo" 
-        #homevideo 
-        data-setup="{ 'aspectRatio':'9:16', 'playbackRates': [1, 1.5, 2] }">
-        <source src="/assets/entrada.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-      </video>
-      <!-- <img class="fran" src="assets/fran.png" [wmAnimate]="'fadeIn'"> -->
-    </div>
-    <div id="home-2" class="home-2" #home2 >
-      <mat-nav-list class="que-fran-quieres">           
-        <div class="cual-fran" (click)="queFran=!queFran"> 
-          ¿Cuál Fran quieres? 
-          <mat-icon class="arrow-down-up">{{queFran ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}}</mat-icon>
-        </div>    
+<div>
+  <div id="home-1" class="home-1" #home1>
+    <video
+      autoplay
+      loop
+      controls
+      muted
+      playsinline
+      id="homeVideo"
+      #homevideo
+      data-setup="{ 'aspectRatio':'9:16', 'playbackRates': [1, 1.5, 2] }"
+    >
+      <source src="/assets/entrada.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
+    </video>
+    <!-- <img class="fran" src="assets/fran.png" [wmAnimate]="'fadeIn'"> -->
+  </div>
+  <div id="home-2" class="home-2" #home2>
+    <mat-nav-list class="que-fran-quieres">
+      <div class="cual-fran" (click)="queFran = !queFran">
+        ¿Cuál Fran quieres?
+        <mat-icon class="arrow-down-up">{{
+          queFran ? "keyboard_arrow_up" : "keyboard_arrow_down"
+        }}</mat-icon>
+      </div>
+    </mat-nav-list>
+    <div wmAnimate="fadeInDown" speed="faster" *ngIf="queFran">
+      <mat-nav-list class="que-fran-quieres-list">
+        <mat-list-item (click)="goTo('category-0')"> Director </mat-list-item>
+        <mat-list-item (click)="goTo('category-1')"> Actor </mat-list-item>
+        <mat-list-item (click)="goTo('category-2')"> Comediante </mat-list-item>
+        <mat-list-item (click)="goTo('category-3')">
+          Voice Artist
+        </mat-list-item>
+        <mat-list-item (click)="goTo('category-4')"> Speaker </mat-list-item>
+
+        <mat-list-item (click)="goTo('category-5')"> Sircomedia </mat-list-item>
       </mat-nav-list>
-      <div wmAnimate="fadeInDown" speed="faster" *ngIf="queFran">
-        <mat-nav-list class="que-fran-quieres-list" >
-          <mat-list-item (click)="goTo('category-0')"> 
-            Director     
-          </mat-list-item>
-          <mat-list-item (click)="goTo('category-1')"> 
-            Actor     
-          </mat-list-item>
-          <mat-list-item (click)="goTo('category-2')"> 
-            Voice Artist     
-          </mat-list-item>
-          <mat-list-item (click)="goTo('category-3')"> 
-            Speaker      
-          </mat-list-item>
-          <mat-list-item (click)="goTo('category-4')"> 
-            Comediante     
-          </mat-list-item>
-          <mat-list-item (click)="goTo('category-5')"> 
-            Sircomedia    
-          </mat-list-item>
-        </mat-nav-list> 
-      </div>      
-      <div class="content">
-        <div class="mini-bio text">
-          Soy un artista multifacético y empresario, amante de la comedia, que ha trabajado por más de 15 años en la industria del entretenimiento de Latinoamérica.
+    </div>
+    <div class="content">
+      <div class="mini-bio text">
+        Soy un artista multifacético y empresario, amante de la comedia, que ha
+        trabajado por más de 15 años en la industria del entretenimiento de
+        Latinoamérica.
+      </div>
+      <div class="divider"></div>
+      <div class="categories">
+        <div
+          class="categories-item"
+          *ngFor="let category of categories; let i = index"
+          id="category-{{ i }}"
+        >
+          <div class="category-title title">{{ category.title }}</div>
+          <p class="text">
+            {{ category.description }}
+          </p>
+          <div class="swiper-card">
+            <swiper
+              [config]="config"
+              [useSwiperClass]="'categories-swiper-' + (i + 1)"
+            >
+              <div *ngFor="let photo of category.photos">
+                <img class="foto-swiper" src="{{ photo }}" alt="" />
+              </div>
+            </swiper>
+          </div>
+          <div>
+            <button [routerLink]="category.link" class="damelo-todo" mat-button>
+              ¡Dámelo Todo!
+            </button>
+            <!-- <span class="arrow-right"> ⟶</span> -->
+            <!-- <button [routerLink]="category.link"  *ngIf="category.title == 'Sircomedia'" class=" w-arrow damelo-todo" mat-button>Visita Sircomedia <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button> -->
+          </div>
+          <!-- <div *ngIf="i != categories.length - 1" class="divider-full"></div> -->
         </div>
-        <div class="divider"></div>
-        <div class="categories">               
-          <div class="categories-item" *ngFor="let category of categories; let i = index" id="category-{{i}}">
-            <div class="category-title title">{{category.title}}</div>
-            <p class="text">
-              {{category.description}}
-            </p>
-            <div class="swiper-card">
-              <swiper [config]="config" [useSwiperClass]="'categories-swiper-'+(i+1)">
-                <div *ngFor="let photo of category.photos">    
-                  <img class="foto-swiper" src="{{photo}}" alt="" >
-                </div>                
-              </swiper>
-            </div>
-            <div>
-              <button [routerLink]="category.link" class="damelo-todo" mat-button>¡Dámelo Todo!</button>
-              <!-- <span class="arrow-right"> ⟶</span> -->
-              <!-- <button [routerLink]="category.link"  *ngIf="category.title == 'Sircomedia'" class=" w-arrow damelo-todo" mat-button>Visita Sircomedia <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button> -->
-            </div>            
-            <!-- <div *ngIf="i != categories.length - 1" class="divider-full"></div> -->
-          </div> 
       </div>
-      </div>
-      <go-to-top></go-to-top>
-    </div>   
+    </div>
+    <go-to-top></go-to-top>
+  </div>
 </div>

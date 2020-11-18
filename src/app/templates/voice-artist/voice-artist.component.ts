@@ -110,15 +110,16 @@ export class VoiceArtistComponent implements OnInit {
       text:
         "“Franártur es un artista de la voz, comprometido y honesto con su proyectos. Siempre propone caminos para darle valor a agregado a cualquier guión o idea. Lo recomiendo 100%!”.",
     },
-    {
-      name: "Andrés Lopez, Comediante.",
-      text:
-        "“Franartur es un muchacho alentado, de buena alimentación y resistencia física, es muy sospechoso que cuando aparece Supermán surcando los cielos él no esté entre nosotros trabajando en el Daily Planet. Franartur es auténtico”.",
-    },
+
     {
       name: "Kiran Fernándes, Director.",
       text:
         "“Trabajar con Fran fue ver comprensión, entusiasmo, creatividad, humor y versatilidad. ¡Es tener un amigo!”",
+    },
+    {
+      name: "Andrés Lopez, Comediante.",
+      text:
+        "“Franartur es un muchacho alentado, de buena alimentación y resistencia física, es muy sospechoso que cuando aparece Supermán surcando los cielos él no esté entre nosotros trabajando en el Daily Planet. Franartur es auténtico”.",
     },
     {
       name: "Alejandro Ranchez, Director.",

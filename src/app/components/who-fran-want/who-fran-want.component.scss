@@ -1,11 +1,11 @@
 @import "variables";
 :host {
-  height: 50px;
+  height: 45px;
   .panel-bottom {
     position: fixed;
     bottom: 0;
     left: 0;
-    height: 50px;
+    height: 45px;
     width: 100%;
     background-color: $white;
     z-index: 4;
@@ -33,7 +33,7 @@
       padding-top: 100px;
     }
     .open-action-panel {
-      line-height: 50px;
+      line-height: 45px;
       color: $purple;
       text-align: center;
       .mat-icon {

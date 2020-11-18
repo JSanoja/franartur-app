@@ -53,11 +53,11 @@ export class TeamComponent implements OnInit {
         "/assets/productions/7 Bernardo Garcés - Postproductor Video.png",
     },
 
-    {
-      name: "Andrés Algeciras",
-      subname: "Animador",
-      picture: "/assets/productions/8 Andrés Algeciras - Animador .png",
-    },
+    // {
+    //   name: "Andrés Algeciras",
+    //   subname: "Animador",
+    //   picture: "/assets/productions/8 Andrés Algeciras - Animador .png",
+    // },
     {
       name: "Juan Sebastian",
       subname: "Diseñador",

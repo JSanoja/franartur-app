@@ -77,6 +77,13 @@ export class HomeComponent implements OnInit {
       photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
     {
+      title: "Comediante",
+      description:
+        "La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura.",
+      link: "",
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
+    },
+    {
       title: "Voice Artist",
       description:
         "Mi experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina. ",
@@ -84,19 +91,13 @@ export class HomeComponent implements OnInit {
       photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
     {
-      title: "Speaker",
+      title: "Conferencista",
       description:
         "Mis conferencias inspiran con valores, arte y risa, para lograr personas y equipos de trabajo más éticos, más felices y más productivos. Esto es todo un propósito que hace parte de un grandioso proyecto social y educativo, mucho más amplio, que desarrollo a través de mi marca Pechos de Héroe.",
       link: "",
       photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
-    {
-      title: "Comediante",
-      description:
-        "La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura.",
-      link: "",
-      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
-    },
+
     {
       title: "Sircomedia",
       description:
