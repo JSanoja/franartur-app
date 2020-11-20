@@ -34,7 +34,6 @@ import { EventsService } from "src/app/services/events.service";
 export class HomeComponent implements OnInit {
   oldScroll: number = 0;
   currentScroll: number = 0;
-  interval = 10;
   isHome: boolean;
   current: number = 1;
   max: number = 3;
@@ -168,17 +167,15 @@ export class HomeComponent implements OnInit {
       .pipe(
         switchMap(
           ({ targetYPos, invert }) =>
-            interval(this.interval).pipe(
+            interval(5).pipe(
               //interval just creates an observable stream corresponding to time, this emits every 1/10th of a second. This can be fixed or make it dynamic depending on the distance to scroll
               scan((acc, curr) => {
-                this.interval = this.interval / 10;
                 if (invert) return acc - 80;
                 return acc + 80;
               }, window.pageYOffset), // scan takes all values from an emitted observable stream and accumulates them, here you're taking the current position, adding a scroll step (fixed at 5, though this could also be dynamic), and then so on, its like a for loop with +=, but you emit every value to the next operator which scrolls, the second argument is the start position
               takeWhile((val) => {
                 if (invert) {
                   if (val < targetYPos) {
-                    this.interval = 10;
                     console.log("finish");
                     window.scrollTo(0, targetYPos);
                     setTimeout(() => (this.inTransition = false), 500);
@@ -186,7 +183,6 @@ export class HomeComponent implements OnInit {
                   return val > targetYPos;
                 } else {
                   if (val > targetYPos) {
-                    this.interval = 10;
                     window.scrollTo(0, targetYPos);
                     setTimeout(() => (this.inTransition = false), 500);
                   }

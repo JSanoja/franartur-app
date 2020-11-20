@@ -19,8 +19,8 @@ export class GoToTopComponent implements OnInit {
     if (i >= 0) {
       setTimeout(() => {
         window.scrollTo(0, i);
-        this.smoothScroll(i - 150);
-      }, 5);
+        this.smoothScroll(i - 200);
+      }, 1);
     } else {
       window.scrollTo(0, 0);
     }
