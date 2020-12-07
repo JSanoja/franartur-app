@@ -1,0 +1,97 @@
+<div class="showcase"></div>
+<div class="content">
+  <div class="title">Actor Marca</div>
+  <div>
+    <p class="text">
+      La industria del entretenimiento es mi casa, llevo más de 15 años
+      trabajando en ella para toda Latinoamérica. Como actor manejo con
+      versatilidad el drama y la comedia para dar a los personajes un carácter
+      distintivo que los hace memorables.
+    </p>
+    <p class="text">
+      Uso mi comedia gestual e ingeniosa para transmitir emociones y dar valor
+      único a las producciones. Llego a amplias audiencias, sin importar el
+      lugar del mundo, con piezas cargadas de humor universal que logran gran
+      recordación.
+    </p>
+    <p class="text">
+      Mi fenotipo ambiguo me permite identificarme con múltiples nacionalidades
+      y grabar en cualquier parte del planeta. El idioma no es una barrera para
+      mí; como actor puedo manejar líneas en cualquier lengua y siempre viajar
+      junto a mi traductor personal para facilitar la comunicación con el
+      cliente y el equipo de dirección.
+    </p>
+    <p class="text">
+      Mis actuaciones y mi imagen son ideales para marcas frescas, entusiastas y
+      de espíritu joven. Mi propósito siempre es lograr que la pieza se
+      inmortalice en la mente de todos y que las marcas se ganen el corazón de
+      sus audiencias.
+    </p>
+  </div>
+  <mat-grid-list cols="2" rowHeight="2:0.5">
+    <mat-grid-tile>Estatura: 1,81 Mts</mat-grid-tile>
+    <mat-grid-tile>Peso: 75 kg</mat-grid-tile>
+    <mat-grid-tile>Ojos: Miel</mat-grid-tile>
+    <mat-grid-tile>Piel: Blanca</mat-grid-tile>
+  </mat-grid-list>
+  <div class="reel-actor">
+    <div class="reel-actor-container">
+      <div class="category-title sub-title">Actor de Marca - Reel</div>
+      <iframe
+        width="100%"
+        height="280"
+        src="https://www.youtube.com/embed/kABRsaIybgI"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+  <div class="title seccion-fotos"></div>
+  <div class="testimonios">
+    <div class="sub-title">Testimonios</div>
+    <swiper [config]="configTest">
+      <div *ngFor="let test of tests">
+        <div class="test-item">
+          <div class="test-message">
+            {{ test.text }}
+            <span class="test-name">
+              {{ test.name }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </swiper>
+  </div>
+  <div class="marcas">
+    <div class="sub-title">Clientes</div>
+    <swiper [config]="configClients">
+      <div *ngFor="let client of clients">
+        <div class="client-item">
+          <div class="client-name">
+            {{ client.name }}
+          </div>
+        </div>
+      </div>
+    </swiper>
+  </div>
+  <!-- <div class="brands">
+    <mat-grid-list cols="2" rowHeight="2:2">
+      <mat-grid-tile>
+        <img src="/assets/voice-artist/10 ACL y Source Connect.png" alt="" />
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <img src="/assets/voice-artist/10.1 ACL y Source Connect.png" alt="" />
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div> -->
+  <button
+    [routerLink]="'/contacto'"
+    class="button-box tomame-button gray"
+    mat-button
+  >
+    ¡Tómame ya!
+  </button>
+  <go-to-top></go-to-top>
+</div>
+<who-fran-want></who-fran-want>

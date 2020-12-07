@@ -1,23 +1,90 @@
 <div class="showcase"></div>
 <div class="content">
-    <div class="title">
-        Actor Ficción
-    </div>
-    <div>
-        <p class="text">
-            Amo interpretar personajes humanos, con historias profundas y destellos cómicos que logren trascender y volverse memorables. Combino el carácter excéntrico y el introvertido, una gran gestualidad actoral y una capacidad especial para detectar la comedia dentro del drama, ese es mi estilo. 
-        </p>
-        <p class="text">
-            Quiero que mis personajes se vinculen con un público amplio y conecten con audiencias de Latinoamérica, Estados Unidos y Europa; lograr interpretaciones que aporten valor a la industria y nutran nuestro arte. 
-        </p>
-        <p class="text">
-            Desde el 2003  he participado como actor en producciones de  televisión, teatro y digital. He nutrido mi experiencia protagonizando más de 20 cortometrajes, interpretando a múltiples personajes en series y novelas, y creando, dirigiendo y actuando mi propia sección en un reconocido programa de tv. Adicionalmente, tengo una amplia experiencia como comediante, ocho rutinas de Stand up comedy de mi autoría, que durante años fueron presentadas en diferentes escenarios. 
-        </p>
-        <p class="text">
-            Mi trabajo actoral en televisión incluye producciones como: ¿Quién Mató a Patricia Soler?, La Esquina del Diablo, Revenge, Pambelé, Sala de Urgencias 2, El Comandante, Paraíso Travel y Narcos.
-        </p>
-    </div>    
-    
-    <go-to-top></go-to-top>
+  <div class="title">Actor Ficción</div>
+  <div>
+    <p class="text">
+      Amo interpretar personajes humanos, con historias profundas y destellos
+      cómicos que logren trascender y volverse memorables. Combino el carácter
+      excéntrico y el introvertido, una gran gestualidad actoral y una capacidad
+      especial para detectar la comedia dentro del drama, ese es mi estilo.
+    </p>
+    <p class="text">
+      Quiero que mis personajes se vinculen con un público amplio y conecten con
+      audiencias de Latinoamérica, Estados Unidos y Europa; lograr
+      interpretaciones que aporten valor a la industria y nutran nuestro arte.
+    </p>
+    <p class="text">
+      Desde el 2003 he participado como actor en producciones de televisión,
+      teatro y digital. He nutrido mi experiencia protagonizando más de 20
+      cortometrajes, interpretando a múltiples personajes en series y novelas, y
+      creando, dirigiendo y actuando mi propia sección en un reconocido programa
+      de tv. Adicionalmente, tengo una amplia experiencia como comediante, ocho
+      rutinas de Stand up comedy de mi autoría, que durante años fueron
+      presentadas en diferentes escenarios.
+    </p>
+    <p class="text">
+      Mi trabajo actoral en televisión incluye producciones como: ¿Quién Mató a
+      Patricia Soler?, La Esquina del Diablo, Revenge, Pambelé, Sala de
+      Urgencias 2, El Comandante, Paraíso Travel y Narcos.
+    </p>
+  </div>
+  <mat-grid-list cols="2" rowHeight="2:0.5">
+    <mat-grid-tile>Estatura: 1,81 Mts</mat-grid-tile>
+    <mat-grid-tile>Peso: 75 kg</mat-grid-tile>
+    <mat-grid-tile>Ojos: Miel</mat-grid-tile>
+    <mat-grid-tile>Piel: Blanca</mat-grid-tile>
+  </mat-grid-list>
+  <button (click)="descargarCV()" class="button-box" mat-button>
+    Descargar CV
+  </button>
+  <div class="reel-actor">
+    <swiper [config]="config">
+      <div class="reel-actor-container">
+        <div class="category-title sub-title">DRAMA</div>
+        <iframe
+          width="100%"
+          height="280"
+          src="https://www.youtube.com/embed/7hfQhnIRZmA"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="reel-actor-container">
+        <div class="category-title sub-title">COMEDIA</div>
+        <iframe
+          width="100%"
+          height="280"
+          src="https://www.youtube.com/embed/5R18ecYxNz8"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </swiper>
+  </div>
+  <div class="title seccion-fotos"></div>
+  <div class="trayectoria">
+    <swiper [config]="config">
+      <div class="t-photo" *ngFor="let photo of photos">
+        <img [src]="trayectoriaPath + photo" alt="" />
+      </div>
+    </swiper>
+    <a
+      class="t-icon"
+      href="https://twitter.com/FranarturDuque/"
+      target="_blank"
+    >
+      <fa-icon [icon]="faImdb"></fa-icon>
+    </a>
+    <a
+      class="t-icon"
+      href="https://twitter.com/FranarturDuque/"
+      target="_blank"
+    >
+      <fa-icon [icon]="faWikipediaW"></fa-icon>
+    </a>
+  </div>
+  <go-to-top></go-to-top>
 </div>
 <who-fran-want></who-fran-want>

@@ -1,22 +1,26 @@
 @import "variables";
 :host {
-    width: 100%;
-    background-color: $purple;
-    text-align: center;
-    padding-top: 10px;
-    display: block;
-    .social {
-        display: inline-block;
-        width: 50px;
-        margin-right: 10px;
-        overflow: hidden;          
-        a {
-            color:white;
-            font-size: 24px;
-        }
+  width: 100%;
+  background-color: $purple;
+  text-align: center;
+  padding-top: 10px;
+  display: block;
+  .social {
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+    overflow: hidden;
+    a {
+      color: white;
+      font-size: 24px;
     }
-    .conecta {
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
+  }
+  .conecta {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+}
+.body {
+  &.voice-artist {
+  }
 }

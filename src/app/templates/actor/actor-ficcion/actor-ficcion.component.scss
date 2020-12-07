@@ -12,4 +12,37 @@
   .content {
     padding: 20px;
   }
+  .reel-actor {
+    margin-left: -20px;
+    margin-right: -20px;
+    .reel-actor-container {
+      margin-top: 30px;
+      margin-bottom: 40px;
+      .category-title {
+        margin-left: 20px;
+      }
+    }
+  }
+  .trayectoria {
+    padding-top: 20px;
+    margin-right: -20px;
+    margin-left: -20px;
+    margin-bottom: 30px;
+    text-align: center;
+    .t-photo {
+      padding-top: 20px;
+      padding-bottom: 40px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .t-icon {
+      font-size: 30px;
+
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
 }

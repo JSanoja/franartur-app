@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule, PreloadAllModules } from "@angular/router";
 import { HomeComponent } from "./templates/home/home.component";
 import { ActorComponent } from "./templates/actor/actor.component";
 import { BioComponent } from "./templates/bio/bio.component";
@@ -7,9 +7,10 @@ import { ContactComponent } from "./templates/contact/contact.component";
 import { TeamComponent } from "./templates/team/team.component";
 import { VoiceArtistComponent } from "./templates/voice-artist/voice-artist.component";
 import { ActorFiccionComponent } from "./templates/actor/actor-ficcion/actor-ficcion.component";
+import { ActorMarcaComponent } from "./templates/actor/actor-marca/actor-marca.component";
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "", component: HomeComponent, data: { preload: true } },
   { path: "bio", component: BioComponent },
   { path: "contacto", component: ContactComponent },
   {
@@ -18,12 +19,17 @@ const routes: Routes = [
     children: [],
   },
   { path: "actor/actor-ficcion", component: ActorFiccionComponent },
+  { path: "actor/actor-marca", component: ActorMarcaComponent },
   { path: "team", component: TeamComponent },
   { path: "voice-artist", component: VoiceArtistComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      preloadingStrategy: PreloadAllModules,
+    }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

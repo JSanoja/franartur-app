@@ -3,7 +3,7 @@
   .showcase {
     width: 100%;
     height: calc(100vw * (4 / 3));
-    background-image: url("/assets/VOICE-ARTIST-MOVIL-5.jpg");
+    background-image: url("/assets/PORTADA+MENU-MOVIL-7.jpg");
     background-size: cover;
     @media (orientation: landscape) {
       height: calc(100vw * (4 / 3));
@@ -11,58 +11,16 @@
   }
   .content {
     padding: 20px;
-    padding-bottom: 0;
   }
-  .audio-item {
-    padding-bottom: 60px;
-    padding-top: 15px;
-    .audio-button {
-      margin: 30px 0;
-    }
-    .audio-title {
-      font-weight: 500;
-      margin-bottom: 40px;
-      margin-top: 10px;
-    }
-    audio {
-      width: 100%;
-    }
-    audio::-internal-media-controls-download-button {
-      display: none;
-    }
-
-    audio::-webkit-media-controls-enclosure {
-      overflow: hidden;
-    }
-
-    audio::-webkit-media-controls-panel {
-      width: calc(100% + 30px); /* Adjust as needed */
-    }
-  }
-  .audio-real-title {
-    margin-top: 40px;
-    margin-bottom: 30px;
-  }
-  .audio-button-all {
-    margin: 53px 0 30px;
-    width: 100%;
-  }
-  .audio-video iframe {
-    margin-top: 20px;
+  .reel-actor {
     margin-left: -20px;
     margin-right: -20px;
-    width: 100vw;
-    height: calc((100vw) * 9 / 16);
-  }
-  .sircomedia {
-    margin-bottom: 40px;
-    margin-top: 40px;
-    .sub-title {
-      margin-top: 20px;
-      margin-bottom: 15px;
-    }
-    .tomame-button {
-      background-color: $light-gray;
+    .reel-actor-container {
+      margin-top: 30px;
+      margin-bottom: 40px;
+      .category-title {
+        margin-left: 20px;
+      }
     }
   }
   .testimonios {
@@ -99,6 +57,20 @@
     }
   }
 
+  ::ng-deep .testimonios .swiper-slide {
+    overflow: hidden !important;
+  }
+
+  .brands {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
   .marcas {
     .sub-title {
       margin-top: 20px;
@@ -126,17 +98,7 @@
       }
     }
   }
-  .brands {
-    margin-top: 0px;
-    margin-bottom: 10px;
-    img {
-      width: auto;
-      height: auto;
-      max-width: 100%;
-      max-height: 100%;
-    }
-  }
-  ::ng-deep .testimonios .swiper-slide {
-    overflow: hidden !important;
+  .tomame-button {
+    margin-bottom: 40px;
   }
 }
