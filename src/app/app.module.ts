@@ -10,11 +10,9 @@ import { HomeComponent } from "./templates/home/home.component";
 import { AnimateModule } from "./animate/animate.module";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
-import {
-  MatToolbarModule,
-  MatSidenavModule,
-  MatListModule,
-} from "@angular/material";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
 import { ActorComponent } from "./templates/actor/actor.component";
 import { ScrollService } from "./services/scroll.service";
@@ -41,6 +39,9 @@ import { GoToTopComponent } from "./components/go-to-top/go-to-top.component";
 import { WhoFranWantComponent } from "./components/who-fran-want/who-fran-want.component";
 import { ActorFiccionComponent } from "./templates/actor/actor-ficcion/actor-ficcion.component";
 import { ActorMarcaComponent } from "./templates/actor/actor-marca/actor-marca.component";
+import { ActorFiccionGalleryComponent } from "./templates/actor/actor-ficcion/gallery/gallery.component";
+import { GalleryModule, GALLERY_CONFIG } from "ng-gallery";
+import { LightboxModule, LIGHTBOX_CONFIG } from "ng-gallery/lightbox";
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
@@ -64,6 +65,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     WhoFranWantComponent,
     ActorFiccionComponent,
     ActorMarcaComponent,
+    ActorFiccionGalleryComponent,
   ],
   entryComponents: [BioDialogComponent],
   imports: [
@@ -87,6 +89,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatSelectModule,
     FormsModule,
     ReactiveFormsModule,
+    GalleryModule,
+    LightboxModule,
   ],
   providers: [
     ScrollService,
@@ -94,6 +98,20 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG,
+    },
+    {
+      provide: GALLERY_CONFIG,
+      useValue: {
+        dots: true,
+        imageSize: "contain",
+        thumb: false,
+      },
+    },
+    {
+      provide: LIGHTBOX_CONFIG,
+      useValue: {
+        keyboardShortcuts: false,
+      },
     },
   ],
   bootstrap: [AppComponent],

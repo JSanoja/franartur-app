@@ -45,4 +45,22 @@
       }
     }
   }
+  .seccion-fotos {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .sub-title {
+      margin-bottom: 10px;
+    }
+    .reel-fotos {
+      margin-left: -20px;
+      margin-right: -20px;
+      .r-photo {
+        padding-bottom: 40px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
 }

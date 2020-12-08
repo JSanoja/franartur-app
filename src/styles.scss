@@ -2,6 +2,7 @@
 // For more information: https://material.angular.io/guide/theming
 @import "~@angular/material/theming";
 @import "styles/index";
+@import "~@angular/cdk/overlay-prebuilt.css";
 // Plus imports for other components in your app.
 
 $custom-typography: mat-typography-config(
@@ -133,4 +134,8 @@ swiper
 }
 .content {
   padding: 20px;
+}
+
+gallery {
+  background-color: #161637 !important;
 }

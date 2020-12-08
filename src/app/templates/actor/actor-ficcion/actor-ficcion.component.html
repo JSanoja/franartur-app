@@ -63,7 +63,20 @@
       </div>
     </swiper>
   </div>
-  <div class="title seccion-fotos"></div>
+  <div class="seccion-fotos">
+    <div class="sub-title">Fotos</div>
+    <div class="reel-fotos">
+      <swiper [config]="configReelPhotos">
+        <div class="r-photo" *ngFor="let photo of reelPhotos">
+          <img [src]="reelPhotosPath + photo" alt="" />
+        </div>
+      </swiper>
+    </div>
+    <button [routerLink]="'gallery'" class="button-box" mat-button>
+      Ver Todas
+    </button>
+    <button class="button-box" mat-button>Descargar Book</button>
+  </div>
   <div class="trayectoria">
     <swiper [config]="config">
       <div class="t-photo" *ngFor="let photo of photos">

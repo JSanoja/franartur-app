@@ -1,0 +1,34 @@
+@import "variables";
+:host {
+  .showcase {
+    width: 100%;
+    height: 56px;
+    background-color: $purple;
+    background-size: cover;
+    @media (orientation: landscape) {
+      height: 56px;
+    }
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  .content {
+    padding: 20px;
+  }
+  .go-to-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    border: 1px solid $purple;
+    line-height: 37px;
+  }
+  .title {
+    margin-bottom: 10px;
+  }
+  .container-gallery {
+    margin-bottom: 40px;
+  }
+}

@@ -6,6 +6,7 @@ import {
   ElementRef,
   OnDestroy,
   Inject,
+  Input,
 } from "@angular/core";
 import { Subject, interval, Observable, empty, Subscription } from "rxjs";
 import {
@@ -21,7 +22,8 @@ import {
 } from "rxjs/operators";
 import { ScrollService } from "src/app/services/scroll.service";
 import { ViewportScroller, DOCUMENT } from "@angular/common";
-import { MatButton, MatDialog } from "@angular/material";
+import { MatButton } from "@angular/material/button";
+import { MatDialog } from "@angular/material/dialog";
 import { BioDialogComponent } from "src/app/components/bio-dialog/bio-dialog.component";
 import { SwiperConfigInterface } from "ngx-swiper-wrapper";
 import { EventsService } from "src/app/services/events.service";
@@ -32,6 +34,7 @@ import { EventsService } from "src/app/services/events.service";
   styleUrls: ["./home.component.scss"],
 })
 export class HomeComponent implements OnInit {
+  @Input("video") video: boolean = true;
   oldScroll: number = 0;
   currentScroll: number = 0;
   isHome: boolean;
@@ -200,20 +203,22 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit() {
     window.scrollTo(0, 0);
-    let video: HTMLVideoElement = this.homeVideo.nativeElement;
-    video.muted = true;
-    video.play();
-    if (
-      !!(
-        video.currentTime > 0 &&
-        !video.paused &&
-        !video.ended &&
-        video.readyState > 2
-      )
-    ) {
-      console.log("playing");
-    } else {
+    if (this.video) {
+      let video: HTMLVideoElement = this.homeVideo.nativeElement;
+      video.muted = true;
       video.play();
+      if (
+        !!(
+          video.currentTime > 0 &&
+          !video.paused &&
+          !video.ended &&
+          video.readyState > 2
+        )
+      ) {
+        console.log("playing");
+      } else {
+        video.play();
+      }
     }
   }
   scrollTo(target: ElementRef, invert: boolean): void {

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from "@angular/core";
-import { MatButton } from "@angular/material";
+import { MatButton } from "@angular/material/button";
 
 @Component({
   selector: "go-to-top",

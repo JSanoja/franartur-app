@@ -2,7 +2,6 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "newProjectRoot": "projects",
-  
   "projects": {
     "franartur-app": {
       "projectType": "application",
@@ -14,7 +13,6 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
-      
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -23,8 +21,9 @@
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
-            "stylePreprocessorOptions":{
+            "stylePreprocessorOptions": {
               "includePaths": [
+                "./node_modules/ngx-lightbox/lightbox.css",
                 "../node_modules/videogular2/fonts/videogular.css",
                 "./src/styles"
               ]
@@ -76,7 +75,7 @@
           "options": {
             "browserTarget": "franartur-app:build",
             "host": "192.168.1.6",
-            "disableHostCheck":true,
+            "disableHostCheck": true,
             "port": 4200
           },
           "configurations": {
@@ -134,6 +133,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "franartur-app"
 }

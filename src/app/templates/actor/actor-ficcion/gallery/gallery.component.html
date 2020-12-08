@@ -1,0 +1,16 @@
+<div class="showcase"></div>
+<div class="content">
+  <div class="title">Fotos</div>
+  <div class="container-gallery" gallerize>
+    <mat-grid-list cols="2" rowHeight="3:4" gutterSize="20">
+      <mat-grid-tile *ngFor="let image of images">
+        <img
+          src="{{ image.thumb }}"
+          [attr.imageSrc]="image.src"
+          [attr.thumbSrc]="image.thumb"
+        />
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  <go-to-top></go-to-top>
+</div>

@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { MatButton } from "@angular/material";
+import { MatButton } from "@angular/material/button";
 export interface ITeam {
   name: string;
   subname: string;
