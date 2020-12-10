@@ -11,26 +11,48 @@ export class ActorFiccionComponent implements OnInit {
   faWikipediaW = faWikipediaW;
   trayectoriaPath: string = "assets/actor/ficcion/trayectoria/";
   photos: Array<string> = [
-    "poster serie la esquina del diablo.jpg",
-    "Pambel_Serie_de_TV-704901649-large.jpg",
-    "1.jpg",
-    "comandante.jpg",
-    "sala de urgencias.jpg",
-    "paraiso.jpg",
+    "Comandate.png",
+    "La esquina.png",
+    "Pambele.png",
+    "Paraiso.png",
+    "Quién mató a Patricia.jpg",
+    "Sala urgencias.png",
   ];
   reelPhotosPath: string = "assets/Galeria/";
   reelPhotos: Array<string> = [
-    "43-01.jpg",
-    "43-02.jpg",
-    "43-03.jpg",
-    "43-04.jpg",
-    "43-05.jpg",
+    "169-01.jpg",
+    "169-02.jpg",
+    "169-03.jpg",
+    "169-04.jpg",
+    "169-05.jpg",
   ];
   configReelPhotos: SwiperConfigInterface = {
     autoHeight: false, //enable auto height
     a11y: true,
     direction: "horizontal",
-    slidesPerView: 2,
+    slidesPerView: 1.1,
+    slideToClickedSlide: true,
+    mousewheel: false,
+    scrollbar: false,
+    watchSlidesProgress: false,
+    navigation: false,
+    keyboard: false,
+    pagination: true,
+    centeredSlides: false,
+    loop: false,
+    roundLengths: true,
+    slidesOffsetBefore: 0,
+    slidesOffsetAfter: 0,
+    spaceBetween: 0,
+    breakpoints: {
+      // when window width is >= 320px
+    },
+  };
+  configTrayectoria: SwiperConfigInterface = {
+    autoHeight: false, //enable auto height
+    a11y: true,
+    direction: "horizontal",
+    slidesPerView: 1.1,
     slideToClickedSlide: true,
     mousewheel: false,
     scrollbar: false,
@@ -51,7 +73,7 @@ export class ActorFiccionComponent implements OnInit {
   config: SwiperConfigInterface = {
     a11y: true,
     direction: "horizontal",
-    slidesPerView: 1,
+    slidesPerView: 1.1,
     slideToClickedSlide: true,
     mousewheel: false,
     scrollbar: false,

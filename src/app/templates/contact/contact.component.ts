@@ -9,10 +9,12 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   whoes: Array<string> = [
+    "Director",
     "Actor",
-    "Voice Artist",
-    "Conferencista",
     "Comediante",
+    "Voice artist",
+    "Conferencista",
+    "Sircomedia",
   ];
   constructor() {}
 

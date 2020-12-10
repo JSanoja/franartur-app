@@ -108,28 +108,27 @@ export class VoiceArtistComponent implements OnInit {
     {
       name: "Laura Pulido,  S&S Post Production.",
       text:
-        "“Franártur es un artista de la voz, comprometido y honesto con su proyectos. Siempre propone caminos para darle valor a agregado a cualquier guión o idea. Lo recomiendo 100%!”.",
-    },
-
-    {
-      name: "Kiran Fernándes, Director.",
-      text:
-        "“Trabajar con Fran fue ver comprensión, entusiasmo, creatividad, humor y versatilidad. ¡Es tener un amigo!”",
-    },
-    {
-      name: "Andrés Lopez, Comediante.",
-      text:
-        "“Franartur es un muchacho alentado, de buena alimentación y resistencia física, es muy sospechoso que cuando aparece Supermán surcando los cielos él no esté entre nosotros trabajando en el Daily Planet. Franartur es auténtico”.",
+        "“Franártur es un artista de la voz, comprometido y honesto con sus proyectos. Siempre propone caminos para darle valor agregado a cualquier guión o idea. Lo recomiendo 100%!”.",
     },
     {
       name: "Alejandro Ranchez, Director.",
       text:
-        "“Franartur es propositivo y enérgico, siempre es pieza clave en el desarrollo de las ideas. Su disposición y entrega siempre es la mejor. ¡Increíble talento y profesionalismo!”",
+        "“Franártur es propositivo y enérgico, siempre es pieza clave en el desarrollo de las ideas. Su disposición y entrega siempre es la mejor. ¡Increíble talento y profesionalismo!”.",
     },
     {
-      name: "Juan Cárdenas. Publicista.",
+      name: "Andrés López, Comediante.",
       text:
-        "“La personalidad de Fran irradia arte todo el tiempo, lo que demuestra su pasión por lo que hace; tuve la oportunidad de crear un proyecto a su lado, y además de aportar su gran talento, fue demasiado fácil interactuar y trabajar con él”. ",
+        "“Franártur es un muchacho alentado, de buena alimentación y resistencia física, es muy sospechoso que cuando aparece Supermán surcando los cielos él no esté entre nosotros trabajando en el Daily Planet. Franártur es auténtico”.",
+    },
+    {
+      name: "Kiran Fernandes, Director.",
+      text:
+        "“Trabajar con Fran fue ver comprensión, entusiasmo, creatividad, humor y versatilidad. ¡Es tener un amigo!”.",
+    },
+    {
+      name: "Juan Cárdenas, Publicista.",
+      text:
+        "“La personalidad de Fran irradia arte todo el tiempo, lo que demuestra su pasión por lo que hace; tuve la oportunidad de crear un proyecto a su lado, y además de aportar su gran talento, fue demasiado fácil interactuar y trabajar con él”.",
     },
     {
       name: "Bill Gates.",

@@ -42,7 +42,7 @@ import { ActorMarcaComponent } from "./templates/actor/actor-marca/actor-marca.c
 import { ActorFiccionGalleryComponent } from "./templates/actor/actor-ficcion/gallery/gallery.component";
 import { GalleryModule, GALLERY_CONFIG } from "ng-gallery";
 import { LightboxModule, LIGHTBOX_CONFIG } from "ng-gallery/lightbox";
-
+import { ActorMarcaGalleryComponent } from "./templates/actor/actor-marca/gallery/gallery.component";
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
   slidesPerView: "auto",
@@ -66,6 +66,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ActorFiccionComponent,
     ActorMarcaComponent,
     ActorFiccionGalleryComponent,
+    ActorMarcaGalleryComponent,
   ],
   entryComponents: [BioDialogComponent],
   imports: [
@@ -105,6 +106,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
         dots: true,
         imageSize: "contain",
         thumb: false,
+        counterPosition: "top",
       },
     },
     {

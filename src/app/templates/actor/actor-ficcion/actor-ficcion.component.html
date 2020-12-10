@@ -40,7 +40,7 @@
   <div class="reel-actor">
     <swiper [config]="config">
       <div class="reel-actor-container">
-        <div class="category-title sub-title">DRAMA</div>
+        <div class="category-title sub-title">Reel Drama</div>
         <iframe
           width="100%"
           height="280"
@@ -51,7 +51,7 @@
         ></iframe>
       </div>
       <div class="reel-actor-container">
-        <div class="category-title sub-title">COMEDIA</div>
+        <div class="category-title sub-title">Reel Comedia</div>
         <iframe
           width="100%"
           height="280"
@@ -75,29 +75,37 @@
     <button [routerLink]="'gallery'" class="button-box" mat-button>
       Ver Todas
     </button>
-    <button class="button-box" mat-button>Descargar Book</button>
+    <button class="button-box" mat-button>Descargar Book ↓</button>
   </div>
   <div class="trayectoria">
-    <swiper [config]="config">
+    <div class="sub-title">Trayectoria</div>
+    <swiper [config]="configTrayectoria">
       <div class="t-photo" *ngFor="let photo of photos">
         <img [src]="trayectoriaPath + photo" alt="" />
       </div>
     </swiper>
     <a
       class="t-icon"
-      href="https://twitter.com/FranarturDuque/"
+      href="https://www.imdb.com/name/nm2907273/"
       target="_blank"
     >
       <fa-icon [icon]="faImdb"></fa-icon>
     </a>
     <a
-      class="t-icon"
-      href="https://twitter.com/FranarturDuque/"
+      class="t-icon faWikipediaW"
+      href="https://es.wikipedia.org/wiki/Fran%C3%A1rtur_Duque"
       target="_blank"
     >
       <fa-icon [icon]="faWikipediaW"></fa-icon>
     </a>
   </div>
+  <button
+    [routerLink]="'/contacto'"
+    class="button-box tomame-button gray"
+    mat-button
+  >
+    ¡Tómame ya!
+  </button>
   <go-to-top></go-to-top>
 </div>
 <who-fran-want></who-fran-want>

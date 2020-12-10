@@ -2,11 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import { ScrollService } from "src/app/services/scroll.service";
 
 @Component({
-  selector: "app-af-gallery",
+  selector: "app-am-gallery",
   templateUrl: "./gallery.component.html",
   styleUrls: ["./gallery.component.scss"],
 })
-export class ActorFiccionGalleryComponent implements OnInit {
+export class ActorMarcaGalleryComponent implements OnInit {
   currentScroll: number = 0;
   constructor(private scrollService: ScrollService) {}
   path: string = "assets/Galeria/";

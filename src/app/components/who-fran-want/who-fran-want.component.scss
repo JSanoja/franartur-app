@@ -26,6 +26,11 @@
         .opened {
           border-bottom: 1px solid $purple;
           display: block;
+          .icon-close {
+            font-size: 31px;
+            width: 31px;
+            height: 31px;
+          }
         }
       }
     }
@@ -38,7 +43,7 @@
       text-align: center;
       .mat-icon {
         position: relative;
-        top: 5px;
+        top: 8px;
       }
       .closed {
         display: block;

@@ -16,10 +16,11 @@
     margin-left: -20px;
     margin-right: -20px;
     .reel-actor-container {
-      margin-top: 30px;
-      margin-bottom: 40px;
+      margin-top: 40px;
+      margin-bottom: 50px;
       .category-title {
         margin-left: 20px;
+        margin-bottom: 20px;
       }
     }
   }
@@ -28,18 +29,37 @@
     margin-right: -20px;
     margin-left: -20px;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
+    .sub-title {
+      margin-bottom: 0px;
+      text-align: left;
+      margin-left: 20px;
+    }
     .t-photo {
       padding-top: 20px;
-      padding-bottom: 40px;
+      padding-bottom: 50px;
       img {
         width: 100%;
         height: auto;
       }
     }
     .t-icon {
-      font-size: 30px;
-
+      display: inline-block;
+      font-size: 24px;
+      border: 1px solid $purple;
+      line-height: 45px;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background-color: #dddddd;
+      color: black;
+      text-align: center;
+      margin-left: 20px;
+      &.faWikipediaW fa-icon {
+        position: relative;
+        top: 2px;
+        font-size: 23px;
+      }
       &:last-child {
         margin-left: 20px;
       }
@@ -49,18 +69,21 @@
     margin-top: 20px;
     margin-bottom: 20px;
     .sub-title {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
     .reel-fotos {
       margin-left: -20px;
       margin-right: -20px;
       .r-photo {
-        padding-bottom: 40px;
+        padding-bottom: 50px;
         img {
           width: 100%;
           height: auto;
         }
       }
     }
+  }
+  .tomame-button {
+    margin-bottom: 40px;
   }
 }
