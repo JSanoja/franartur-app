@@ -1,0 +1,89 @@
+@import "variables";
+:host {
+  .showcase {
+    width: 100%;
+    height: calc(100vw * (4 / 3));
+    background-image: url("/assets/VOICE-ARTIST-MOVIL-5.jpg");
+    background-size: cover;
+    @media (orientation: landscape) {
+      height: calc(100vw * (4 / 3));
+    }
+  }
+  .content {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  .reel-actor {
+    margin-left: -20px;
+    margin-right: -20px;
+    .reel-actor-container {
+      margin-top: 30px;
+      margin-bottom: 0px;
+      .category-title {
+        margin-left: 20px;
+        margin-bottom: 20px;
+      }
+      iframe {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .seccion-fotos {
+    margin-top: 0px;
+    margin-bottom: 20px;
+    .sub-title {
+      margin-bottom: 20px;
+    }
+    .reel-fotos {
+      margin-left: -20px;
+      margin-right: -20px;
+      .r-photo {
+        padding-bottom: 50px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .t-icon {
+    display: inline-block;
+    font-size: 24px;
+    border: 1px solid $purple;
+    line-height: 45px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: #dddddd;
+    color: black;
+    text-align: center;
+  }
+  .tomame-button {
+    margin-bottom: 40px;
+  }
+  .test-item {
+    padding-bottom: 60px;
+    height: 100%;
+    vertical-align: middle;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    .test-message {
+      text-align: center;
+      font-style: italic;
+      padding-bottom: 30px;
+    }
+    .test-name {
+      font-weight: 500;
+    }
+  }
+}

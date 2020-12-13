@@ -1,0 +1,98 @@
+<div class="showcase"></div>
+<div class="content">
+  <div class="title">Comediante</div>
+  <div>
+    <p class="text">
+      Fiel a mi esencia y llevando el absurdo como bandera, he construido un
+      estilo único a través del tiempo. Amo la comedia gestual e ingeniosa,
+      siempre trabajo con un humor universal y jamás desperdicio el potencial
+      del chiste audiovisual. Fiel a mi esencia y llevando el absurdo como
+      bandera, he construido un estilo único a través del tiempo. Amo la comedia
+      gestual e ingeniosa, siempre trabajo con un humor universal y jamás
+      desperdicio el potencial del chiste audiovisual.
+    </p>
+    <p class="text">
+      Cuando entro a escena, deslizo entre carcajadas, gestos y reflexiones
+      mordaces. Para mí la comedia es un boleto ida y vuelta al “otro lado del
+      velo”, eso que algunos llaman “la verdad”. La comedia siempre puede dar
+      vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi
+      forma de darle al mundo maravillas y un poquito de ternura.
+    </p>
+    <p class="text">
+      Desde el 2003 he creado, escrito, producido, dirigido y actuado más de una
+      docena de cortometrajes y sketch cómicos. Creé, dirigí y actué mi propia
+      sección en un reconocido programa de tv, en donde interpreté a Butaquito,
+      personaje que estuvo dos años al aire y dejó huella. Adicionalmente soy el
+      autor de 8 rutinas de Stand up Comedy que durante años fueron presentadas
+      en diferentes escenarios.
+    </p>
+    <p class="text">Qué más puedo decir… toda una Garota sexy.</p>
+  </div>
+  <div class="reel-actor">
+    <div class="reel-actor-container">
+      <div class="category-title sub-title">Programa Butaquito</div>
+      <iframe
+        width="100%"
+        height="280"
+        src="https://www.youtube.com/embed/fUX0qn5QQtw"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <div class="category-title sub-title">Stand up Comedy</div>
+      <iframe
+        width="100%"
+        height="280"
+        src="https://www.youtube.com/embed/aE85NigAQZk"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+  <div class="seccion-fotos">
+    <div class="sub-title">Fotos</div>
+    <div class="reel-fotos">
+      <swiper [config]="configReelPhotos">
+        <div class="r-photo" *ngFor="let photo of reelPhotos">
+          <img [src]="reelPhotosPath + photo" alt="" />
+        </div>
+      </swiper>
+    </div>
+    <button [routerLink]="'gallery'" class="button-box" mat-button>
+      Ver Todas
+    </button>
+    <button class="button-box" mat-button>Descargar Book ↓</button>
+  </div>
+  <a
+    class="t-icon"
+    href="https://www.instagram.com/franarturduque/"
+    target="_blank"
+  >
+    <fa-icon [icon]="faInstagram"></fa-icon>
+  </a>
+  <button
+    [routerLink]="'/contacto'"
+    class="button-box tomame-button gray"
+    mat-button
+  >
+    ¡Tómame ya!
+  </button>
+  <div class="testimonios">
+    <div class="sub-title">Testimonios</div>
+    <swiper [config]="configTest">
+      <div *ngFor="let test of tests">
+        <div class="test-item">
+          <div class="test-message">
+            {{ test.text }}
+            <span class="test-name">
+              {{ test.name }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </swiper>
+  </div>
+  <go-to-top></go-to-top>
+</div>
+<who-fran-want></who-fran-want>

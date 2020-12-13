@@ -10,6 +10,8 @@ import { ActorFiccionComponent } from "./templates/actor/actor-ficcion/actor-fic
 import { ActorMarcaComponent } from "./templates/actor/actor-marca/actor-marca.component";
 import { ActorFiccionGalleryComponent } from "./templates/actor/actor-ficcion/gallery/gallery.component";
 import { ActorMarcaGalleryComponent } from "./templates/actor/actor-marca/gallery/gallery.component";
+import { ComediaComponent } from "./templates/comedia/comedia.component";
+import { ComediaGalleryComponent } from "./templates/comedia/gallery/gallery.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, data: { preload: true } },
@@ -29,6 +31,14 @@ const routes: Routes = [
   {
     path: "actor/actor-marca/gallery",
     component: ActorMarcaGalleryComponent,
+  },
+  {
+    path: "comediante",
+    component: ComediaComponent,
+  },
+  {
+    path: "comediante/gallery",
+    component: ComediaGalleryComponent,
   },
   { path: "team", component: TeamComponent },
   { path: "voice-artist", component: VoiceArtistComponent },

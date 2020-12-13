@@ -82,7 +82,7 @@ export class HomeComponent implements OnInit {
       title: "Comediante",
       description:
         "La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura.",
-      link: "",
+      link: "/comediante",
       photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
     {
@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
       title: "Conferencista",
       description:
         "Mis conferencias inspiran con valores, arte y risa, para lograr personas y equipos de trabajo más éticos, más felices y más productivos. Esto es todo un propósito que hace parte de un grandioso proyecto social y educativo, mucho más amplio, que desarrollo a través de mi marca Pechos de Héroe.",
-      link: "",
+      link: "conferencista",
       photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
 
@@ -104,7 +104,7 @@ export class HomeComponent implements OnInit {
       title: "Sircomedia",
       description:
         "Esta es mi empresa y nace para brindar espacios amplios y diversos para la Comedia como forma de arte. Es una casa matriz de un conjunto de marcas que celebran el don universal de las risas. Justo en el instante en el que se produce una carcajada comienza nuestro universo. ",
-      link: "",
+      link: "sircomedia",
       photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
     },
   ];
