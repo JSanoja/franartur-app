@@ -1,4 +1,6 @@
+<go-back></go-back>
 <div class="showcase"></div>
+
 <div class="content">
   <div class="title">Actor de Marca</div>
   <div>
@@ -36,10 +38,9 @@
   </mat-grid-list>
   <div class="reel-actor">
     <div class="reel-actor-container">
-      <div class="category-title sub-title">Reel Video</div>
+      <div class="category-title sub-title">Reel</div>
       <iframe
         width="100%"
-        height="280"
         src="https://www.youtube.com/embed/kABRsaIybgI"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -76,17 +77,13 @@
       </div>
     </swiper>
   </div>
-  <div class="marcas">
+  <div class="clients-container">
     <div class="sub-title">Clientes</div>
-    <swiper [config]="configClients">
-      <div *ngFor="let client of clients">
-        <div class="client-item">
-          <div class="client-name">
-            {{ client.name }}
-          </div>
-        </div>
-      </div>
-    </swiper>
+    <mat-grid-list cols="2" rowHeight="2:1.5">
+      <mat-grid-tile class="client-item" *ngFor="let client of clients">
+        <img class="client-img" [src]="clientsPath + client.src" />
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
   <!-- <div class="brands">
     <mat-grid-list cols="2" rowHeight="2:2">

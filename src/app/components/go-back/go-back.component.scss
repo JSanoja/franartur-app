@@ -1,0 +1,16 @@
+:host {
+  .sub-header {
+    position: fixed;
+    z-index: 10;
+    background: white;
+    transition: all 0.2s;
+    border: 1px solid #2d2955;
+    line-height: 37px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 10px;
+    &.scrolled {
+      margin-top: -39px;
+    }
+  }
+}

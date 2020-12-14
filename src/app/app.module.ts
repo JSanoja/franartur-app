@@ -45,6 +45,7 @@ import { LightboxModule, LIGHTBOX_CONFIG } from "ng-gallery/lightbox";
 import { ActorMarcaGalleryComponent } from "./templates/actor/actor-marca/gallery/gallery.component";
 import { ComediaComponent } from "./templates/comedia/comedia.component";
 import { ComediaGalleryComponent } from "./templates/comedia/gallery/gallery.component";
+import { GoBackComponent } from './components/go-back/go-back.component';
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
   slidesPerView: "auto",
@@ -71,6 +72,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ActorMarcaGalleryComponent,
     ComediaComponent,
     ComediaGalleryComponent,
+    GoBackComponent,
   ],
   entryComponents: [BioDialogComponent],
   imports: [

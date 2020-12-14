@@ -82,17 +82,13 @@
     </button>
   </div>
 
-  <div class="marcas">
+  <div class="clients-container">
     <div class="sub-title">Clientes</div>
-    <swiper [config]="configClients">
-      <div *ngFor="let client of clients">
-        <div class="client-item">
-          <div class="client-name">
-            {{ client.name }}
-          </div>
-        </div>
-      </div>
-    </swiper>
+    <mat-grid-list cols="2" rowHeight="2:1.5">
+      <mat-grid-tile class="client-item" *ngFor="let client of clients">
+        <img class="client-img" [src]="clientsPath + client.src" />
+      </mat-grid-tile>
+    </mat-grid-list>
   </div>
 
   <div class="testimonios">

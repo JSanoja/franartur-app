@@ -9,6 +9,11 @@
       height: calc(100vw * (4 / 3));
     }
   }
+  go-back {
+    position: fixed;
+    margin-top: 56px;
+    display: block;
+  }
   .content {
     padding: 20px;
   }
@@ -17,10 +22,15 @@
     margin-right: -20px;
     .reel-actor-container {
       margin-top: 40px;
-      margin-bottom: 50px;
+      margin-bottom: 0px;
       .category-title {
         margin-left: 20px;
         margin-bottom: 20px;
+      }
+      iframe {
+        margin-bottom: 30px;
+        width: 100vw;
+        height: calc((100vw) * 9 / 16);
       }
     }
   }
@@ -66,7 +76,7 @@
     }
   }
   .seccion-fotos {
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 20px;
     .sub-title {
       margin-bottom: 20px;

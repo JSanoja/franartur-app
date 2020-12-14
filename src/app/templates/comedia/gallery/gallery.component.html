@@ -1,9 +1,5 @@
 <div class="showcase"></div>
-<div class="sub-header" [ngClass]="{ scrolled: currentScroll != 0 }">
-  <button mat-icon-button class="go-back" (click)="goBack()">
-    <mat-icon>arrow_back</mat-icon>
-  </button>
-</div>
+<go-back></go-back>
 <div class="content">
   <div class="title">Fotos</div>
   <div class="container-gallery" gallerize>

@@ -32,15 +32,4 @@
   .container-gallery {
     margin-bottom: 40px;
   }
-  .sub-header {
-    position: fixed;
-    z-index: 10;
-    background: white;
-    width: 100%;
-    transition: all 0.2s;
-    border-bottom: 1px solid $purple;
-    &.scrolled {
-      margin-top: -49px;
-    }
-  }
 }

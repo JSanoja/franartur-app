@@ -135,66 +135,55 @@ export class VoiceArtistComponent implements OnInit {
       text: "“Yo era un tipo normal hasta que conocí a Franártur Duque”.",
     },
   ];
+  clientsPath: string = "assets/voice-artist/clientes/";
   clients: Array<any> = [
     {
-      name: "Coca cola",
-      url: "",
+      src: "bimbo.png",
     },
     {
-      name: "La Especial",
-      url: "",
+      src: "cocacola.png",
     },
     {
-      name: "Del Valle",
-      url: "",
+      src: "davivienda.png",
     },
     {
-      name: "Bimbo",
-      url: "",
+      src: "del valle.png",
     },
     {
-      name: "El Tiempo",
-      url: "",
+      src: "durex.png",
     },
     {
-      name: "ETB",
-      url: "",
+      src: "eltiempo.png",
     },
     {
-      name: "Samsung",
-      url: "",
+      src: "etb.png",
     },
     {
-      name: "Davivienda",
-      url: "",
+      src: "exito.png",
     },
     {
-      name: "Éxito",
-      url: "",
+      src: "havas.png",
     },
     {
-      name: "Durex",
-      url: "",
+      src: "la-especial2.png",
     },
     {
-      name: "MullenLowe SSP3",
-      url: "",
+      src: "leo-burnett.png",
     },
     {
-      name: "MCCann",
-      url: "",
+      src: "McCann.png",
     },
     {
-      name: "Ogilvy",
-      url: "",
+      src: "mullen lowe.png",
     },
     {
-      name: "Havas",
-      url: "",
+      src: "nutresa.png",
     },
     {
-      name: "Leo Burnett",
-      url: "",
+      src: "ogilvy_logo_BN.png",
+    },
+    {
+      src: "samsung.png",
     },
   ];
   constructor() {}

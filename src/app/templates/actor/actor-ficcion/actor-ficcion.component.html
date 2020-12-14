@@ -1,4 +1,6 @@
+<go-back></go-back>
 <div class="showcase"></div>
+
 <div class="content">
   <div class="title">Actor Ficción</div>
   <div>
@@ -38,30 +40,24 @@
     Descargar CV
   </button>
   <div class="reel-actor">
-    <swiper [config]="config">
-      <div class="reel-actor-container">
-        <div class="category-title sub-title">Reel Drama</div>
-        <iframe
-          width="100%"
-          height="280"
-          src="https://www.youtube.com/embed/7hfQhnIRZmA"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-      <div class="reel-actor-container">
-        <div class="category-title sub-title">Reel Comedia</div>
-        <iframe
-          width="100%"
-          height="280"
-          src="https://www.youtube.com/embed/5R18ecYxNz8"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </div>
-    </swiper>
+    <div class="reel-actor-container">
+      <div class="category-title sub-title">Reel Drama</div>
+      <iframe
+        width="100%"
+        src="https://www.youtube.com/embed/7hfQhnIRZmA"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+      <div class="category-title sub-title">Reel Comedia</div>
+      <iframe
+        width="100%"
+        src="https://www.youtube.com/embed/5R18ecYxNz8"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
   <div class="seccion-fotos">
     <div class="sub-title">Fotos</div>
@@ -90,13 +86,6 @@
       target="_blank"
     >
       <fa-icon [icon]="faImdb"></fa-icon>
-    </a>
-    <a
-      class="t-icon faWikipediaW"
-      href="https://es.wikipedia.org/wiki/Fran%C3%A1rtur_Duque"
-      target="_blank"
-    >
-      <fa-icon [icon]="faWikipediaW"></fa-icon>
     </a>
   </div>
   <button

@@ -7,8 +7,7 @@ import { ScrollService } from "src/app/services/scroll.service";
   styleUrls: ["./gallery.component.scss"],
 })
 export class ActorFiccionGalleryComponent implements OnInit {
-  currentScroll: number = 0;
-  constructor(private scrollService: ScrollService) {}
+  constructor() {}
   path: string = "assets/Galeria/";
   images = [
     {
@@ -32,12 +31,5 @@ export class ActorFiccionGalleryComponent implements OnInit {
       thumb: this.path + "43-05.jpg",
     },
   ];
-  ngOnInit(): void {
-    this.scrollService.scroll$.subscribe((scroll) => {
-      this.currentScroll = scroll;
-    });
-  }
-  goBack() {
-    window.history.back();
-  }
+  ngOnInit() {}
 }

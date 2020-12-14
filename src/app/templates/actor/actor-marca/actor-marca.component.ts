@@ -10,6 +10,7 @@ export class ActorMarcaComponent implements OnInit {
   faImdb = faImdb;
   faWikipediaW = faWikipediaW;
   trayectoriaPath: string = "assets/actor/marca/trayectoria/";
+  clientsPath: string = "assets/actor/marca/clientes/";
 
   reelPhotosPath: string = "assets/Galeria/";
   reelPhotos: Array<string> = [
@@ -50,7 +51,7 @@ export class ActorMarcaComponent implements OnInit {
     {
       name: "Leonardo Salgado, Creativo - Wunderman Thompson",
       text:
-        "“Pocas personas pueden sacarle humor a la vida como Franártur, sus posibilidades de creación son infinitas. Fue una gran experiencia trabajar con él”",
+        "“Pocas personas pueden sacarle humor a la vida como Franártur, sus posibilidades de creación son infinitas. Fue una gran experiencia trabajar con él”.",
     },
     {
       name: "Kiran Fernandes, Director",
@@ -146,43 +147,48 @@ export class ActorMarcaComponent implements OnInit {
   clients: Array<any> = [
     {
       name: "BBVA",
-      url: "",
-    },
-    {
-      name: "Smart Fit",
-      url: "",
-    },
-    {
-      name: "Poker",
-      url: "",
-    },
-    {
-      name: "Blancox",
-      url: "",
+      src: "bbva.png",
     },
     {
       name: "Burger King",
-      url: "",
-    },
-    {
-      name: "Movistar",
-      url: "",
-    },
-    {
-      name: "Trident",
-      url: "",
-    },
-    {
-      name: "Zoom Producciones",
-      url: "",
+      src: "burguerking.png",
     },
     {
       name: "DDB",
-      url: "",
+      src: "DDB2.png",
     },
     {
-      name: "Los Notarios",
-      url: "",
+      name: "iqos_logo_BN",
+      src: "iqos_logo_BN.png",
+    },
+    {
+      src: "leo-burnett.png",
+    },
+    {
+      name: "Movistar",
+      src: "movistar2.png",
+    },
+    {
+      src: "ogilvy_logo_BN.png",
+    },
+    {
+      name: "Poker",
+      src: "poker.png",
+    },
+    {
+      src: "RCN-logo_BN.png",
+    },
+    {
+      name: "Smart Fit",
+      src: "smart fit.png",
+    },
+    {
+      name: "Trident",
+      src: "trident.png",
+    },
+    {
+      name: "Zoom Producciones",
+      src: "zoom.png",
     },
   ];
   constructor() {}

@@ -33,7 +33,6 @@
       <div class="category-title sub-title">Programa Butaquito</div>
       <iframe
         width="100%"
-        height="280"
         src="https://www.youtube.com/embed/fUX0qn5QQtw"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -42,7 +41,6 @@
       <div class="category-title sub-title">Stand up Comedy</div>
       <iframe
         width="100%"
-        height="280"
         src="https://www.youtube.com/embed/aE85NigAQZk"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -50,6 +48,13 @@
       ></iframe>
     </div>
   </div>
+  <button
+    [routerLink]="'/contacto'"
+    class="button-box tomame-button gray"
+    mat-button
+  >
+    ¡Tómame ya!
+  </button>
   <div class="seccion-fotos">
     <div class="sub-title">Fotos</div>
     <div class="reel-fotos">
@@ -59,10 +64,10 @@
         </div>
       </swiper>
     </div>
-    <button [routerLink]="'gallery'" class="button-box" mat-button>
+    <button [routerLink]="'gallery'" class="button-box ver-todas" mat-button>
       Ver Todas
     </button>
-    <button class="button-box" mat-button>Descargar Book ↓</button>
+    <!-- <button class="button-box" mat-button>Descargar Book ↓</button> -->
   </div>
   <a
     class="t-icon"
@@ -71,13 +76,7 @@
   >
     <fa-icon [icon]="faInstagram"></fa-icon>
   </a>
-  <button
-    [routerLink]="'/contacto'"
-    class="button-box tomame-button gray"
-    mat-button
-  >
-    ¡Tómame ya!
-  </button>
+
   <div class="testimonios">
     <div class="sub-title">Testimonios</div>
     <swiper [config]="configTest">
