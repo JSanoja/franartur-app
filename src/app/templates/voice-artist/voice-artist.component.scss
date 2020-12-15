@@ -102,7 +102,10 @@
   .clients-container {
     .sub-title {
       margin-top: 30px;
-      margin-bottom: 20px;
+      margin-bottom: 0px;
+    }
+    .client-swiper {
+      padding-bottom: 20px;
     }
     .client-item {
       vertical-align: middle;
@@ -119,8 +122,9 @@
       -webkit-align-items: center;
       align-items: center;
       .client-img {
-        width: 80%;
-        height: auto;
+        width: auto;
+        height: 30px;
+        max-width: 100%;
       }
     }
   }

@@ -13,8 +13,8 @@
     </p>
     <p class="text">
       ¿Mis fuertes? Institucionales amables, caracterizaciones y promos, en un
-      tono medio, edad de 20 a 38 años y un acento sin regionalismos (español
-      latino) que me permite llegar a toda Latinoamérica.
+      tono medio, edad de 20 a 38 años y un acento sin regionalismos —español
+      latino— que me permite llegar a toda Latinoamérica.
     </p>
     <p class="text">
       Desde 2013 he sido la voz de más de 200 piezas comerciales y estoy
@@ -84,11 +84,22 @@
 
   <div class="clients-container">
     <div class="sub-title">Clientes</div>
-    <mat-grid-list cols="2" rowHeight="2:1.5">
-      <mat-grid-tile class="client-item" *ngFor="let client of clients">
-        <img class="client-img" [src]="clientsPath + client.src" />
-      </mat-grid-tile>
-    </mat-grid-list>
+    <swiper [config]="configClients">
+      <div class="client-swiper">
+        <mat-grid-list cols="2" rowHeight="2:1.3">
+          <mat-grid-tile class="client-item" *ngFor="let client of clients">
+            <img class="client-img" [src]="clientsPath + client.src" />
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+      <div class="client-swiper">
+        <mat-grid-list cols="2" rowHeight="2:1.3">
+          <mat-grid-tile class="client-item" *ngFor="let client of clients2">
+            <img class="client-img" [src]="clientsPath + client.src" />
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </swiper>
   </div>
 
   <div class="testimonios">

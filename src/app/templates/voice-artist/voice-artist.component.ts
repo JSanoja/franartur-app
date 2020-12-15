@@ -59,10 +59,9 @@ export class VoiceArtistComponent implements OnInit {
     },
   };
   configClients: SwiperConfigInterface = {
-    autoHeight: true, //enable auto height
     a11y: true,
     direction: "horizontal",
-    slidesPerView: 2,
+    slidesPerView: 1,
     slideToClickedSlide: true,
     mousewheel: false,
     scrollbar: false,
@@ -161,6 +160,8 @@ export class VoiceArtistComponent implements OnInit {
     {
       src: "exito.png",
     },
+  ];
+  clients2: Array<any> = [
     {
       src: "havas.png",
     },
