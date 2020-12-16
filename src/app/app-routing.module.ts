@@ -12,6 +12,7 @@ import { ActorFiccionGalleryComponent } from "./templates/actor/actor-ficcion/ga
 import { ActorMarcaGalleryComponent } from "./templates/actor/actor-marca/gallery/gallery.component";
 import { ComediaComponent } from "./templates/comedia/comedia.component";
 import { ComediaGalleryComponent } from "./templates/comedia/gallery/gallery.component";
+import { DirectorComponent } from "./templates/director/director.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, data: { preload: true } },
@@ -39,6 +40,10 @@ const routes: Routes = [
   {
     path: "comediante/gallery",
     component: ComediaGalleryComponent,
+  },
+  {
+    path: "director",
+    component: DirectorComponent,
   },
   { path: "team", component: TeamComponent },
   { path: "voice-artist", component: VoiceArtistComponent },
