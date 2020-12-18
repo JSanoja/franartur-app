@@ -39,4 +39,26 @@
     margin-top: 40px;
     margin-bottom: 40px;
   }
+  .t-icon {
+    display: inline-block;
+    font-size: 24px;
+    border: 1px solid $purple;
+    line-height: 45px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: #dddddd;
+    color: black;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 30px;
+    &.faWikipediaW fa-icon {
+      position: relative;
+      top: 2px;
+      font-size: 23px;
+    }
+    &:last-child {
+      margin-left: 20px;
+    }
+  }
 }

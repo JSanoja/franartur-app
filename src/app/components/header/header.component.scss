@@ -109,28 +109,29 @@
           transition-delay: 0.3s;
         }
         &:nth-child(2) {
-          transition-delay: 0.4s;
-        }
-        &:nth-child(3) {
           transition-delay: 0.5s;
         }
-        &:nth-child(4) {
+        &:nth-child(3) {
           transition-delay: 0.6s;
         }
-        &:nth-child(5) {
+        &:nth-child(4) {
           transition-delay: 0.7s;
         }
-        &:nth-child(6) {
+        &:nth-child(5) {
           transition-delay: 0.8s;
+        }
+        &:nth-child(6) {
+          transition-delay: 0.9s;
         }
       }
       .que-fran {
         opacity: 1;
         padding-left: 0;
-        transition-delay: 0.8s;
+        transition-delay: 0.5s;
+        margin-bottom: 7px;
       }
       .que-fran-list {
-        padding-top: 10px;
+        padding-top: 0px;
         @media (orientation: landscape) {
           padding-bottom: 50px;
         }

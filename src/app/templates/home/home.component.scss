@@ -126,13 +126,18 @@
   }
   .categories {
     .categories-item {
-      margin-bottom: 60px;
+      margin-bottom: 50px;
+
+      .category-item {
+        padding-bottom: 50px;
+      }
     }
     .foto {
       // width: 100%;
     }
     .damelo-todo {
       margin-top: 25px;
+      margin-bottom: 30px;
       display: block;
       border: 1px solid $purple;
       border-radius: 0;

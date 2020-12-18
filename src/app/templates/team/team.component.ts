@@ -24,9 +24,14 @@ export class TeamComponent implements OnInit {
     },
     {
       name: "Class Celebridades",
-      subname: "Manager Actor Marcas (México y Estados Unidos)",
+      subname: "Manager Actor Marcas (México)",
       picture:
         "/assets/agents/3 Class Celebridades - Agencia Actor Marcas (México y Estados Unidos).png",
+    },
+    {
+      name: "La Comedia Local - Johanna Moya",
+      subname: "Manager Actor Marcas y Comedia (Latinoamérica)",
+      picture: "/assets/agents/4 La comedia local.png",
     },
   ];
   teamProductions: Array<ITeam> = [

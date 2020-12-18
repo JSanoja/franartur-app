@@ -56,16 +56,6 @@
           <p class="text">
             {{ category.description }}
           </p>
-          <div class="swiper-card">
-            <swiper
-              [config]="config"
-              [useSwiperClass]="'categories-swiper-' + (i + 1)"
-            >
-              <div *ngFor="let photo of category.photos">
-                <img class="foto-swiper" src="{{ photo }}" alt="" />
-              </div>
-            </swiper>
-          </div>
           <div>
             <button [routerLink]="category.link" class="damelo-todo" mat-button>
               ¡Dámelo Todo!
@@ -73,6 +63,17 @@
             <!-- <span class="arrow-right"> ⟶</span> -->
             <!-- <button [routerLink]="category.link"  *ngIf="category.title == 'Sircomedia'" class=" w-arrow damelo-todo" mat-button>Visita Sircomedia <mat-icon class="arrow-right">arrow_right_alt</mat-icon></button> -->
           </div>
+          <div class="swiper-card">
+            <swiper
+              [config]="config"
+              [useSwiperClass]="'categories-swiper-' + (i + 1)"
+            >
+              <div class="category-item" *ngFor="let photo of category.photos">
+                <img class="foto-swiper" src="{{ photo }}" alt="" />
+              </div>
+            </swiper>
+          </div>
+
           <!-- <div *ngIf="i != categories.length - 1" class="divider-full"></div> -->
         </div>
       </div>
