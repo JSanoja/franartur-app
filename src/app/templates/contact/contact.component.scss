@@ -1,5 +1,11 @@
 @import "variables";
 :host {
+  .title {
+    margin-bottom: 20px;
+  }
+  .text {
+    margin-bottom: 20px;
+  }
   .showcase {
     width: 100%;
     height: 56px;

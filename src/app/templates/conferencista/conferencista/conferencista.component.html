@@ -1,0 +1,116 @@
+<div class="showcase"></div>
+<div class="content">
+  <div class="title">Conferencista</div>
+  <div>
+    <p class="text">
+      La sociedad y el mundo empresarial necesitan personas que estén dispuestas
+      a compartir experiencias que sean reales, genuinas y cercanas. Hoy quiero
+      transmitir lo que mi camino me ha enseñado, llegar a todos los que estén
+      dispuestos a crecer y ser mejores personas y mejores profesionales.
+    </p>
+    <p class="text">
+      Como Conferencista he ahondado en mis talentos artísticos desarrollados en
+      mis más de 15 años de experiencia en la industria del entretenimiento,
+      para transmitir mis mensajes de forma divertida y dinámica a niños,
+      jóvenes y adultos.
+    </p>
+    <p class="text">
+      Mi presencia en medios televisivos y de entretenimiento, favorece
+      profundamente la conexión con mi audiencia, ya que siempre están con alta
+      disposición a escuchar lo que una figura pública tiene para comunicar.
+    </p>
+  </div>
+  <div class="reel-fotos">
+    <swiper [config]="configReelPhotos">
+      <div class="r-photo" *ngFor="let photo of reelPhotos">
+        <img [src]="reelPhotosPath + photo" alt="" />
+      </div>
+    </swiper>
+  </div>
+  <div>
+    <p class="text">
+      Las conferencias y seminarios que ofrezco se fundamentan en el libro El
+      Camino a la Felicidad, una guía no política ni religiosa, basada en el
+      sentido común. Todo es enfocado 100% hacia tu necesidad puntual y se
+      entrega con un lenguaje fresco, dinámico y cercano al público.
+    </p>
+    <p class="text">
+      Brindo herramientas efectivas para momentos de crisis, que permiten a los
+      participantes mejorar su actitud frente al entorno y reactivar sus metas.
+    </p>
+    <p class="text">
+      Produzco transformación cultural en empresas, colegios y comunidades,
+      inspirando siempre con valores, arte y risa, para lograr personas, grupos
+      y equipos de trabajo más éticos, más felices y más productivos.
+    </p>
+    <p class="text">
+      Toda esta actividad como Conferencista forma parte de un gran proyecto
+      social y educativo, mucho más amplio, que desarrollo a través de mi marca
+      Pechos de Héroe.
+    </p>
+    <button
+      (click)="descargarBr()"
+      class="button-box button-brochure"
+      mat-button
+    >
+      Descargar Brochure ↓
+    </button>
+  </div>
+  <div class="conf-video">
+    <iframe
+      src="https://player.vimeo.com/video/490541640"
+      width="100%"
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <button
+    [routerLink]="'/contacto'"
+    class="button-box tomame-button gray"
+    mat-button
+  >
+    ¡Tómame ya!
+  </button>
+  <div class="pechos-container">
+    <div class="sub-title">Pechos de Héroe</div>
+    <div>
+      <p class="text">
+        Este es mi proyecto social, una marca de Sircomedia Group®, que tiene el
+        propósito de crear Un Mundo Mejor, una nueva civilización más feliz, en
+        donde cada persona es un gran Héroe.
+      </p>
+      <p class="text">
+        Educación, Producción, Arte y Valores son los 4 pilares fundamentales de
+        nuestros Héroes y el foco de nuestros esfuerzos.
+      </p>
+      <p class="text">
+        Transmitir estos 4 pilares hará que tengamos personas valientes y
+        causativas sobre su vida y entorno, por encima de cualquier
+        circunstancia, es decir Héroes capaces de crear Un Mundo Mejor.
+      </p>
+      <p class="text">¡Sé parte de esta legión y ponte Pechos de Héroe!</p>
+    </div>
+    <div class="pecho-foto">
+      <img src="/assets/conferencista/9 Pechos foto en 16_9.png" alt="" />
+    </div>
+    <button class="button-box" mat-button>Visita Pechos de Héroe</button>
+  </div>
+  <div class="testimonios">
+    <div class="sub-title">Testimonios</div>
+    <swiper [config]="configTest">
+      <div *ngFor="let test of tests">
+        <div class="test-item">
+          <div class="test-message">
+            {{ test.text }}
+            <span class="test-name">
+              {{ test.name }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </swiper>
+  </div>
+  <go-to-top></go-to-top>
+</div>
+<who-fran-want></who-fran-want>

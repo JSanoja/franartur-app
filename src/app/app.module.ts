@@ -47,6 +47,7 @@ import { ComediaComponent } from "./templates/comedia/comedia.component";
 import { ComediaGalleryComponent } from "./templates/comedia/gallery/gallery.component";
 import { GoBackComponent } from './components/go-back/go-back.component';
 import { DirectorComponent } from './templates/director/director.component';
+import { ConferencistaComponent } from './templates/conferencista/conferencista/conferencista.component';
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: "horizontal",
   slidesPerView: "auto",
@@ -75,6 +76,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ComediaGalleryComponent,
     GoBackComponent,
     DirectorComponent,
+    ConferencistaComponent,
   ],
   entryComponents: [BioDialogComponent],
   imports: [

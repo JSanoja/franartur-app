@@ -245,10 +245,12 @@
         <a mat-list-item [routerLink]="'/team'" (click)="toggleMenu()">
           MI EQUIPO
         </a>
+        <a mat-list-item [routerLink]="'/tienda'" (click)="toggleMenu()">
+          TIENDA
+        </a>
         <a mat-list-item [routerLink]="'/contacto'" (click)="toggleMenu()">
           CONECTA CONMIGO
         </a>
-        <a mat-list-item (click)="toggleMenu()"> TIENDA </a>
       </mat-nav-list>
     </div>
     <app-footer [ngClass]="{ active: menuActive }"></app-footer>
