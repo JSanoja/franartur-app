@@ -52,7 +52,7 @@ export class ActorFiccionComponent implements OnInit {
     autoHeight: false, //enable auto height
     a11y: true,
     direction: "horizontal",
-    slidesPerView: 1.1,
+    slidesPerView: 2.3,
     slideToClickedSlide: true,
     mousewheel: false,
     scrollbar: false,
@@ -65,7 +65,7 @@ export class ActorFiccionComponent implements OnInit {
     roundLengths: true,
     slidesOffsetBefore: 0,
     slidesOffsetAfter: 0,
-    spaceBetween: 0,
+    spaceBetween: 10,
     breakpoints: {
       // when window width is >= 320px
     },

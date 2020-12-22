@@ -1,14 +1,127 @@
 :host {
-    .showcase {
-        width: 100%;
-        height: calc(100vw * (4/3));
-        background-image: url('/assets/Foto-bio.png');
-        background-size: cover; 
-        @media (orientation: landscape) { 
-            height: calc(100vw * (4/3));
-        }        
+  .showcase {
+    width: 100%;
+    height: calc(100vw * (4 / 3));
+    background-image: url("/assets/Foto-bio.png");
+    background-size: cover;
+    position: relative;
+    @media (orientation: landscape) {
+      height: calc(100vw * (4 / 3));
     }
-    .content {
-        padding: 20px;
+  }
+  .content {
+    padding: 20px;
+  }
+  .brandCardImage__container-logo {
+    position: absolute;
+    top: 0px;
+    color: white;
+    right: 20px;
+    display: flex;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    font-size: 40px;
+    .brandCardImage__logo-switch {
+      animation: logoSwitch 5s infinite;
+      max-height: 50px;
+      max-width: 90vw;
+      margin-top: 64px;
+      margin-bottom: 64px;
     }
+    .brandCardImage__logo-alt {
+      width: 0;
+      opacity: 0;
+      -webkit-animation-delay: -2.5s;
+      animation-delay: -2.5s;
+      font-family: "Crimson Text";
+    }
+  }
+  .show-category {
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    text-align: right;
+    right: 20px;
+    ul {
+      list-style: none;
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .foto-bio-1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  .container-bio-logos {
+    text-align: center;
+    img {
+      width: 100%;
+      height: auto;
+
+      filter: grayscale(1) contrast(0.5);
+      transition: 0.2s filter;
+      &.logo-0 {
+        width: 70%;
+      }
+      &.logo-3 {
+        width: 65%;
+      }
+      &.logo-4 {
+        width: 70%;
+        filter: grayscale(1) contrast(0.2);
+      }
+      &.logo-5 {
+        width: 60%;
+      }
+    }
+    a:hover img,
+    a:active img {
+      filter: grayscale(0) contrast(1);
+    }
+  }
+}
+@keyframes logoSwitch {
+  0%,
+  100% {
+    width: auto;
+    opacity: 0.5;
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+  }
+  3% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  44% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  48% {
+    width: auto;
+  }
+  49% {
+    width: 0;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 30%, 0);
+    transform: translate3d(0, 30%, 0);
+  }
+  98% {
+    width: 0;
+    opacity: 0;
+    -webkit-transform: translate3d(0, -30%, 0);
+    transform: translate3d(0, -30%, 0);
+  }
+  99% {
+    width: auto;
+  }
 }

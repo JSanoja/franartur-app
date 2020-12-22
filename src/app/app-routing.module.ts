@@ -14,6 +14,7 @@ import { ComediaComponent } from "./templates/comedia/comedia.component";
 import { ComediaGalleryComponent } from "./templates/comedia/gallery/gallery.component";
 import { DirectorComponent } from "./templates/director/director.component";
 import { ConferencistaComponent } from "./templates/conferencista/conferencista/conferencista.component";
+import { SircomediaComponent } from "./templates/sircomedia/sircomedia.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, data: { preload: true } },
@@ -49,6 +50,7 @@ const routes: Routes = [
   { path: "team", component: TeamComponent },
   { path: "voice-artist", component: VoiceArtistComponent },
   { path: "conferencista", component: ConferencistaComponent },
+  { path: "sircomedia", component: SircomediaComponent },
 ];
 
 @NgModule({

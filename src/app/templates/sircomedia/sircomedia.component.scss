@@ -1,0 +1,37 @@
+@import "variables";
+:host {
+  .showcase {
+    width: 100%;
+    height: calc(100vw * (4 / 3));
+    background-image: url("/assets/VOICE-ARTIST-MOVIL-5.jpg");
+    background-size: cover;
+    @media (orientation: landscape) {
+      height: calc(100vw * (4 / 3));
+    }
+  }
+  .content {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+  .seccion-fotos {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    .sub-title {
+      margin-bottom: 20px;
+    }
+    .reel-fotos {
+      margin-left: -20px;
+      margin-right: -20px;
+      .r-photo {
+        padding-bottom: 50px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .visita-sircomedia {
+    margin-bottom: 30px;
+  }
+}
