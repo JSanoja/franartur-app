@@ -15,7 +15,7 @@ export class ActorFiccionComponent implements OnInit {
     "La esquina.png",
     "Pambele.png",
     "Paraiso.png",
-    "Quién mató a Patricia.jpg",
+    "Quien. mato a patricia.png",
     "Sala urgencias.png",
   ];
   reelPhotosPath: string = "assets/Galeria/";

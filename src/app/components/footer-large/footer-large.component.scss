@@ -24,8 +24,17 @@
   }
   .copyright {
     font-size: 12px;
-    color: white;
+    color: $light2-gray;
     margin-top: 10px;
+    text-align: center;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    .terminos {
+      margin-bottom: 10px;
+      font-size: 10px;
+      text-transform: uppercase;
+    }
     .rights {
       font-size: 25px;
       line-height: 0px;
@@ -51,6 +60,7 @@
     text-transform: uppercase;
     text-align: center;
     padding: 10px 32px;
+    max-width: 100%;
   }
   .divider-full {
     display: block;
