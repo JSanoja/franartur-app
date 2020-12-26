@@ -122,7 +122,7 @@ export class HomeComponent implements OnInit {
     private vc: ViewportScroller,
     public dialog: MatDialog,
     private eventService: EventsService,
-    @Inject(DOCUMENT) document
+    @Inject(DOCUMENT) private document
   ) {}
 
   ngOnDestroy() {
@@ -132,10 +132,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     console.log("init");
     this.eventService.eventEmit$.subscribe((event) => {
-      if (event.name == "goTo") {
-        setTimeout(() => {
-          this.goTo(event.action);
-        }, 200);
+      if (event.name == "goTo" && this.video == true) {
+        setTimeout(() => this.goTo(event.action), 200);
       }
     });
     /* this.scroll$ = this.scrollService.scroll$.subscribe(
@@ -166,7 +164,7 @@ export class HomeComponent implements OnInit {
       
     }); */
 
-    this.scrollToSource
+    /* this.scrollToSource
       .pipe(
         switchMap(
           ({ targetYPos, invert }) =>
@@ -198,7 +196,7 @@ export class HomeComponent implements OnInit {
       .subscribe((position) => {
         //console.log(position)
         window.scrollTo(0, position);
-      });
+      }); */
   }
 
   ngAfterViewInit() {
@@ -240,18 +238,21 @@ export class HomeComponent implements OnInit {
   }
   goTo(item: string) {
     let element: HTMLElement = document.getElementById(item);
-    this.scrollToSource.next({
-      targetYPos: element.offsetTop + 345,
-      invert: false,
-    });
+    let top = this.getElementOffset(element).top - 50;
+    window.scrollTo(0, top);
+    // this.scrollToSource.next({
+    //   targetYPos: element.offsetTop + 345,
+    //   invert: false,
+    // });
   }
 
   // goToTop() {
   //   this.scrollToSource.next({ targetYPos: 0, invert: true });
   // }
-  goToTop() {
-    this.smoothScroll(this.goToTopRef._elementRef.nativeElement.offsetTop);
-  }
+  // goToTop() {
+  //   window.scrollTo(0, 0);
+  //   // this.smoothScroll(this.goToTopRef._elementRef.nativeElement.offsetTop);
+  // }
   smoothScroll(h) {
     let i = h || 0;
     if (i >= 0) {
@@ -262,5 +263,12 @@ export class HomeComponent implements OnInit {
     } else {
       window.scrollTo(0, 0);
     }
+  }
+  getElementOffset(element: HTMLElement) {
+    var de = document.documentElement;
+    var box = element.getBoundingClientRect();
+    var top = box.top + window.pageYOffset - de.clientTop;
+    var left = box.left + window.pageXOffset - de.clientLeft;
+    return { top: top, left: left };
   }
 }

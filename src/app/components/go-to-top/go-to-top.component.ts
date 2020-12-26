@@ -12,7 +12,8 @@ export class GoToTopComponent implements OnInit {
 
   ngOnInit(): void {}
   goToTop() {
-    this.smoothScroll(this.goToTopRef._elementRef.nativeElement.offsetTop);
+    window.scrollTo(0, 0);
+    // this.smoothScroll(this.goToTopRef._elementRef.nativeElement.offsetTop);
   }
   smoothScroll(h) {
     let i = h || 0;
