@@ -1,64 +1,84 @@
 @import "variables";
 :host {
-    
-    .top-header {
-      display: block;
-      position: fixed;
-      top:0;
-      left: 0;
-      z-index: 3;
-      height: 30px;
-      width: 100%;
-      background-color: $dark-purple;
-      text-align: right;
-      transition: all .3s;
-      &.top-scroll {
-        top:-30px;
+  .top-header {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    height: 30px;
+    width: 100%;
+    background-color: $dark-purple;
+    text-align: right;
+    transition: all 0.3s;
+    @media screen and (min-width: 768px) {
+      height: 40px;
+    }
+    &.top-scroll {
+      top: -30px;
+      @media screen and (min-width: 768px) {
+        top: -40px;
       }
     }
-    .social-item {
-        text-align: center;
-        display: inline-block;
-        margin: 0 5px;
-        margin-top: 3px;
-        min-width: 20px;
-        height: 20px;
-        a {
-            color:white;
-        }
+  }
+  .social-item {
+    text-align: center;
+    display: inline-block;
+    margin: 0 10px;
+    margin-top: 3px;
+    min-width: 20px;
+    height: 20px;
+    @media screen and (min-width: 768px) {
+      height: 40px;
+      &:last-child {
+        margin-right: 20px;
+      }
     }
-    
+    a {
+      color: white;
+      @media screen and (min-width: 768px) {
+        height: 40px;
+        font-size: 24px;
+        transition: color 0.3s;
+        &:hover {
+          color: $mid-gray;
+        }
+      }
+    }
+  }
 }
 
 ::ng-deep .top-select-language .mat-form-field-wrapper {
-    padding-bottom: 0 !important;
-  }
+  padding-bottom: 0 !important;
+}
 ::ng-deep .top-select-language .mat-form-field-infix {
-    padding: 0 !important;
-    border:0 !important;
-    width: 70px;
-  }
+  padding: 0 !important;
+  border: 0 !important;
+  width: 70px;
+}
 ::ng-deep .top-select-language {
-    position: relative;
-    top: -2px;
-    text-align: right;
-    .mat-select-arrow-wrapper .mat-select-arrow {
-      color: white !important;
-    }
-    .mat-select-value {
-      color: white;
-      font-size: 13px;
-      text-align: right;
-    }
-    &.mat-form-field-appearance-legacy .mat-form-field-underline {
-      height: 0;
-      display: none;
-    }
-    
-  } 
-  ::ng-deep .mat-select-panel .mat-option {
-    line-height: 2em !important;
-    height: 2em !important;
-    padding: 0 0px;
-    text-align: center;
+  position: relative;
+  top: -2px;
+  text-align: right;
+  @media screen and (min-width: 768px) {
+    top: -5px;
   }
+  .mat-select-arrow-wrapper .mat-select-arrow {
+    color: white !important;
+  }
+  .mat-select-value {
+    color: white;
+    font-size: 13px;
+    text-align: right;
+  }
+  &.mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: 0;
+    display: none;
+  }
+}
+::ng-deep .mat-select-panel .mat-option {
+  line-height: 2em !important;
+  height: 2em !important;
+  padding: 0 0px;
+  text-align: center;
+}

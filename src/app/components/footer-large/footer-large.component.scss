@@ -6,11 +6,29 @@
   padding-top: 30px;
   display: block;
   padding-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    text-align: left;
+  }
+  footer {
+    position: relative;
+    @media screen and (min-width: 768px) {
+      width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   .slogan {
     font-style: italic;
     color: white;
     padding: 10px 0;
     font-size: 14px;
+  }
+  .social-container {
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 0px;
+      right: -10px;
+    }
   }
   .social {
     display: inline-block;
@@ -20,6 +38,12 @@
     a {
       color: white;
       font-size: 24px;
+      transition: color 0.3s;
+    }
+    @media screen and (min-width: 768px) {
+      a:hover {
+        color: $mid-gray;
+      }
     }
   }
   .copyright {
@@ -30,10 +54,24 @@
     width: calc(100% - 40px);
     margin-left: auto;
     margin-right: auto;
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      text-align: left;
+      br {
+        display: none;
+      }
+    }
     .terminos {
       margin-bottom: 10px;
       font-size: 10px;
       text-transform: uppercase;
+      transition: color 0.3s;
+      cursor: pointer;
+      @media screen and (min-width: 768px) {
+        &:hover {
+          color: $white;
+        }
+      }
     }
     .rights {
       font-size: 25px;
@@ -61,6 +99,11 @@
     text-align: center;
     padding: 10px 32px;
     max-width: 100%;
+    @media screen and (min-width: 768px) {
+      position: absolute;
+      top: 45px;
+      right: 0px;
+    }
   }
   .divider-full {
     display: block;
@@ -68,5 +111,8 @@
     height: 1px;
     background-color: #979797;
     margin: 13px auto 20px;
+    @media screen and (min-width: 768px) {
+      width: 100%;
+    }
   }
 }

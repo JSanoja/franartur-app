@@ -3,7 +3,6 @@
     <mat-toolbar-row>
       <svg
         [routerLink]="'/'"
-        width="125"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 318.49 100.19"
       >
@@ -94,12 +93,45 @@
       </button>
     </mat-toolbar-row>
   </mat-toolbar>
+  <div class="menu-desktop" [ngClass]="{ scrolled: currentScroll != 0 }">
+    <a [routerLink]="'/'"> HOME </a>
+    <a [routerLink]="'/bio'"> BIO </a>
+    <div class="que-fran-desk">
+      <a class=""> ¿Cuál Fran Quieres?</a>
+      <div class="sub-menu">
+        <mat-nav-list class="que-fran-list">
+          <a mat-list-item [routerLink]="'/'" (click)="goToEvent('category-0')">
+            DIRECTOR
+          </a>
+          <a mat-list-item [routerLink]="'/'" (click)="goToEvent('category-1')">
+            ACTOR
+          </a>
+          <a mat-list-item [routerLink]="'/'" (click)="goToEvent('category-2')">
+            COMEDIANTE
+          </a>
+          <a mat-list-item [routerLink]="'/'" (click)="goToEvent('category-3')">
+            VOICE ARTIST
+          </a>
+          <a mat-list-item [routerLink]="'/'" (click)="goToEvent('category-4')">
+            CONFERENCISTA
+          </a>
+
+          <a mat-list-item [routerLink]="'/'" (click)="goToEvent('category-5')">
+            SIRCOMEDIA
+          </a>
+        </mat-nav-list>
+      </div>
+    </div>
+
+    <a [routerLink]="'/team'"> MI EQUIPO </a>
+    <a [routerLink]="'/tienda'"> TIENDA </a>
+    <a [routerLink]="'/contacto'"> CONECTA CONMIGO </a>
+  </div>
   <div class="menu-container" [ngClass]="{ active: menuActive }">
     <svg
       [routerLink]="'/'"
       (click)="toggleMenu()"
       class="logo-menu"
-      width="125"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 318.49 100.19"
     >

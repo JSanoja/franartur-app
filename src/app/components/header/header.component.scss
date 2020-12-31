@@ -10,6 +10,9 @@
     transition: all 0.3s;
     &.top-scroll {
       top: 30px;
+      @media screen and (min-width: 768px) {
+        top: 40px;
+      }
     }
     &.active {
       z-index: 8;
@@ -17,6 +20,9 @@
   }
   .menu-icon {
     transform: scale(1.3, 1);
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
   }
   svg {
     outline: unset;
@@ -31,16 +37,29 @@
     min-height: 36px;
     .mat-toolbar-row {
       height: 36px;
+      @media screen and (min-width: 768px) {
+        height: 50px;
+      }
       svg {
         width: 90px;
+        @media screen and (min-width: 768px) {
+          width: 125px;
+        }
       }
     }
     &.transparent {
       position: relative;
       .mat-toolbar-row {
         height: 56px;
+        @media screen and (min-width: 768px) {
+          height: 70px;
+        }
         svg {
           width: 125px;
+          cursor: pointer;
+          @media screen and (min-width: 768px) {
+            width: 180px;
+          }
         }
       }
     }
@@ -58,6 +77,84 @@
       );
     }
   }
+  .menu-desktop {
+    display: none;
+    text-align: right;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    transition: top 0.3s;
+    &.scrolled {
+      top: 12px;
+      .que-fran-desk:hover .sub-menu {
+        background-color: $purple;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+    }
+    ::ng-deep .que-fran-desk {
+      display: inline-block;
+      position: relative;
+      background-color: transparent;
+      padding-bottom: 10px;
+      .sub-menu {
+        display: block;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        transition: opacity 0.3s;
+        .que-fran-list {
+          display: none;
+        }
+      }
+      &:hover a {
+        color: $mid-gray;
+      }
+      &:hover .sub-menu {
+        top: 30px;
+        right: 10px;
+        display: block;
+        height: auto;
+        color: $white;
+        opacity: 1;
+        a {
+          color: white;
+          &:hover {
+            color: $light-gray;
+          }
+        }
+        .que-fran-list {
+          padding: 8px;
+          display: block;
+          .mat-list-item {
+            height: 35px;
+            .mat-list-item-content {
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+    }
+
+    a {
+      text-decoration: none;
+      margin-right: 10px;
+      color: white;
+      transition: color 0.3s;
+      text-transform: uppercase;
+      cursor: pointer;
+      &:visited,
+      &:hover,
+      &:active {
+        text-decoration: none;
+      }
+      &:hover {
+        color: $mid-gray;
+      }
+    }
+  }
   .menu-container {
     display: block;
     padding-top: 30px;
@@ -70,6 +167,9 @@
     width: 100vw;
     top: -100vh;
     left: 0;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
     .logo-menu {
       margin-top: -15px;
       margin-left: 15px;

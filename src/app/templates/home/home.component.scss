@@ -4,11 +4,20 @@
   // background-image: url("/assets/back.jpg");
   background-size: cover;
   display: block;
+  .que-fran-quieres-desk {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+  }
   .que-fran-quieres {
     background-color: $light-gray;
     padding-top: 0;
     position: relative;
     z-index: 1;
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
     .arrow-down-up {
       margin-left: auto;
     }
@@ -20,6 +29,10 @@
   .swiper-card {
     margin-left: -20px;
     margin-right: -20px;
+    @media screen and (min-width: 768px) {
+      margin-left: calc(-100vw / 2 + 1105px / 2);
+      margin-right: calc(-100vw / 2 + 1105px / 2);
+    }
   }
 
   .que-fran-quieres-list {
@@ -58,8 +71,11 @@
       margin-bottom: -7px;
       left: 0%;
       object-fit: cover;
-      @media (orientation: landscape) {
+      @media (orientation: landscape) and (max-width: 768px) {
         height: calc(90vh - 30px);
+      }
+      @media screen and (min-width: 768px) {
+        height: calc(100vh - 30px);
       }
     }
     .fran {
@@ -68,7 +84,7 @@
       left: -42px;
       width: 110%;
       display: none;
-      @media (orientation: landscape) {
+      @media (orientation: landscape) and (min-width: 768px) {
         display: none;
       }
     }
@@ -83,6 +99,12 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
+    @media screen and (min-width: 768px) {
+      width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+      overflow: initial;
+    }
     .cual-fran {
       display: flex;
       flex-direction: row;
@@ -164,10 +186,13 @@
   }
   .content {
     padding: 30px 20px 0px;
+    @media screen and (min-width: 768px) {
+      padding: 30px 15px 0px;
+    }
   }
   .mini-bio {
     font-size: 18px;
-    text-align: center;
+    text-align: left;
   }
   .divider {
     display: block;

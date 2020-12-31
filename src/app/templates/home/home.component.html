@@ -16,6 +16,16 @@
     <!-- <img class="fran" src="assets/fran.png" [wmAnimate]="'fadeIn'"> -->
   </div>
   <div id="home-2" class="home-2" #home2>
+    <mat-nav-list class="que-fran-quieres-desk">
+      <mat-list-item (click)="goTo('category-0')"> Director </mat-list-item>
+      <mat-list-item (click)="goTo('category-1')"> Actor </mat-list-item>
+      <mat-list-item (click)="goTo('category-2')"> Comediante </mat-list-item>
+      <mat-list-item (click)="goTo('category-3')"> Voice Artist </mat-list-item>
+      <mat-list-item (click)="goTo('category-4')">
+        Conferencista
+      </mat-list-item>
+      <mat-list-item (click)="goTo('category-5')"> Sircomedia </mat-list-item>
+    </mat-nav-list>
     <mat-nav-list class="que-fran-quieres">
       <div class="cual-fran" (click)="queFran = !queFran">
         ¿Cuál Fran quieres?
@@ -35,7 +45,6 @@
         <mat-list-item (click)="goTo('category-4')">
           Conferencista
         </mat-list-item>
-
         <mat-list-item (click)="goTo('category-5')"> Sircomedia </mat-list-item>
       </mat-nav-list>
     </div>
