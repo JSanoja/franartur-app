@@ -87,63 +87,19 @@
     &.scrolled {
       top: 12px;
       .que-fran-desk:hover .sub-menu {
-        background-color: $purple;
+        background-color: $yellow;
       }
     }
     @media screen and (min-width: 768px) {
       display: inline-block;
     }
-    ::ng-deep .que-fran-desk {
-      display: inline-block;
-      position: relative;
-      background-color: transparent;
-      padding-bottom: 10px;
-      .sub-menu {
-        display: block;
-        height: 0;
-        opacity: 0;
-        overflow: hidden;
-        position: absolute;
-        transition: opacity 0.3s;
-        .que-fran-list {
-          display: none;
-        }
-      }
-      &:hover a {
-        color: $mid-gray;
-      }
-      &:hover .sub-menu {
-        top: 30px;
-        right: 10px;
-        display: block;
-        height: auto;
-        color: $white;
-        opacity: 1;
-        a {
-          color: white;
-          &:hover {
-            color: $light-gray;
-          }
-        }
-        .que-fran-list {
-          padding: 8px;
-          display: block;
-          .mat-list-item {
-            height: 35px;
-            .mat-list-item-content {
-              justify-content: flex-end;
-            }
-          }
-        }
-      }
-    }
-
     a {
       text-decoration: none;
-      margin-right: 10px;
+      margin-right: 30px;
       color: white;
       transition: color 0.3s;
       text-transform: uppercase;
+      position: relative;
       cursor: pointer;
       &:visited,
       &:hover,
@@ -151,7 +107,87 @@
         text-decoration: none;
       }
       &:hover {
-        color: $mid-gray;
+        color: $yellow;
+      }
+      &.item-menu:last-child {
+        margin-right: 10px;
+        &:hover::after {
+          width: calc(100%);
+        }
+      }
+      &.item-menu:hover::after {
+        width: calc(100% - 3px);
+        transition: width 0.25s;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        margin-top: 17px;
+        width: 0;
+        height: 2px;
+        background: $yellow;
+        box-sizing: border-box;
+      }
+    }
+    ::ng-deep .que-fran-desk {
+      display: inline-block;
+      position: relative;
+      background-color: transparent;
+      padding-bottom: 10px;
+
+      .sub-menu {
+        display: block;
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        position: absolute;
+        transition: opacity 0.3s;
+        right: 10px;
+        .que-fran-list {
+          display: none;
+        }
+      }
+      &:hover > a {
+        color: $yellow;
+        position: relative;
+        &::after {
+          width: calc(100% - 3px);
+          transition: width 0.25s;
+        }
+      }
+      &:hover .sub-menu {
+        top: 30px;
+        right: 30px;
+        display: block;
+        height: auto;
+        color: $white;
+        opacity: 1;
+        a {
+          color: $purple;
+          &:hover {
+            color: $purple;
+            &::after {
+              top: 10px;
+              // width: calc(100%);
+              background: $purple;
+              transition: width 0.25s;
+            }
+          }
+        }
+        .que-fran-list {
+          padding: 8px;
+          display: block;
+          width: 155px;
+          .mat-list-item {
+            height: 35px;
+            .mat-list-item-content {
+              justify-content: center;
+            }
+          }
+        }
       }
     }
   }

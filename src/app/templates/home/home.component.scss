@@ -8,6 +8,30 @@
     display: none;
     @media screen and (min-width: 768px) {
       display: block;
+      list-style: none;
+      cursor: pointer;
+      padding-inline-start: 20px;
+      text-transform: uppercase;
+
+      li {
+        margin-right: 30px;
+        display: inline-block;
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 2px;
+          top: 2px;
+          background: #2d2e2f;
+          position: relative;
+        }
+        &:hover::after,
+        &:focus::after,
+        &:active::after {
+          width: 100%;
+          transition: width 0.25s;
+        }
+      }
     }
   }
   .que-fran-quieres {
@@ -30,8 +54,8 @@
     margin-left: -20px;
     margin-right: -20px;
     @media screen and (min-width: 768px) {
-      margin-left: calc(-100vw / 2 + 1105px / 2);
-      margin-right: calc(-100vw / 2 + 1105px / 2);
+      margin-left: calc(-100vw / 2 + 520px / 2);
+      margin-right: calc(-100vw / 2 + 520px / 2);
     }
   }
 
@@ -100,7 +124,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     @media screen and (min-width: 768px) {
-      width: 1120px;
+      width: 1100px;
       margin-left: auto;
       margin-right: auto;
       overflow: initial;
@@ -145,7 +169,11 @@
   .categories {
     .categories-item {
       margin-bottom: 50px;
-
+      @media screen and (min-width: 768px) {
+        width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+      }
       .category-item {
         padding-bottom: 50px;
       }

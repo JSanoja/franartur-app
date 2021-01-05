@@ -94,8 +94,8 @@
     </mat-toolbar-row>
   </mat-toolbar>
   <div class="menu-desktop" [ngClass]="{ scrolled: currentScroll != 0 }">
-    <a [routerLink]="'/'"> HOME </a>
-    <a [routerLink]="'/bio'"> BIO </a>
+    <a class="item-menu" [routerLink]="'/'"> HOME </a>
+    <a class="item-menu" [routerLink]="'/bio'"> BIO </a>
     <div class="que-fran-desk">
       <a class=""> ¿Cuál Fran Quieres?</a>
       <div class="sub-menu">
@@ -123,9 +123,9 @@
       </div>
     </div>
 
-    <a [routerLink]="'/team'"> MI EQUIPO </a>
-    <a [routerLink]="'/tienda'"> TIENDA </a>
-    <a [routerLink]="'/contacto'"> CONECTA CONMIGO </a>
+    <a class="item-menu" [routerLink]="'/team'"> MI EQUIPO </a>
+    <a class="item-menu" [routerLink]="'/tienda'"> TIENDA </a>
+    <a class="item-menu" [routerLink]="'/contacto'"> CONECTA CONMIGO </a>
   </div>
   <div class="menu-container" [ngClass]="{ active: menuActive }">
     <svg
