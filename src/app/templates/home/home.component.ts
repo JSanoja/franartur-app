@@ -52,7 +52,11 @@ export class HomeComponent implements OnInit {
     watchSlidesProgress: false,
     navigation: false,
     keyboard: false,
-    pagination: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true,
+    },
     centeredSlides: false,
     loop: false,
     roundLengths: true,
@@ -61,6 +65,9 @@ export class HomeComponent implements OnInit {
     spaceBetween: 0,
     breakpoints: {
       // when window width is >= 320px
+      769: {
+        slidesPerView: 1,
+      },
     },
   };
   categories: Array<any> = [
@@ -70,34 +77,59 @@ export class HomeComponent implements OnInit {
         "Como Director uso el lenguaje de la comedia para transmitir ideas en todos los formatos. A cada proyecto le imprimo el tratamiento artístico y cinematográfico necesario, para lograr productos de comedia pocas veces vistos en Latam.",
       link: "/director",
       photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
+      photosDesk: [
+        "/assets/329-1.jpg",
+        "/assets/329-2.jpg",
+        "/assets/329-3.jpg",
+      ],
     },
     {
       title: "Actor",
       description:
         "Me gusta que cada personaje que interprete sea único y peculiar, soy capaz de pasar del drama a la comedia, manteniendo un delicado equilibrio entre ambos mundos y uso mi comedia gestual para darle un valor único a las producciones, en cualquiera de sus formatos.",
       link: "/actor",
-      photos: ["/assets/219-1.jpg", "/assets/219-2.jpg", "/assets/219-3.jpg"],
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
+      photosDesk: [
+        "/assets/329-1.jpg",
+        "/assets/329-2.jpg",
+        "/assets/329-3.jpg",
+      ],
     },
     {
       title: "Comediante",
       description:
         "La comedia siempre puede dar vida y reavivar el corazón más marchito, por eso la amo y la hago, es mi forma de darle al mundo maravillas y un poquito de ternura.",
       link: "/comediante",
-      photos: ["/assets/219-1.jpg", "/assets/219-2.jpg", "/assets/219-3.jpg"],
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
+      photosDesk: [
+        "/assets/329-1.jpg",
+        "/assets/329-2.jpg",
+        "/assets/329-3.jpg",
+      ],
     },
     {
       title: "Voice Artist",
       description:
         "Mi experiencia en la actuación y la comedia me permite dar vida a voces diversas, frescas y divertidas, que transmiten confianza y credibilidad a las más exigentes audiencias de América Latina. ",
       link: "/voice-artist",
-      photos: ["/assets/219-1.jpg", "/assets/219-2.jpg", "/assets/219-3.jpg"],
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
+      photosDesk: [
+        "/assets/329-1.jpg",
+        "/assets/329-2.jpg",
+        "/assets/329-3.jpg",
+      ],
     },
     {
       title: "Conferencista",
       description:
         "Mis conferencias inspiran con valores, arte y risa, para lograr personas y equipos de trabajo más éticos, más felices y más productivos. Esto es todo un propósito que hace parte de un grandioso proyecto social y educativo, mucho más amplio, que desarrollo a través de mi marca Pechos de Héroe.",
       link: "conferencista",
-      photos: ["/assets/219-1.jpg", "/assets/219-2.jpg", "/assets/219-3.jpg"],
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
+      photosDesk: [
+        "/assets/329-1.jpg",
+        "/assets/329-2.jpg",
+        "/assets/329-3.jpg",
+      ],
     },
 
     {
@@ -105,7 +137,12 @@ export class HomeComponent implements OnInit {
       description:
         "Esta es mi empresa y nace para brindar espacios amplios y diversos para la Comedia como forma de arte. Es una casa matriz de un conjunto de marcas que celebran el don universal de las risas. Justo en el instante en el que se produce una carcajada comienza nuestro universo. ",
       link: "sircomedia",
-      photos: ["/assets/219-1.jpg", "/assets/219-2.jpg", "/assets/219-3.jpg"],
+      photos: ["/assets/foto.jpg", "/assets/foto.jpg", "/assets/foto.jpg"],
+      photosDesk: [
+        "/assets/329-1.jpg",
+        "/assets/329-2.jpg",
+        "/assets/329-3.jpg",
+      ],
     },
   ];
   @ViewChild("home1") home1: ElementRef;

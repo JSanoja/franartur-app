@@ -2,7 +2,10 @@
   .main {
     max-width: 100%;
     .top-background {
-      height: 39px;
+      height: 30px;
+      @media screen and (min-width: 768px) {
+        height: 39px;
+      }
       background-color: #212051;
     }
   }

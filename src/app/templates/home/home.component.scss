@@ -4,13 +4,22 @@
   // background-image: url("/assets/back.jpg");
   background-size: cover;
   display: block;
+  .content {
+    padding: 30px 20px 0px;
+    @media screen and (min-width: 768px) {
+      // padding: 30px 15px 0px;
+    }
+  }
   .que-fran-quieres-desk {
     display: none;
     @media screen and (min-width: 768px) {
       display: block;
       list-style: none;
+      width: $width-desk;
+      margin-left: auto;
+      margin-right: auto;
       cursor: pointer;
-      padding-inline-start: 20px;
+      padding-inline-start: 0px;
       text-transform: uppercase;
 
       li {
@@ -46,7 +55,22 @@
       margin-left: auto;
     }
   }
+  .category-item {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+    &-desk {
+      display: none;
+      @media screen and (min-width: 768px) {
+        display: block;
+      }
+    }
+  }
   .foto-swiper {
+    width: 100%;
+    height: auto;
+  }
+  .foto-swiper-desk {
     width: 100%;
     height: auto;
   }
@@ -54,8 +78,8 @@
     margin-left: -20px;
     margin-right: -20px;
     @media screen and (min-width: 768px) {
-      margin-left: calc(-100vw / 2 + 520px / 2);
-      margin-right: calc(-100vw / 2 + 520px / 2);
+      //margin-left: calc(-100vw / 2 + 520px / 2);
+      //margin-right: calc(-100vw / 2 + 520px / 2);
     }
   }
 
@@ -95,6 +119,7 @@
       margin-bottom: -7px;
       left: 0%;
       object-fit: cover;
+      outline: none !important;
       @media (orientation: landscape) and (max-width: 768px) {
         height: calc(90vh - 30px);
       }
@@ -124,7 +149,6 @@
     background-repeat: no-repeat;
     background-size: contain;
     @media screen and (min-width: 768px) {
-      width: 1100px;
       margin-left: auto;
       margin-right: auto;
       overflow: initial;
@@ -169,12 +193,9 @@
   .categories {
     .categories-item {
       margin-bottom: 50px;
-      @media screen and (min-width: 768px) {
-        width: 520px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      .category-item {
+
+      .category-item,
+      .category-item-desk {
         padding-bottom: 50px;
       }
     }
@@ -212,12 +233,7 @@
   .main-content {
     padding: 10px;
   }
-  .content {
-    padding: 30px 20px 0px;
-    @media screen and (min-width: 768px) {
-      padding: 30px 15px 0px;
-    }
-  }
+
   .mini-bio {
     font-size: 18px;
     text-align: left;
@@ -232,5 +248,15 @@
 
   .category-title {
     padding-bottom: 0;
+  }
+  @media screen and (min-width: 768px) {
+    .text,
+    .category-title,
+    .damelo-todo-container {
+      width: 50%;
+      margin-left: 25%;
+    }
+    .damelo-todo-container {
+    }
   }
 }

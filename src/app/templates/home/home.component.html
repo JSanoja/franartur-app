@@ -63,7 +63,7 @@
           <p class="text">
             {{ category.description }}
           </p>
-          <div>
+          <div class="damelo-todo-container">
             <button [routerLink]="category.link" class="damelo-todo" mat-button>
               ¡Dámelo Todo!
             </button>
@@ -77,6 +77,12 @@
             >
               <div class="category-item" *ngFor="let photo of category.photos">
                 <img class="foto-swiper" src="{{ photo }}" alt="" />
+              </div>
+              <div
+                class="category-item-desk"
+                *ngFor="let photo of category.photosDesk"
+              >
+                <img class="foto-swiper-desk" src="{{ photo }}" alt="" />
               </div>
             </swiper>
           </div>

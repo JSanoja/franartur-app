@@ -132,6 +132,10 @@ swiper
   line-height: 1.25;
   color: $black-2;
   margin: 5px 0 10px;
+  @media screen and (min-width: 768px) {
+    font-size: 17px;
+    line-height: 28px;
+  }
 }
 .content {
   padding: 20px;
@@ -139,4 +143,8 @@ swiper
 
 gallery {
   background-color: #161637 !important;
+}
+
+.swiper-pagination {
+  pointer-events: all !important;
 }

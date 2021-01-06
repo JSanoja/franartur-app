@@ -87,7 +87,7 @@
     &.scrolled {
       top: 12px;
       .que-fran-desk:hover .sub-menu {
-        background-color: $yellow;
+        background-color: $orange;
       }
     }
     @media screen and (min-width: 768px) {
@@ -107,7 +107,7 @@
         text-decoration: none;
       }
       &:hover {
-        color: $yellow;
+        color: $orange;
       }
       &.item-menu:last-child {
         margin-right: 10px;
@@ -128,7 +128,7 @@
         margin-top: 17px;
         width: 0;
         height: 2px;
-        background: $yellow;
+        background: $orange;
         box-sizing: border-box;
       }
     }
@@ -151,7 +151,7 @@
         }
       }
       &:hover > a {
-        color: $yellow;
+        color: $orange;
         position: relative;
         &::after {
           width: calc(100% - 3px);
